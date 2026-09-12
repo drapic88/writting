@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 650" width="1400" height="650" role="img" aria-label="Chat returns one answer you evaluate; an agent runs a read-act-check-decide loop you supervise at two checkpoints, the plan and the diff">
+  <defs>
+    <style>
+      .ink   { fill: #12203A; }
+      .mute  { fill: #6B7789; }
+      .accent{ fill: #E0662E; }
+      .h     { font-family: Georgia, 'Times New Roman', serif; }
+      .m     { font-family: 'SF Mono', 'DejaVu Sans Mono', Menlo, monospace; }
+      .s     { font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif; }
+    </style>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#6B7789"/>
+    </marker>
+    <marker id="arA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#E0662E"/>
+    </marker>
+  </defs>
+
+  <rect width="1400" height="650" fill="#FAF8F4"/>
+
+  <!-- kicker -->
+  <rect x="80" y="92" width="120" height="3" class="accent"/>
+  <text x="80" y="122" class="m" font-size="14" fill="#8A93A3" letter-spacing="1">AGENTS · CHECKPOINTS</text>
+
+  <!-- title -->
+  <text x="80" y="206" class="h ink" font-size="58" font-weight="700">Chat answers. An agent acts.</text>
+  <text x="80" y="252" class="s mute" font-size="24">You stop reviewing keystrokes and start reviewing checkpoints.</text>
+
+  <!-- divider between the two panels -->
+  <rect x="540" y="300" width="2" height="252" fill="#E4DED3"/>
+
+  <!-- ============ LEFT: CHAT ============ -->
+  <text x="80" y="312" class="m" font-size="14" fill="#12203A" letter-spacing="1.5">CHAT</text>
+
+  <rect x="80" y="380" width="170" height="50" rx="8" fill="#12203A"/>
+  <text x="165" y="411" class="s" font-size="17" fill="#FAF8F4" text-anchor="middle">your question</text>
+
+  <line x1="256" y1="405" x2="280" y2="405" stroke="#6B7789" stroke-width="2" marker-end="url(#ar)"/>
+
+  <rect x="292" y="380" width="170" height="50" rx="8" fill="none" stroke="#12203A" stroke-width="2"/>
+  <text x="377" y="411" class="s ink" font-size="17" text-anchor="middle">one reply</text>
+
+  <text x="80" y="478" class="s ink" font-size="17">You evaluate it, then do the work.</text>
+  <text x="80" y="506" class="s mute" font-size="16">Nothing reaches your files.</text>
+
+  <!-- ============ RIGHT: AGENT ============ -->
+  <text x="620" y="312" class="m" font-size="14" fill="#12203A" letter-spacing="1.5">AGENT</text>
+
+  <!-- checkpoint: the plan -->
+  <rect x="620" y="380" width="130" height="50" rx="8" class="accent"/>
+  <text x="685" y="411" class="s" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="middle">the plan</text>
+  <line x1="754" y1="405" x2="772" y2="405" stroke="#E0662E" stroke-width="2" marker-end="url(#arA)"/>
+
+  <!-- the loop -->
+  <rect x="776" y="320" width="384" height="170" rx="10" fill="none" stroke="#12203A" stroke-width="3"/>
+
+  <rect x="796" y="342" width="150" height="50" rx="6" fill="#12203A"/>
+  <text x="871" y="373" class="s" font-size="17" fill="#FAF8F4" text-anchor="middle">read</text>
+
+  <rect x="990" y="342" width="150" height="50" rx="6" fill="#12203A"/>
+  <text x="1065" y="373" class="s" font-size="17" fill="#FAF8F4" text-anchor="middle">act</text>
+
+  <rect x="990" y="418" width="150" height="50" rx="6" fill="#12203A" fill-opacity="0.55"/>
+  <text x="1065" y="449" class="s" font-size="17" fill="#FAF8F4" text-anchor="middle">check</text>
+
+  <rect x="796" y="418" width="150" height="50" rx="6" fill="#12203A" fill-opacity="0.55"/>
+  <text x="871" y="449" class="s" font-size="17" fill="#FAF8F4" text-anchor="middle">decide</text>
+
+  <line x1="952" y1="367" x2="984" y2="367" stroke="#6B7789" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="1065" y1="398" x2="1065" y2="412" stroke="#6B7789" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="984" y1="443" x2="952" y2="443" stroke="#6B7789" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="871" y1="412" x2="871" y2="398" stroke="#6B7789" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- checkpoint: the diff -->
+  <line x1="1166" y1="405" x2="1184" y2="405" stroke="#E0662E" stroke-width="2" marker-end="url(#arA)"/>
+  <rect x="1190" y="380" width="130" height="50" rx="8" class="accent"/>
+  <text x="1255" y="411" class="s" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="middle">the diff</text>
+
+  <text x="620" y="530" class="s ink" font-size="17">Two checkpoints are yours. Everything between them runs on its own.</text>
+
+</svg>
