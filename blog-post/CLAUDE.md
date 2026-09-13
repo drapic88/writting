@@ -6,7 +6,7 @@ Technical blog posts written for Medium under Dragan Rapić's byline.
 
 **Read [`../VOICE.md`](../VOICE.md) then [CRAFT.md](CRAFT.md).** The first is the voice for
 everything in this repository; the second is what a Medium post specifically requires —
-anatomy, length, series scaffolding, workflow, pre-publish checklist. Do not draft from a
+anatomy, length, workflow, pre-publish checklist. Do not draft from a
 generic idea of what a technical blog post sounds like.
 
 The single rule it all serves: **every claim ends in a file path, a command, a number, a
@@ -19,8 +19,10 @@ evidence.
   `hero.svg` + `hero.png`.
 - **Write and agree `plan.md` before drafting `article.md`.** Do not jump straight to prose
   for a new post.
-- [README.md](README.md) holds the series table, the publish order, and the Medium tags and
-  publication targets. Check it before drafting a series post.
+- [README.md](README.md) holds the post index and the Medium tags and publication targets.
+- **Every post is an independent article.** No series note, no "next post" link, no
+  cross-reference to another post in this folder. A concept the post leans on gets a short
+  self-contained explanation inside the post, or gets left out.
 - Internal material is genericized per [`../CONFIDENTIALITY.md`](../CONFIDENTIALITY.md)
   before it reaches a draft.
 - Verify every version number, model name, flag and command against current docs. Source
@@ -30,4 +32,4 @@ evidence.
 
 Match the surrounding voice rather than improving it toward a house style. Two drafts are
 finished and set the standard: `php-8.6-small-release/article.md` and
-`03-context-is-the-product/article.md`.
+`context-is-the-product/article.md`.

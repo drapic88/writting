@@ -114,9 +114,10 @@ Use these deliberately, not all at once.
   matters: fully control / partly control / the only mechanism that removes volume.
 - **The cost estimate.** "Half a day to a day, and most of that is waiting on dependency
   updates." Readers are deciding whether to spend time; tell them how much.
-- **Cross-links in parentheses.** "(If the phrase 'context window' is doing a lot of
-  unexplained work here, [post 1](#) covers the mechanics.)" Serves the skimmer without
-  derailing the paragraph.
+- **Cross-links in parentheses.** "(The RFC has the full grammar, including the two cases
+  I am skipping here.)" A link out to documentation, an RFC or a changelog serves the
+  reader who wants depth without derailing the paragraph. Links point outward — a piece
+  never sends the reader to another piece in this repository to finish an idea.
 - **The self-implicating admission**, once per post, maximum.
 
 ---

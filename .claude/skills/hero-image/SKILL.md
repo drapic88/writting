@@ -11,20 +11,21 @@ disposable and regenerated.
 ## The system
 
 One visual system so pieces read as a set. Established by
-`blog-post/03-context-is-the-product/hero.svg` — read that file before authoring a new one.
+`blog-post/context-is-the-product/hero.svg` — read that file before authoring a new one.
 
 - **Canvas:** `viewBox="0 0 1400 650"` with matching `width`/`height`. Export at 2× →
   2800×1300.
-- **Palette:** ink `#12203A`, muted `#6B7789`, accent `#E0662E`, ground `#FAF8F4`, and
-  `#E4DED3` for the oversized number. Two colours plus ink; no gradients.
-- **Type stack, declared as CSS classes in `<defs>`:** Georgia/serif for the title and the
-  number (`.h`), `SF Mono`/monospace for labels and data (`.m`), system sans for the subtitle
-  and body (`.s`). System fonts only — a webfont will not resolve during export.
-- **Composition:** accent rule, then the series or section label in spaced monospace caps,
-  then the number rendered large in `#E4DED3` behind the title, then the title, then the
-  subtitle. Diagram on the right or below.
-- **One diagram motif per arc**, so a reader recognises the group: Foundations = token
-  stream, Craft = layered window, Trust = evidence chain.
+- **Palette:** ink `#12203A`, muted `#6B7789`, accent `#E0662E`, ground `#FAF8F4`, with
+  `#E4DED3` as the pale tint for rules and ghosted shapes. Two colours plus ink; no
+  gradients.
+- **Type stack, declared as CSS classes in `<defs>`:** Georgia/serif for the title (`.h`),
+  `SF Mono`/monospace for labels and data (`.m`), system sans for the subtitle and body
+  (`.s`). System fonts only — a webfont will not resolve during export.
+- **Composition:** accent rule, then a kicker in spaced monospace caps naming this piece's
+  own subject (`CONTEXT WINDOWS`, `TOKENS · WINDOWS`), then the title, then the subtitle.
+  Diagram on the right or below.
+- **No number and no series label.** Pieces are independent; the image carries the subject,
+  never a position in a sequence. Nothing numbered goes on a hero.
 - **`role="img"` and an `aria-label` that restates the thesis**, matching the alt text the
   draft uses.
 
@@ -34,7 +35,7 @@ the real numbers from the piece. Not decoration.
 ## Export
 
 ```bash
-scripts/hero-export.sh blog-post/03-context-is-the-product/hero.svg
+scripts/hero-export.sh blog-post/context-is-the-product/hero.svg
 ```
 
 Writes `hero.png` next to the SVG at 2× and prints the resulting dimensions. Confirm they

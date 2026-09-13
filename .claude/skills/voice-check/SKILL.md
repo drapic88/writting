@@ -15,7 +15,7 @@ Always [`VOICE.md`](../../../VOICE.md), plus:
 
 | Draft lives in | Also read |
 |----------------|-----------|
-| `blog-post/` | [`blog-post/CRAFT.md`](../../../blog-post/CRAFT.md) §5 |
+| `blog-post/` | [`blog-post/CRAFT.md`](../../../blog-post/CRAFT.md) §4 |
 | `stories/` | [`stories/CRAFT.md`](../../../stories/CRAFT.md) §9 |
 | `books/` | [`books/CRAFT.md`](../../../books/CRAFT.md) §8 |
 
@@ -37,7 +37,7 @@ Add [`CONFIDENTIALITY.md`](../../../CONFIDENTIALITY.md) §6 for anything from re
    something verified that you did not check.
 5. **Format-specific.** Stories: the four qualifiers, two real-time scenes, no hero
    narrative, no moralising close. Books: ledger consistency, terms defined before use,
-   promises resolved. Posts: series links resolve, tags present.
+   promises resolved. Posts: no cross-reference to another post, tags present.
 6. **Confidentiality**, where applicable. Names, aliases, dates, scrubbed artefacts,
    disclosure line.
 

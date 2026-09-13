@@ -44,7 +44,7 @@ there.
 
 Match the surrounding voice rather than improving it toward a house style. Two blog drafts
 are finished and set the standard: `blog-post/php-8.6-small-release/article.md` and
-`blog-post/03-context-is-the-product/article.md`.
+`blog-post/context-is-the-product/article.md`.
 
 ## Git
 

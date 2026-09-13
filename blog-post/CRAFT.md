@@ -3,10 +3,10 @@
 **Read [`../VOICE.md`](../VOICE.md) first.** It holds the evidence rule, the stance, the
 sentence mechanics, the devices and the anti-patterns that govern everything in this
 repository. This file holds only what is specific to a Medium post: its anatomy, its
-length, the series scaffolding, the folder workflow and the pre-publish checklist.
+length, the folder workflow and the pre-publish checklist.
 
-See [README.md](README.md) for the series table, publish order, and Medium tags and
-publication targets. Anything drawn from real client work goes through
+See [README.md](README.md) for the post index and the Medium tags and publication targets.
+Anything drawn from real client work goes through
 [`../CONFIDENTIALITY.md`](../CONFIDENTIALITY.md) first.
 
 ---
@@ -57,12 +57,13 @@ it states the reframe plainly. No hype, no colon-separated keyword salad.
 ### Provenance line (italic, optional but usual)
 
 One italic sentence establishing what the post was written against and what could move —
-a beta version, a series position, a warning that command names drift between releases.
+a beta version, a date, a warning that command names drift between releases.
 This is a trust device: it tells the reader you know your own shelf life.
 
 ### Hero image
 
-`hero.svg` authored in the folder, exported to `hero.png` at 1400×700. Alt text is a full
+`hero.svg` authored in the folder on a 1400×650 viewBox, exported to `hero.png` at 2×. It
+carries no post number and no series label — see the `hero-image` skill. Alt text is a full
 restatement of the thesis, not a caption.
 
 ### Lede
@@ -144,31 +145,17 @@ tag. Keep code under ~20 lines; if it needs more, the example is doing too much.
 
 ---
 
-## 3. Series conventions
-
-Every post in a series carries scaffolding at both ends — this is inherited directly from
-"A Revendo Way" and it worked.
-
-- **Open** with a one-line italic series note: `*Part 3 of* From Assistant to Agent — *a
-  series on …*`.
-- **Close** with the next post in the series, linked. Update links as posts go live; a
-  dangling promise to a post that does not exist costs more than it gains.
-- **Back-link list** at the top for the third post onward, as a plain bulleted list of the
-  previous titles.
-
----
-
-## 4. Repository workflow
+## 3. Repository workflow
 
 Each post is a folder: `plan.md` (drafting brief) → `article.md` (the Medium draft) →
 `hero.svg` + `hero.png`. Write `plan.md` first and get it agreed before drafting the
-article. See [README.md](README.md) for the series table, publish order, and Medium tags
-and publication targets. Internal material is genericized per
+article. See [README.md](README.md) for the post index and the Medium tags and publication
+targets. Internal material is genericized per
 [`../CONFIDENTIALITY.md`](../CONFIDENTIALITY.md) before it reaches a draft.
 
 ---
 
-## 5. Pre-publish checklist
+## 4. Pre-publish checklist
 
 Run this against the finished draft.
 
@@ -184,6 +171,7 @@ Run this against the finished draft.
 - [ ] A cost estimate somewhere.
 - [ ] Close does the three moves and ends on a concrete action with a threshold.
 - [ ] Sources section with real links.
-- [ ] Series note at the top, next-post link at the bottom, both correct.
+- [ ] The post stands alone — no reference to another post in this folder, and every
+      concept it leans on is explained inside it.
 - [ ] Zero words from the anti-pattern list.
 - [ ] Read the whole thing aloud once. Anything you would not say to a colleague, cut.

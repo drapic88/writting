@@ -1,6 +1,6 @@
 ---
 name: write-blog-post
-description: Draft or edit a technical blog post for Medium under Dragan Rapić's byline — the From Assistant to Agent series or a standalone post. Use for "write a post about X", "draft the plan for post 5", "edit this article", "is this article ready to publish", anything landing in blog-post/. Enforces brief-before-draft and the repository's voice.
+description: Draft or edit a technical blog post for Medium under Dragan Rapić's byline. Use for "write a post about X", "draft the plan for the sandboxing post", "edit this article", "is this article ready to publish", anything landing in blog-post/. Enforces brief-before-draft and the repository's voice.
 ---
 
 # Writing a Medium blog post
@@ -8,10 +8,10 @@ description: Draft or edit a technical blog post for Medium under Dragan Rapić'
 ## Read first, every time
 
 1. [`VOICE.md`](../../../VOICE.md) — the voice. Non-negotiable.
-2. [`blog-post/CRAFT.md`](../../../blog-post/CRAFT.md) — post anatomy, length, series
-   scaffolding, pre-publish checklist.
-3. [`blog-post/README.md`](../../../blog-post/README.md) — the series table and publish
-   order, if this is a series post.
+2. [`blog-post/CRAFT.md`](../../../blog-post/CRAFT.md) — post anatomy, length, folder
+   workflow, pre-publish checklist.
+3. [`blog-post/README.md`](../../../blog-post/README.md) — the post index, the Medium tags
+   and the publication targets.
 4. [`CONFIDENTIALITY.md`](../../../CONFIDENTIALITY.md) — if any of it comes from real client
    work.
 5. [`CROATIAN.md`](../../../CROATIAN.md) — if the post is in Croatian. Croatian posts are
@@ -26,13 +26,13 @@ and there is no agreed brief, write the brief and stop. Existing briefs in
 `blog-post/*/plan.md` show the shape — positioning, meta, section-by-section structure,
 evidence, out of scope.
 
-If the post is in the series and its `plan.md` is already there, it is agreed. Draft from it
-and say which brief you are working from.
+If a `plan.md` is already in the folder, it is agreed. Draft from it and say which brief you
+are working from. Briefs written before September 2026 carry instructions to link forward
+and back between posts; those are superseded — see the note at the top of the brief.
 
 ## Workflow
 
-1. **Locate or create the folder.** `blog-post/NN-slug/` for a series post (number from the
-   README table), `blog-post/slug/` for a standalone.
+1. **Locate or create the folder.** `blog-post/slug/` — a plain slug, never numbered.
 2. **Brief.** Write `plan.md`. Name the thesis, the evidence that backs each section, and
    what the post deliberately leaves out. Stop here and get agreement.
 3. **Gather evidence before prose.** Every section needs its file path, command, number,
@@ -43,7 +43,7 @@ and say which brief you are working from.
    July 2026. If a flag may have been renamed, describe the shape of the capability instead.
 5. **Draft `article.md`** against the anatomy in `CRAFT.md` §1.
 6. **Hero image.** Use the `hero-image` skill.
-7. **Check.** Run the `voice-check` skill, or work the checklist in `CRAFT.md` §5 yourself.
+7. **Check.** Run the `voice-check` skill, or work the checklist in `CRAFT.md` §4 yourself.
    Report what fails; do not silently fix voice by flattening it.
 
 ## Rules that override convenience
@@ -52,7 +52,9 @@ and say which brief you are working from.
   quote that was not said. Say the evidence is missing and let the post be thinner.
 - **No pseudo-code where real code was available.** Go get the real thing.
 - **Match the surrounding voice when editing**, rather than improving a draft toward a house
-  style. `php-8.6-small-release/article.md` and `03-context-is-the-product/article.md` are
+  style. `php-8.6-small-release/article.md` and `context-is-the-product/article.md` are
   the standard.
-- **Series links are promises.** Do not link to a post that does not exist yet.
+- **Every post stands alone.** No series note, no "next post" link, no "(post 1 covers the
+  mechanics)". A concept the post leans on gets a short self-contained explanation inside
+  the post, or gets left out. Links point outward, to documentation and sources.
 - Nothing gets committed unless Dragan asks for a commit.

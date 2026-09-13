@@ -114,7 +114,7 @@ chapter with two theses in it — split it rather than cutting evenly.
 Material from `blog-post/` and `stories/` is a legitimate starting point, and is **never
 pasted.**
 
-- Record the source in the chapter's `brief.md` (`Derived from: blog-post/03-...`), so a
+- Record the source in the chapter's `brief.md` (`Derived from: blog-post/context-is-the-product`), so a
   reader who followed the blog is not sold the same text twice.
 - Strip every artefact of the original format: series notes, "in my last post", Medium tags,
   next-post links, the call to clap, the pitch of a standalone lede.
