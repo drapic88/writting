@@ -36,4 +36,4 @@ A chapter drafted without an agreed brief is a chapter that gets rewritten.
 
 | Book | Stage | Chapters drafted | Words |
 |------|-------|------------------|-------|
-| — | *none started* | — | — |
+| [five-rings](five-rings/) | Outline — awaiting evidence | 0 of 10 | 0 / 34,000 |
