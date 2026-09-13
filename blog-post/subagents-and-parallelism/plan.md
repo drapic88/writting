@@ -1,6 +1,11 @@
-# Plan — post 5: Subagents Buy Context Isolation, Not Speed
+# Plan — Subagents Buy Context Isolation, Not Speed
 
-**Series:** *From Assistant to Agent*, part 5 of 10 (Craft)
+**Standalone post.** This brief was written when these posts were planned as a
+ten-part series. That is superseded: the draft carries no series note, no next-post
+link and no cross-reference to another post in `blog-post/`. Where a section below
+says to link to another post, explain the idea in a sentence or two inside this draft
+instead, or leave it out. See [`../CRAFT.md`](../CRAFT.md).
+
 **Source:** advanced workshop deck, slides 7, 8, 9, 11
 **Status:** brief · not drafted
 
@@ -38,7 +43,6 @@ strictly better than one that can fix things for you."
 - **Audience:** daily agent users who have tried subagents and found them expensive or
   underwhelming.
 - **Tags:** `AI`, `Software Engineering`, `Developer Tools`, `Programming`, `Coding`
-- **Series slot:** publish 5th.
 
 ---
 

@@ -1,6 +1,11 @@
-# Plan — post 3: You Are Not Writing Prompts. You Are Curating a Window.
+# Plan — You Are Not Writing Prompts. You Are Curating a Window.
 
-**Series:** *From Assistant to Agent*, part 3 of 10 (Craft) — **FLAGSHIP**
+**Standalone post.** This brief was written when these posts were planned as a
+ten-part series. That is superseded: the draft carries no series note, no next-post
+link and no cross-reference to another post in `blog-post/`. Where a section below
+says to link to another post, explain the idea in a sentence or two inside this draft
+instead, or leave it out. See [`../CRAFT.md`](../CRAFT.md).
+
 **Source:** advanced workshop deck, slides 3, 5, 12
 **Status:** brief · not drafted
 
@@ -37,7 +42,6 @@ immediately states the real idea.
 - **Audience:** engineers already using an agent daily who have hit the wall where results
   degrade and they cannot say why. Assume they know what an instruction file is.
 - **Tags:** `AI`, `Software Engineering`, `Developer Tools`, `Programming`, `Coding`
-- **Series slot:** **publish first.** This is the post that earns subscribers.
 
 ---
 

@@ -1,8 +1,13 @@
-# Plan — post 1: What Actually Happens When You Prompt an LLM
+# Plan — Your LLM Has No Memory. It Has a Window.
 
-**Series:** *From Assistant to Agent*, part 1 of 10 (Foundations)
+**Standalone post.** This brief was written when these posts were planned as a
+ten-part series. That is superseded: the draft carries no series note, no next-post
+link and no cross-reference to another post in `blog-post/`. Where a section below
+says to link to another post, explain the idea in a sentence or two inside this draft
+instead, or leave it out. See [`../CRAFT.md`](../CRAFT.md).
+
 **Source:** "AI basic" deck, slides 3–4
-**Status:** brief · not drafted
+**Status:** brief · drafted
 
 ---
 
@@ -27,7 +32,7 @@ Everything in the post earns its place by making that sentence more actionable.
 3. **Tokens, Windows, and Why Your Model "Got Worse"** — concrete and a little contrarian.
 
 *Recommendation:* title #2, subtitle "Tokens, context windows, and the one distinction
-that explains most of your frustration." It sets up post 3, which is the flagship.
+that explains most of your frustration."
 
 ---
 
@@ -38,7 +43,6 @@ that explains most of your frustration." It sets up post 3, which is the flagshi
   they work. Assume they know what a neural network is in the loosest sense; assume they
   do not know what a token is.
 - **Tags:** `AI`, `LLM`, `Software Engineering`, `Programming`, `Developer Tools`
-- **Series slot:** publish 7th. It exists to catch search traffic and funnel it to post 3.
 
 ---
 
@@ -95,20 +99,27 @@ Two misconceptions to kill explicitly:
 - "A bigger window means I can stop thinking about what I paste." Signal-to-noise still
   degrades; forty irrelevant files make the relevant one harder to weight.
 
-This is the hinge into post 3 — say so in one sentence and move on.
+Close the section on the consequence the reader can act on: the window is the thing you
+curate, and curating it is a habit rather than a setting. Say it in a sentence and move on
+— the *how* of curating a window is a different post's job, and this one does not gesture
+at it.
 
 ### Section 4 — Training vs inference (~200 words)
 Training happened once, in the past, against a fixed data cutoff. Inference is the live
 conversation. Nothing you say in a session is learned. Consequences:
 - The model does not know your repo, your incident from last Tuesday, or a library
   released after its cutoff — you have to put those in front of it.
-- Correcting it in-conversation fixes *this* window and nothing beyond it. Durable
-  correction is a file you commit, which is post 3's subject.
+- Correcting it in-conversation fixes *this* window and nothing beyond it. The durable
+  version of a correction is a file you commit into the project, so it is re-supplied on
+  every future session. One sentence; do not turn this into a tour of instruction files.
 
 ### Close (~150 words)
-Restate the three ideas as three habits: keep the window clean, pay attention to what you
-paste, and re-supply context deliberately instead of hoping for memory. Then the series
-link to post 3.
+Restate the three ideas as three numbered habits the reader can adopt this week: keep the
+window clean, pay attention to what you paste, and re-supply context deliberately instead
+of hoping for memory. Give each one the actual move, not the principle. End on a single
+concrete action with a threshold — the next time an answer looks wrong, read back what was
+in the window before blaming the model — and a cost estimate for the habit (starting a
+fresh session costs the re-paste of two or three files, call it a minute).
 
 ---
 
@@ -116,8 +127,8 @@ link to post 3.
 
 Nothing sensitive in this post — it is all general mechanics. The only rule: when
 illustrating with a codebase, use the shared fictional stack from the root `README.md`
-(`web-app`, `rest-api`, `PROJ-1234`) rather than inventing new names, so the series stays
-consistent.
+(`web-app`, `rest-api`, `PROJ-1234`) rather than inventing new names, so the posts stay
+consistent with each other.
 
 ---
 
@@ -132,9 +143,10 @@ consistent.
 
 ## 6. Hero image brief
 
-Foundations motif: a horizontal token stream, each token a rounded box, the last three
-boxes ghosted with probability percentages beside them. Large "01" in the corner. Two
-colours plus a neutral background, per the series system in the root `README.md`.
+A horizontal token stream: each token a rounded box, the last three ghosted with
+probability percentages beside them, so the image carries the post's actual claim —
+prediction, not lookup. Kicker `TOKENS · WINDOWS` in spaced mono caps. **No number and no
+series label.** Palette, type stack and export step per the `hero-image` skill.
 
 ---
 
@@ -143,4 +155,7 @@ colours plus a neutral background, per the series system in the root `README.md`
 - Do not explain attention or transformer architecture. It does not change what the reader
   does on Monday.
 - Do not moralise about hallucination. Explain the mechanism and let the reader conclude.
-- Resist the urge to add prompting tips here — they belong in post 2.
+- Resist the urge to add prompting tips here. This post explains the machine; a post
+  about working with it is a different piece and this one does not advertise it.
+- Do not send the reader anywhere else to finish an idea. Anything the argument leans on
+  is explained here, briefly, or left out.

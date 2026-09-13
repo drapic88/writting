@@ -1,6 +1,11 @@
-# Plan — post 4: The Readiness Gate Is the Cheapest Bug Fix You Own
+# Plan — The Readiness Gate Is the Cheapest Bug Fix You Own
 
-**Series:** *From Assistant to Agent*, part 4 of 10 (Craft)
+**Standalone post.** This brief was written when these posts were planned as a
+ten-part series. That is superseded: the draft carries no series note, no next-post
+link and no cross-reference to another post in `blog-post/`. Where a section below
+says to link to another post, explain the idea in a sentence or two inside this draft
+instead, or leave it out. See [`../CRAFT.md`](../CRAFT.md).
+
 **Source:** advanced workshop deck, slide 6 (with a beat from slide 14)
 **Status:** brief · not drafted
 
@@ -36,7 +41,6 @@ checklist, and why agents make underspecified tickets more expensive, not less."
 - **Audience:** engineers and tech leads who own an implementation decision. This one also
   reads well to an engineering manager, which is useful for reach.
 - **Tags:** `AI`, `Software Engineering`, `Programming`, `Developer Tools`, `Productivity`
-- **Series slot:** publish 6th.
 
 ---
 

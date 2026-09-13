@@ -1,6 +1,11 @@
-# Plan — post 9: An Agent You Can Pipe Into `jq`
+# Plan — An Agent You Can Pipe Into `jq`
 
-**Series:** *From Assistant to Agent*, part 9 of 10 (Trust)
+**Standalone post.** This brief was written when these posts were planned as a
+ten-part series. That is superseded: the draft carries no series note, no next-post
+link and no cross-reference to another post in `blog-post/`. Where a section below
+says to link to another post, explain the idea in a sentence or two inside this draft
+instead, or leave it out. See [`../CRAFT.md`](../CRAFT.md).
+
 **Source:** advanced workshop deck, slides 22–23
 **Status:** brief · not drafted
 
@@ -36,7 +41,6 @@ schema output as a build gate."
   should be a pipeline step." Narrower audience than the rest of the series but a much
   higher-intent one.
 - **Tags:** `AI`, `DevOps`, `Software Engineering`, `Developer Tools`, `Automation`
-- **Series slot:** publish 9th.
 
 ---
 

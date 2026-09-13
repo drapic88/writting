@@ -1,6 +1,11 @@
-# Plan — post 7: "Done" Is Five Separate Claims
+# Plan — "Done" Is Five Separate Claims
 
-**Series:** *From Assistant to Agent*, part 7 of 10 (Trust) — **FLAGSHIP**
+**Standalone post.** This brief was written when these posts were planned as a
+ten-part series. That is superseded: the draft carries no series note, no next-post
+link and no cross-reference to another post in `blog-post/`. Where a section below
+says to link to another post, explain the idea in a sentence or two inside this draft
+instead, or leave it out. See [`../CRAFT.md`](../CRAFT.md).
+
 **Source:** advanced workshop deck, slides 13–17
 **Status:** brief · not drafted
 
@@ -37,7 +42,6 @@ reports 'shipped' — and the evidence standard that makes it impossible to say 
 - **Audience:** engineers, QA, and leads who have to decide whether agent output can be
   believed. This is the post to send to a sceptical staff engineer.
 - **Tags:** `AI`, `Software Engineering`, `Software Testing`, `Programming`, `Developer Tools`
-- **Series slot:** **publish second**, right after post 3.
 
 ---
 

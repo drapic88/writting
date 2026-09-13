@@ -1,6 +1,11 @@
-# Plan — post 8: The Container Is the Security Model, Not the Prompt
+# Plan — The Container Is the Security Model, Not the Prompt
 
-**Series:** *From Assistant to Agent*, part 8 of 10 (Trust)
+**Standalone post.** This brief was written when these posts were planned as a
+ten-part series. That is superseded: the draft carries no series note, no next-post
+link and no cross-reference to another post in `blog-post/`. Where a section below
+says to link to another post, explain the idea in a sentence or two inside this draft
+instead, or leave it out. See [`../CRAFT.md`](../CRAFT.md).
+
 **Source:** advanced workshop deck, slides 18–21, 24, 29
 **Status:** brief · not drafted
 
@@ -35,7 +40,6 @@ that do not depend on anyone paying attention.
   has to answer a security review about it. Also the post most likely to reach a
   platform/DevOps audience.
 - **Tags:** `AI`, `DevOps`, `Security`, `Software Engineering`, `Developer Tools`
-- **Series slot:** publish 4th.
 
 ---
 

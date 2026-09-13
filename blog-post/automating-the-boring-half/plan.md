@@ -1,6 +1,11 @@
-# Plan — post 10: A Tip Nobody Installs Is Not a Tip
+# Plan — A Tip Nobody Installs Is Not a Tip
 
-**Series:** *From Assistant to Agent*, part 10 of 10 (Trust)
+**Standalone post.** This brief was written when these posts were planned as a
+ten-part series. That is superseded: the draft carries no series note, no next-post
+link and no cross-reference to another post in `blog-post/`. Where a section below
+says to link to another post, explain the idea in a sentence or two inside this draft
+instead, or leave it out. See [`../CRAFT.md`](../CRAFT.md).
+
 **Source:** advanced workshop deck, slides 25–28, 30
 **Status:** brief · not drafted
 
@@ -36,7 +41,6 @@ recurrence surface, and why distribution is harder than the insight."
 - **Audience:** anyone who has built a good agent setup and watched nobody else adopt it.
   Leads and staff engineers especially.
 - **Tags:** `AI`, `Automation`, `Software Engineering`, `Developer Tools`, `Productivity`
-- **Series slot:** publish last. It carries the series wrap-up.
 
 ---
 

@@ -2,7 +2,7 @@
 
 ### You are not writing prompts. You are curating what is in the window when the model decides.
 
-*Part 3 of* From Assistant to Agent — *a series on running coding agents inside a real, governed codebase. Command names in this post move between releases; check them against your own version rather than trusting a blog post from months ago.*
+*Written against the coding agents I use daily, in September 2026. Command names move between releases; check them against your own version rather than trusting a blog post from months ago.*
 
 ![Context is the product — instructions, retrieved context, and delegated summaries inside one window](./hero.png)
 
@@ -30,7 +30,7 @@ Everything the model can see when it decides comes from exactly three places. Na
 
 **Retrieved** context is everything pulled in during the session — files you or the agent read, command output, test results, connector responses. This is the volatile majority of the window, and it is the part that grows without anyone deciding it should. A single `git log` on a busy repository can cost more window than every instruction file you own. Nobody chose that. It accumulated.
 
-The growth is also one-directional, which is the part people underestimate. Instruction files are roughly constant. Retrieved context only ever goes up over a session, until you clear it — so a window that felt spacious at 9am is genuinely crowded by 3pm, on the same machine, with the same model, doing the same kind of work. (If the phrase "context window" is doing a lot of unexplained work here, [post 1](#) covers the mechanics.)
+The growth is also one-directional, which is the part people underestimate. Instruction files are roughly constant. Retrieved context only ever goes up over a session, until you clear it — so a window that felt spacious at 9am is genuinely crowded by 3pm, on the same machine, with the same model, doing the same kind of work. The window is simply everything the model can see when it decides — your messages, the files and command output in the session, and its own previous replies — and it is finite.
 
 **Delegated** context is the interesting one. It is the summary a subagent hands back *instead of* the raw material. You asked which of six services still call a deprecated endpoint; a separate session burned its own window on two hundred search hits and returned four lines. The two hundred hits never entered your window at all.
 
@@ -158,7 +158,3 @@ The model is not the variable you control day to day. The window is.
 So when output degrades, don't reach for a better prompt — reach for the three questions. What instructions am I loading whether I meant to or not? What did this session read that it didn't need? And what should I have delegated so it never entered my window at all?
 
 Answer those and most "the AI got worse" conversations end before they start.
-
----
-
-*Next in the series: **The Readiness Gate Is the Cheapest Bug Fix You Own** — why an agent makes an underspecified ticket more expensive rather than less, and the ten-section checklist that stops it.*

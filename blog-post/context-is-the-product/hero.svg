@@ -12,16 +12,13 @@
 
   <rect width="1400" height="650" fill="#FAF8F4"/>
 
-  <!-- series label -->
-  <rect x="80" y="54" width="120" height="3" class="accent"/>
-  <text x="80" y="84" class="m" font-size="14" fill="#8A93A3" letter-spacing="1">FROM ASSISTANT TO AGENT</text>
-
-  <!-- number -->
-  <text x="80" y="178" class="h" font-size="120" font-weight="700" fill="#E4DED3">03</text>
+  <!-- kicker -->
+  <rect x="80" y="92" width="120" height="3" class="accent"/>
+  <text x="80" y="122" class="m" font-size="14" fill="#8A93A3" letter-spacing="1">CONTEXT WINDOWS</text>
 
   <!-- title -->
-  <text x="80" y="238" class="h ink" font-size="58" font-weight="700">Context is the product</text>
-  <text x="80" y="284" class="s mute" font-size="24">You are not writing prompts. You are curating a window.</text>
+  <text x="80" y="206" class="h ink" font-size="58" font-weight="700">Context is the product</text>
+  <text x="80" y="252" class="s mute" font-size="24">You are not writing prompts. You are curating a window.</text>
 
   <!-- raw material feeding in (left) -->
   <text x="80" y="360" class="m" font-size="14" fill="#B0B7C2" letter-spacing="1">RAW MATERIAL</text>

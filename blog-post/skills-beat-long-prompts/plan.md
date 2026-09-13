@@ -1,6 +1,11 @@
-# Plan — post 6: Stop Retyping Procedures. Commit Them.
+# Plan — Stop Retyping Procedures. Commit Them.
 
-**Series:** *From Assistant to Agent*, part 6 of 10 (Craft)
+**Standalone post.** This brief was written when these posts were planned as a
+ten-part series. That is superseded: the draft carries no series note, no next-post
+link and no cross-reference to another post in `blog-post/`. Where a section below
+says to link to another post, explain the idea in a sentence or two inside this draft
+instead, or leave it out. See [`../CRAFT.md`](../CRAFT.md).
+
 **Source:** advanced workshop deck, slides 10 and 28
 **Status:** brief · not drafted
 
@@ -35,7 +40,6 @@ should live next to the code it describes."
 - **Audience:** engineers who have a `prompts.md` in their home directory, and leads trying
   to make one person's good practice reach the team.
 - **Tags:** `AI`, `Software Engineering`, `Developer Tools`, `Programming`, `Automation`
-- **Series slot:** publish 8th.
 
 ---
 

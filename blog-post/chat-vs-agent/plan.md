@@ -1,6 +1,11 @@
-# Plan — post 2: Chat Answers. An Agent Acts.
+# Plan — Chat Answers. An Agent Acts.
 
-**Series:** *From Assistant to Agent*, part 2 of 10 (Foundations)
+**Standalone post.** This brief was written when these posts were planned as a
+ten-part series. That is superseded: the draft carries no series note, no next-post
+link and no cross-reference to another post in `blog-post/`. Where a section below
+says to link to another post, explain the idea in a sentence or two inside this draft
+instead, or leave it out. See [`../CRAFT.md`](../CRAFT.md).
+
 **Source:** "AI basic" deck, slides 5–10
 **Status:** brief · not drafted
 
@@ -37,8 +42,6 @@ your tests, and decide what to do next."
 - **Audience:** engineers who have used a chat assistant and are about to be handed an
   agentic tool, plus leads deciding whether to roll one out.
 - **Tags:** `AI`, `Software Engineering`, `Developer Tools`, `Programming`, `Productivity`
-- **Series slot:** publish 3rd, after the two flagships — it is the natural "start here"
-  post to link back to.
 
 ---
 
