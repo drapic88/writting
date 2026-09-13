@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 650" width="1400" height="650" role="img" aria-label="An LLM predicts the next token from what is in its context window — it has no memory of you and no database of facts">
+  <defs>
+    <style>
+      .ink   { fill: #12203A; }
+      .mute  { fill: #6B7789; }
+      .accent{ fill: #E0662E; }
+      .h     { font-family: Georgia, 'Times New Roman', serif; }
+      .m     { font-family: 'SF Mono', 'DejaVu Sans Mono', Menlo, monospace; }
+      .s     { font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="1400" height="650" fill="#FAF8F4"/>
+
+  <!-- kicker -->
+  <rect x="80" y="92" width="120" height="3" class="accent"/>
+  <text x="80" y="122" class="m" font-size="14" fill="#8A93A3" letter-spacing="1">TOKENS · WINDOWS</text>
+
+  <!-- title -->
+  <text x="80" y="206" class="h ink" font-size="58" font-weight="700">No memory. A window.</text>
+  <text x="80" y="252" class="s mute" font-size="24">It predicts the next token from whatever is on the desk.</text>
+
+  <!-- the stream -->
+  <text x="80" y="330" class="m" font-size="14" fill="#B0B7C2" letter-spacing="1">WHAT IS IN THE WINDOW</text>
+
+  <rect x="80" y="366" width="132" height="70" rx="8" fill="#12203A"/>
+  <text x="146" y="410" class="m" font-size="26" fill="#FAF8F4" text-anchor="middle">The</text>
+
+  <rect x="224" y="366" width="176" height="70" rx="8" fill="#12203A"/>
+  <text x="312" y="410" class="m" font-size="26" fill="#FAF8F4" text-anchor="middle">build</text>
+
+  <rect x="412" y="366" width="110" height="70" rx="8" fill="#12203A"/>
+  <text x="467" y="410" class="m" font-size="26" fill="#FAF8F4" text-anchor="middle">is</text>
+
+  <!-- the empty slot -->
+  <rect x="534" y="366" width="132" height="70" rx="8" fill="none" stroke="#E0662E" stroke-width="2.5" stroke-dasharray="7 7"/>
+  <text x="600" y="410" class="m" font-size="26" fill="#E0662E" text-anchor="middle">?</text>
+
+  <!-- arrow into the candidates -->
+  <path d="M 690 401 L 754 401" stroke="#E0662E" stroke-width="2.5" fill="none"/>
+  <path d="M 746 393 L 758 401 L 746 409 Z" fill="#E0662E"/>
+
+  <!-- candidates -->
+  <text x="786" y="330" class="m" font-size="14" fill="#B0B7C2" letter-spacing="1">NEXT TOKEN, BY PROBABILITY</text>
+
+  <text x="786" y="378" class="m" font-size="19" fill="#12203A">green</text>
+  <rect x="786" y="390" width="460" height="10" rx="5" fill="#E0662E"/>
+
+  <text x="786" y="442" class="m" font-size="19" fill="#6B7789">failing</text>
+  <rect x="786" y="454" width="236" height="10" rx="5" fill="#E0662E" fill-opacity="0.55"/>
+
+  <text x="786" y="506" class="m" font-size="19" fill="#B0B7C2">purple</text>
+  <rect x="786" y="518" width="54" height="10" rx="5" fill="#E4DED3"/>
+
+  <!-- the point -->
+  <rect x="80" y="550" width="1166" height="2" fill="#E4DED3"/>
+  <text x="80" y="588" class="s" font-size="20" fill="#12203A">No lookup step. No table of facts. No memory of you between requests.</text>
+  <text x="80" y="618" class="s" font-size="17" fill="#8A93A3">Ordering, not measurement — the real distribution depends on every token before it.</text>
+
+</svg>
