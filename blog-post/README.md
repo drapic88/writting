@@ -24,7 +24,7 @@ whatever is worth writing about. The table is an index, not a sequence.
 | `how-llms-actually-work` | Your LLM Has No Memory. It Has a Window. | 1,200–1,500 | **drafted** |
 | `chat-vs-agent` | Chat Answers. An Agent Acts. | 1,500–1,800 | **drafted** |
 | `plan-before-you-let-it-code` | The Readiness Gate Is the Cheapest Bug Fix You Own | 1,700–2,000 | **drafted** |
-| `subagents-and-parallelism` | Subagents Buy Context Isolation, Not Speed | 1,900–2,200 | plan |
+| `subagents-and-parallelism` | Subagents Buy Context Isolation, Not Speed | 1,900–2,200 | **drafted** |
 | `skills-beat-long-prompts` | Stop Retyping Procedures. Commit Them. | 1,600–1,900 | plan |
 | `evidence-over-assertion` | "Done" Is Five Separate Claims | 2,100–2,400 | plan |
 | `design-the-blast-radius` | The Container Is the Security Model, Not the Prompt | 1,900–2,200 | plan |
