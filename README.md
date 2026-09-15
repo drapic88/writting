@@ -4,7 +4,7 @@ Dragan Rapić's writing workspace. Four formats, one voice.
 
 | Format | Where | Craft spec | What it is |
 |--------|-------|-----------|------------|
-| Blog posts | [`blog-post/`](blog-post/) | [`blog-post/CRAFT.md`](blog-post/CRAFT.md) | technical posts for Medium, currently the ten-part *From Assistant to Agent* series |
+| Blog posts | [`blog-post/`](blog-post/) | [`blog-post/CRAFT.md`](blog-post/CRAFT.md) | standalone technical posts for Medium; [`blog-post/README.md`](blog-post/README.md) indexes them in publishing order |
 | Stories | [`stories/`](stories/) | [`stories/CRAFT.md`](stories/CRAFT.md) | narrative non-fiction for the personal site — AI and technology accounts from real work |
 | Books | [`books/`](books/) | [`books/CRAFT.md`](books/CRAFT.md) | long-form; scaffold in place, no book chosen yet |
 | Croatian, any format | alongside the English piece | [`CROATIAN.md`](CROATIAN.md) | originals, never translations |

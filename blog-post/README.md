@@ -15,25 +15,70 @@ needs, in its own words, as briefly as its own argument allows.
 
 Derived from two internal talks — an introductory "Using AI" briefing and a 30-slide
 advanced workshop on coding, QA, DevOps and daily automation — plus standalone pieces on
-whatever is worth writing about. The table is an index, not a sequence.
+whatever is worth writing about.
 
-| Folder | Working title | Words | Status |
-|--------|---------------|-------|--------|
-| `php-8.6-small-release` | PHP 8.6 Is a Small Release With a Big Warning Label | 3,000 | **drafted** |
-| `context-is-the-product` | Your AI Didn’t Get Worse. Your Context Did. | 2,100 | **drafted** |
-| `how-llms-actually-work` | Your LLM Has No Memory. It Has a Window. | 1,200–1,500 | **drafted** |
-| `chat-vs-agent` | Chat Answers. An Agent Acts. | 1,500–1,800 | **drafted** |
-| `plan-before-you-let-it-code` | The Readiness Gate Is the Cheapest Bug Fix You Own | 1,700–2,000 | **drafted** |
-| `subagents-and-parallelism` | Subagents Buy Context Isolation, Not Speed | 1,900–2,200 | **drafted** |
-| `skills-beat-long-prompts` | Stop Retyping Procedures. Commit Them. | 1,600–1,900 | plan |
-| `evidence-over-assertion` | "Done" Is Five Separate Claims | 2,100–2,400 | plan |
-| `design-the-blast-radius` | The Container Is the Security Model, Not the Prompt | 1,900–2,200 | plan |
-| `the-agent-as-a-unix-tool` | An Agent You Can Pipe Into `jq` | 1,600–1,900 | plan |
-| `automating-the-boring-half` | A Tip Nobody Installs Is Not a Tip | 1,700–2,000 | plan |
+The table is ordered by **publishing order** — the sequence to ship them in, not a reading
+order. Nothing in a post depends on an earlier one; a reader arriving at #9 from search gets
+a complete argument. The order exists because publishing is sequential and the first posts
+have to carry the ones behind them.
 
-The briefs written before this convention changed still contain instructions to link
-forward and back between posts. Those instructions are superseded; the note at the top of
-each brief says so.
+| # | Folder | Working title | Words | Status |
+|---|--------|---------------|-------|--------|
+| 1 | `context-is-the-product` | Your AI Didn’t Get Worse. Your Context Did. | 2,100 | **drafted** |
+| 2 | `how-llms-actually-work` | Your LLM Has No Memory. It Has a Window. | 1,200–1,500 | **drafted** |
+| 3 | `chat-vs-agent` | Chat Answers. An Agent Acts. | 1,500–1,800 | **drafted** |
+| 4 | `php-8.6-small-release` | PHP 8.6 Is a Small Release With a Big Warning Label | 3,000 | **drafted** |
+| 5 | `plan-before-you-let-it-code` | The Readiness Gate Is the Cheapest Bug Fix You Own | 1,700–2,000 | **drafted** |
+| 6 | `subagents-and-parallelism` | Subagents Buy Context Isolation, Not Speed | 1,900–2,200 | **drafted** |
+| 7 | `evidence-over-assertion` | "Done" Is Five Separate Claims | 2,100–2,400 | plan |
+| 8 | `design-the-blast-radius` | The Container Is the Security Model, Not the Prompt | 1,900–2,200 | plan |
+| 9 | `skills-beat-long-prompts` | Stop Retyping Procedures. Commit Them. | 1,600–1,900 | plan |
+| 10 | `the-agent-as-a-unix-tool` | An Agent You Can Pipe Into `jq` | 1,600–1,900 | plan |
+| 11 | `automating-the-boring-half` | A Tip Nobody Installs Is Not a Tip | 1,700–2,000 | plan |
+
+### Why this order
+
+**1–6 are the six that already have an `article.md`.** They ship as written; only 7–11 need
+drafting time, so the order also keeps a publishable post in hand while the next brief is
+still a brief.
+
+- **#1 `context-is-the-product` opens** because it is the most differentiated post in the
+  folder — Medium is saturated with prompt tips and near-empty on context design — and its
+  title is the highest click-through of the eleven. The first post is the one that has to
+  find readers with no audience behind it.
+- **#2 `how-llms-actually-work` follows** as the explainer with the widest search surface.
+  It is the shortest post here, it answers the question #1 raises for a reader who has never
+  thought about the window, and it is the one most likely to keep earning traffic a year on.
+- **#3 `chat-vs-agent`** draws the category line — answer you evaluate, process you
+  supervise — which is the frame every practice post after it assumes.
+- **#4 `php-8.6-small-release` is time-boxed and everything else is not.** PHP 8.6 GA is
+  **19 November 2026**; the post is worth the most in the weeks either side of that date and
+  loses value steadily after. Publish it in the run-up, then refresh the beta-era specifics
+  at GA. It also breaks the AI cadence and pulls a different audience, which is a second
+  reason to place it here rather than at the end.
+- **#5 `plan-before-you-let-it-code` and #6 `subagents-and-parallelism`** are the first two
+  practice posts, in that order: the readiness gate is the cheaper, more universal
+  intervention, and the subagents post is mildly contrarian — worth more to readers who have
+  already tried the thing and seen the token bill.
+- **#7 `evidence-over-assertion`** is the strongest post in the folder and the strongest
+  title, so it goes first among the undrafted ones. It is deliberately not #1: "Done Is Five
+  Separate Claims" lands hardest on a reader who is already running agents, which is the
+  audience the first six build.
+- **#8 `design-the-blast-radius`** reaches outside the usual readership — security reviewers
+  and the people who have to answer them — so it is best published once there is something
+  behind it to link to from a profile.
+- **#9–#11 are the narrowing tail.** `skills-beat-long-prompts` needs the reader to already
+  keep procedures somewhere; `the-agent-as-a-unix-tool` is for CI and platform people;
+  `automating-the-boring-half` is about compounding and distribution, which is the idea that
+  reads best last, to an audience that has adopted something.
+
+Publishing order is an editorial decision and nothing in the drafts encodes it. Reorder it
+freely — move a post up when its subject is suddenly live, or when a brief is ready earlier
+than planned.
+
+The briefs written before the standalone convention changed still contain instructions to
+link forward and back between posts. Those instructions are superseded; the note at the top
+of each brief says so.
 
 ---
 
