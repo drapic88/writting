@@ -24,10 +24,10 @@ have to carry the ones behind them.
 
 | # | Folder | Working title | Words | Status |
 |---|--------|---------------|-------|--------|
-| 1 | `context-is-the-product` | Your AI Didn’t Get Worse. Your Context Did. | 2,100 | **drafted** |
-| 2 | `how-llms-actually-work` | Your LLM Has No Memory. It Has a Window. | 1,200–1,500 | **drafted** |
-| 3 | `chat-vs-agent` | Chat Answers. An Agent Acts. | 1,500–1,800 | **drafted** |
-| 4 | `php-8.6-small-release` | PHP 8.6 Is a Small Release With a Big Warning Label | 3,000 | **drafted** |
+| 1 | `context-is-the-product` | Your AI Didn’t Get Worse. Your Context Did. | 2,100 | **published** |
+| 2 | `how-llms-actually-work` | Your LLM Has No Memory. It Has a Window. | 1,200–1,500 | **published** |
+| 3 | `chat-vs-agent` | Chat Answers. An Agent Acts. | 1,500–1,800 | **published** |
+| 4 | `php-8.6-small-release` | PHP 8.6 Is a Small Release With a Big Warning Label | 3,000 | **published** |
 | 5 | `plan-before-you-let-it-code` | The Readiness Gate Is the Cheapest Bug Fix You Own | 1,700–2,000 | **drafted** |
 | 6 | `subagents-and-parallelism` | Subagents Buy Context Isolation, Not Speed | 1,900–2,200 | **drafted** |
 | 7 | `evidence-over-assertion` | "Done" Is Five Separate Claims | 2,100–2,400 | **drafted** |

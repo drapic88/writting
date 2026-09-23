@@ -1,6 +1,6 @@
 # Article plan — "PHP 8.6: What's New, What Breaks, and How to Migrate"
 
-**Platform:** Medium · **Status:** planning / drafting brief
+**Platform:** Medium · **Status:** published
 **Researched:** 2026-09-08, when PHP 8.6 was at **beta 3** (feature freeze passed, so the
 feature list below is effectively final — only bug fixes land between now and GA).
 **PHP 8.6 GA:** **19 November 2026**

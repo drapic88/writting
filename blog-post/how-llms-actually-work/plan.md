@@ -7,7 +7,7 @@ says to link to another post, explain the idea in a sentence or two inside this 
 instead, or leave it out. See [`../CRAFT.md`](../CRAFT.md).
 
 **Source:** "AI basic" deck, slides 3–4
-**Status:** brief · drafted
+**Status:** brief · published
 
 ---
 
