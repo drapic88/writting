@@ -38,7 +38,7 @@ have to carry the ones behind them.
 
 ### Why this order
 
-**1–6 are the six that already have an `article.md`.** They ship as written; only 7–11 need
+**1–4 are published and 5–7 are drafted.** The drafts ship as written; only 8–11 need
 drafting time, so the order also keeps a publishable post in hand while the next brief is
 still a brief.
 
@@ -53,15 +53,15 @@ still a brief.
   supervise — which is the frame every practice post after it assumes.
 - **#4 `php-8.6-small-release` is time-boxed and everything else is not.** PHP 8.6 GA is
   **19 November 2026**; the post is worth the most in the weeks either side of that date and
-  loses value steadily after. Publish it in the run-up, then refresh the beta-era specifics
-  at GA. It also breaks the AI cadence and pulls a different audience, which is a second
+  loses value steadily after. It went out in the run-up; the beta-era specifics still need a
+  refresh at GA. It also breaks the AI cadence and pulls a different audience, which is a second
   reason to place it here rather than at the end.
 - **#5 `plan-before-you-let-it-code` and #6 `subagents-and-parallelism`** are the first two
   practice posts, in that order: the readiness gate is the cheaper, more universal
   intervention, and the subagents post is mildly contrarian — worth more to readers who have
   already tried the thing and seen the token bill.
 - **#7 `evidence-over-assertion`** is the strongest post in the folder and the strongest
-  title, so it goes first among the undrafted ones. It is deliberately not #1: "Done Is Five
+  title, so it closes the run of drafted posts before the briefs begin. It is deliberately not #1: "Done Is Five
   Separate Claims" lands hardest on a reader who is already running agents, which is the
   audience the first six build.
 - **#8 `design-the-blast-radius`** reaches outside the usual readership — security reviewers
