@@ -1,18 +1,123 @@
 # Starac u mladosti
 
-> Radna verzija. Ispravljeni su samo pravopis, tipfeleri i interpunkcija. Riječi, redoslijed
-> i stil su autorovi. Izvornik je u [original.md](original.md).
+> Prerađena verzija za slikovnicu (7 do 10 godina), prema [plan.md](plan.md).
+> Brojevi u komentarima su dvostranice. Izvornik je u [original.md](original.md), a verzija
+> sa samo ispravljenim pravopisom je u commitu `36b9f3a`.
 
-Kad sam bio stari čovjek, u moje mlado doba, rodio mi se otac. Nakon veselja u kući što je došla prinova, počelo se razgovarati o krštenju. Tada je bio običaj da se beba krsti što prije. Ja, kao najstarije dijete u roditelja i još muško, odrediše me da idem donijeti svete vode za krštenje kod Svetog Petra. Cijeli dan su me pripremali i objašnjavali kuda i kako trebam ići da ne bih zalutao. U seljačku torbu, onu vunenu, lijepo ukrašenu s kitama i resama, stavili su mi hrane za više dana. Također su u torbu stavili i tikvicu za vodu, jer tada nije bilo staklenih ni plastičnih boca. Jednu malu tikvicu za svetu vodu, lijepo okićenu, zamotali su u smotuljak da je ne bih izgubio. U slučaju neke nezgode tu tikvicu sam mogao objesiti oko vrata. Taj dan sam otišao rano leći da bih ujutro što ranije mogao krenuti na taj put pun iznenađenja. I prije nego je sunce počelo izlaziti, moji su me probudili, objesili mi torbu na rame i uputili me na već objašnjen put. I tako, u ranim jutarnjim satima, pun samo pouzdanja, krenem prašnjavim seoskim putem po svetu vodu. Žurio sam da što više pređem puta prije nego ugrije sunce. Žureći tako, dođem do neke čudne šume iz koje su se čuli čudni zvukovi. U prvi moment sam se prepao. Sjetim se priče starijih da te zvukove zna stvarati povjetarac koji puše kroz šumu. To me umirilo. Prolazeći dalje kroz šumu, osjetim da se primiče večer. I na samom izlazu iz šume vidim kuću na ivici šume. Već se smračilo. Priđem kući, pokucam te čujem glas koji me poziva da uđem. Otvorim vrata i vidim na sredini ognjište gdje gori vatra te starca sa ženom kako večeraju za sinijom. „Dobra večer“, rečem, a oni uglas: „I tebi, sinko. Koje dobro u ovo doba? Večeraj s nama ako si gladan.“ Svoj dolazak im objasnim nakon što smo večerali. Ponudili su mi i da prenoćim, što sam radosno prihvatio. Ujutro su me probudili, dali mi doručkovati i vodom nalili tikvicu koja je već bila prazna. Starica me zamoli da joj iz obližnje šume donesem drva za ložiti. To sam i učinio, kao zahvalu što su mi dali prenoćište. Prije nego smo se razišli, starica mi je dala u maloj kesici malo boba, da mogu jesti putem kad ogladnim. Starac je još jednom objasnio kuda trebam ići i zaželio mi sretan put. I tako ja krenem dalje raznim puteljcima koji su se protezali raznim uzbrdicama i udolinama. Umoran, sa žuljevima na stopalima, dođem predvečer u jednu udolinu okruženu šumom. Tu odlučim stati i prenoćiti. Iz torbe sam izvadio što sam imao za jesti. Hrane je bilo malo te sam uzeo i boba što mi ga je dala starica. Tako umoran, zaspem. Ujutro, kad je sunce počelo izlaziti, čujem neko zvonce i blejanje ovaca. Probudim se i, trljajući oči, vidim neku staricu kako tjera ovce i koze u ovu udolinu. Okrenem se i vidim da je u visinu narastao veliki bob kojem ne vidim kraja.
+<!-- 1 -->
 
-Shvatim da je to bob koji mi je dala starica, a sinoć mi je ispao na zemlju dok sam pokušavao jesti. Kroz glavu mi odmah prođe: zašto se ne bih pokušao popeti tim bobom i tako možda skratiti put do Svetog Petra? Stavim torbu preko leđa i počnem se penjati. Penjući se tako, vidim da bob sve više i više raste. I nakon priličnog penjanja, kad sam već bio umoran, ugledam nešto kao vrata. Približim se, i kad stavim ruku da gurnem vrata, ona se sama otvore. Uđem unutra i vidim blještavilo i sjaj. Također vidim i druge ljude koji se kreću tim hodnikom. Na kraju hodnika vidim da ljudi izlaze iz tih zidova i natpis gdje se što nalazi. Nema redova, nema čekanja. Hodajući hodnikom, dođem do natpisa „Sveti Petar“. Približim se vratima, ona se otvore i uđem unutra. Iza šaltera mi netko pruži posudu sa svetom vodom, kao da su znali što mi treba. Osjetio sam da mi se misli čitaju. Uzmem tikvicu što su mi moji dali i u nju ulijem svetu vodu. Začepim je, objesim oko vrata te krenem natrag, sav sretan što sam uspio dobiti svete vode. Moji će biti radosni i ponosni na mene. Kad sam došao do vrata kroz koja sam ušao, čekalo me iznenađenje. Vidim da nema boba. Što ću sada?! Razmišljam jesam li falio izlaz i shvatim da su bob pregrizle koze one starice koja je došla prije nego što sam se počeo penjati. Razmišljam dalje te počnem sumnjati da je to zato što se nisam javio starici kad je prolazila s kozama i ovcama. I danas mislim da sam se trebao javiti. Što je, tu je, treba se nekako vratiti. Pomislim da je najbolje da isparam konac (pređu) s torbe i robe te napravim uže. Kad sam sve ispleo, spustim ga prema zemlji i shvatim da fali još puno do zemlje. Što ću sad? Ostaje mi jedino da čupam dlake sa sebe i da ih nadovežem na uže. Kad to učinim, spremim se za spuštanje. Tikvicu sa svetom vodom dobro zavežem oko vrata, da je ne izgubim. I tako dođem do kraja toga užeta, pogledam dolje i shvatim da fali još oko 80 do 100 metara. Što da radim sad? Počnem zvati, vikati, ali nitko me nije čuo. Vidim da sunce polagano počinje zalaziti i odlučim da ću skočiti.
+Kad sam bio stari čovjek, u moje mlado doba, rodio mi se otac. Nakon veselja u kući što je došla prinova, počelo se razgovarati o krštenju. Tada je bio običaj da se beba krsti što prije. Ja, kao najstarije dijete u roditelja i još muško, odrediše me da idem donijeti svete vode za krštenje kod Svetog Petra.
 
-Prilikom doskoka noga mi zapne u jednu rupu između dva kamena. Ne mogu je izvući, a nema nikoga da mi pomogne. Počeo sam se bojati da bi me možda napale neke životinje. Nakon kratkog razmišljanja odlučim da odem doma po motiku te razbijem kamen i izvučem nogu.
+<!-- 2 -->
 
-Odahnem i, sav sretan, vratim se kući. Dolaskom pred kuću vidim da i ostali ukućani dolaze kući od svojih obaveza. Netko iz polja, netko iz paše, vraćajući ovce. Predam im svetu vodu, a oni ubrzano počnu pripreme za sutrašnje krštenje. Kad je sve bilo pripremljeno, večeramo i pođosmo spavati. Pošto sam bio umoran, ujutro sam duže spavao. Moji me nisu probudili te su bez mene išli na krštenje.
+Cijeli dan su me pripremali. U seljačku torbu, onu vunenu, lijepo ukrašenu s kitama i resama, stavili su mi hrane za više dana i tikvicu za vodu. Za svetu vodu dali su mi jednu malu tikvicu, lijepo okićenu, i zamotali je u smotuljak da je ne bih izgubio.
 
-Izađem na dvorišna vrata i ugledam susjeda starca sa štapom, onako sijedog i punog životnog iskustva. On mi kaže:
+„Ako se dogodi kakva nezgoda, objesi je oko vrata“, rekli su mi.
 
-„E, moj sinko, možeš ponekad lagati da nekoga zabaviš, ali nemoj nikada živjeti u laži.“ Shvatim to ozbiljno i zbog te poruke od starca odlučim ispričati ovu istinitu laž.
+Stariji su mi objašnjavali kuda i kako trebam ići:
 
-Čiča miča, gotova je priča. Kad se laže, ovako se kaže.
+„Kroz šumu, pa preko uzbrdica i udolina. Ako u šumi čuješ čudne zvukove, ne boj se, to je samo povjetarac. I svakome se usput javi.“
+
+<!-- 3 -->
+
+I prije nego je sunce počelo izlaziti, moji su me probudili, objesili mi torbu na rame i uputili me na put. Pun samo pouzdanja, krenem prašnjavim seoskim putem po svetu vodu. Žureći tako, dođem do neke čudne šume iz koje su se čuli čudni zvukovi. Šuštalo je, zviždalo i uzdisalo. U prvi moment sam se prepao. Onda se sjetim što su mi stariji rekli: to je samo povjetarac. I svakome se javi. Stanem pred prvo drvo i kažem:
+
+„Dobar dan, šumo.“
+
+Zvukovi se smire, a povjetarac mi zapuše u leđa, kao da me gura naprijed.
+
+<!-- 4 -->
+
+Prolazeći dalje kroz šumu, osjetim da se primiče večer. Na samom izlazu iz šume vidim kuću. Već se smračilo. Priđem, pokucam te čujem glas koji me poziva da uđem. Otvorim vrata i vidim na sredini ognjište gdje gori vatra te starca sa ženom kako večeraju za sinijom.
+
+„Dobra večer“, rečem.
+
+A oni uglas: „I tebi, sinko. Koje dobro u ovo doba? Večeraj s nama ako si gladan.“
+
+Svoj dolazak im objasnim nakon što smo večerali. Ponudili su mi i da prenoćim, što sam radosno prihvatio.
+
+<!-- 5 -->
+
+Ujutro su mi dali doručkovati i vodom nalili tikvicu koja je već bila prazna. Starica me zamoli da joj iz obližnje šume donesem drva za ložiti. To sam i učinio, kao zahvalu za prenoćište. Prije nego smo se razišli, dala mi je u maloj kesici malo boba, da mogu jesti putem kad ogladnim. Starac je još jednom objasnio kuda trebam ići i zaželio mi sretan put.
+
+<!-- 6 -->
+
+I tako ja krenem dalje raznim puteljcima, uzbrdicama i udolinama. Umoran, sa žuljevima na stopalima, dođem predvečer u jednu udolinu okruženu šumom. Tu odlučim prenoćiti. Iz torbe sam izvadio što sam imao za jesti. Hrane je bilo malo te sam uzeo i boba što mi ga je dala starica. Tako umoran, zaspem.
+
+<!-- 7 -->
+
+Ujutro, kad je sunce počelo izlaziti, čujem neko zvonce i blejanje ovaca. Probudim se i, trljajući oči, vidim neku staricu, pastiricu, kako tjera ovce i koze u ovu udolinu. Prođe tik pokraj mene, a ja se ne javim. Još sam bio bunovan.
+
+Okrenem se i vidim da je u visinu narastao veliki bob kojem ne vidim kraja. Shvatim da je to bob koji mi je dala starica, a sinoć mi je ispao na zemlju dok sam pokušavao jesti.
+
+<!-- 8 -->
+
+Kroz glavu mi odmah prođe: zašto se ne bih pokušao popeti tim bobom i tako možda skratiti put do Svetog Petra? Stavim torbu preko leđa i počnem se penjati. Penjući se tako, vidim da bob sve više i više raste. I nakon priličnog penjanja, kad sam već bio umoran, ugledam nešto kao vrata. Približim se, i kad stavim ruku da gurnem vrata, ona se sama otvore.
+
+<!-- 9 -->
+
+Uđem unutra, a ono blještavilo i sjaj. Dugim hodnikom kreću se ljudi i prolaze kroz vrata u zidovima, a nad svakim vratima je natpis gdje se što nalazi. Nema redova, nema čekanja. Hodajući hodnikom, dođem do natpisa „Sveti Petar“. Vrata se sama otvore i uđem unutra.
+
+Taman sam htio reći „Dobar dan“, a netko mi iza šaltera već pruži posudu sa svetom vodom. Osjetio sam da mi se misli čitaju.
+
+Uzmem malu tikvicu što su mi moji dali, ulijem u nju svetu vodu, začepim je i objesim oko vrata.
+
+<!-- 10 -->
+
+Krenem natrag, sav sretan što sam uspio dobiti svete vode. Moji će biti radosni i ponosni na mene. Kad sam došao do vrata kroz koja sam ušao, čekalo me iznenađenje. Boba nema.
+
+Što ću sad?
+
+Razmišljam jesam li falio izlaz i shvatim da su bob pregrizle koze one pastirice. Počnem sumnjati da je to zato što se nisam javio kad je prolazila. I danas mislim da sam se trebao javiti.
+
+<!-- 11 -->
+
+Što je, tu je, treba se nekako vratiti. Pomislim da je najbolje da isparam konac (pređu) s torbe i robe te napravim uže. Kad sam sve ispleo, spustim ga prema zemlji i shvatim da fali još puno do zemlje.
+
+Što ću sad?
+
+Ostaje mi jedino da čupam dlake sa sebe i da ih nadovežem na uže. Tikvicu sa svetom vodom dobro zavežem oko vrata i spustim se do kraja užeta. Pogledam dolje i shvatim da fali još oko 80 do 100 metara.
+
+Što ću sad?
+
+Počnem zvati, vikati, ali nitko me nije čuo. Sunce polagano počinje zalaziti. Odlučim da ću skočiti.
+
+<!-- 12 -->
+
+Pustim uže i padam. I tada iz šume dopuše onaj isti povjetarac kojem sam se javio. Uhvati me i spušta sve polakše. Ipak ne savršeno: prilikom doskoka noga mi zapne u jednu rupu između dva kamena. Ne mogu je izvući, a nema nikoga da mi pomogne. Počeo sam se bojati da bi me možda napale neke životinje.
+
+Što ću sad?
+
+Nakon kratkog razmišljanja odlučim da odem doma po motiku te razbijem kamen i izvučem nogu.
+
+<!-- 13 -->
+
+Odahnem i, sav sretan, vratim se kući. Prvo odnesem motiku natrag u šupu. Taman su se i ostali ukućani vraćali od svojih obaveza, netko iz polja, netko iz paše vraćajući ovce. Skinem tikvicu s vrata i predam je roditeljima. Ni kap svete vode nije se prolila. Bili su radosni i ponosni na mene, baš kako sam i mislio.
+
+Odmah počnu pripreme za sutrašnje krštenje. Toliko su se žurili da me nitko nije ni pitao kako je bilo. Večeramo i pođosmo spavati.
+
+<!-- 14 -->
+
+Pošto sam bio umoran, ujutro sam duže spavao. Moji me nisu probudili te su bez mene išli na krštenje. Tako sam propustio krštenje svoga oca.
+
+Bilo mi je žao. Ali bio sam i sretan, jer krštenja ne bi ni bilo da nisam donio svete vode od Svetog Petra.
+
+<!-- 15 -->
+
+Izađem na dvorišna vrata i ugledam susjeda starca sa štapom, onako sijedog i punog životnog iskustva. Ovaj put sam se prvi javio:
+
+„Dobro jutro, susjede!“
+
+„Dobro jutro, sinko. Što ti radiš doma kad su tvoji na krštenju?“
+
+I ja mu ispričam sve: šumu, bob do neba, Svetog Petra, uže od dlaka i motiku. Starac me slušao, kimao glavom i smješkao se. Onda mi kaže:
+
+„E, moj sinko, možeš ponekad lagati da nekoga zabaviš, ali nemoj nikada živjeti u laži.“
+
+Shvatim to ozbiljno i zbog te poruke od starca odlučim ispričati ovu istinitu laž.
+
+*Čiča miča, gotova je priča. Kad se laže, ovako se kaže.*
+
+<!-- zadnja stranica -->
+
+A sad ti ispričaj svoju istinitu laž.
