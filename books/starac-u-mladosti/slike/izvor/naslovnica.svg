@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000" role="img" aria-label="Naslovnica: dječak stoji na vrhu golemog boba pred drvenim vratima u zlatnom oblaku, s tikvicom i torbom, i maše čitatelju; daleko dolje crno-bijela koza žvače stabljiku.">
+<!-- likovi -->
+<rect x="0" y="0" width="1000" height="1000" fill="url(#g-nebo-dan)"/>
+<use href="#oblak" transform="translate(140,520) scale(.6)"/>
+<use href="#oblak" transform="translate(880,640) scale(.5)"/>
+<use href="#ptica-leti" transform="translate(820,420) scale(1.2)"/>
+<!-- dolje udolina -->
+<path d="M0,900 Q500,870 1000,890 L1000,1000 L0,1000 Z" fill="#BCC385"/>
+<use href="#hrast" transform="translate(90,930) scale(.6)"/><use href="#hrast" transform="translate(920,930) scale(.6)"/>
+<!-- stabljika -->
+<path d="M560,1010 C520,900 600,820 560,720 C530,640 590,600 560,540" fill="none" stroke="#2F5F2A" stroke-width="46" stroke-linecap="round"/>
+<path d="M560,1010 C520,900 600,820 560,720 C530,640 590,600 560,540" fill="none" stroke="#3F7F37" stroke-width="38" stroke-linecap="round"/>
+<path d="M560,1010 C520,900 600,820 560,720 C530,640 590,600 560,540" fill="none" stroke="#74AE55" stroke-width="7" stroke-linecap="round" transform="translate(-9,0)" opacity=".85"/>
+<use href="#bob-list" transform="translate(566,900) scale(1.1)"/><use href="#bob-list" transform="translate(556,820) scale(-1.1,1.1)"/>
+<use href="#bob-list" transform="translate(570,720) scale(1.05)"/><use href="#bob-list" transform="translate(556,640) scale(-1.05,1.05)"/>
+<use href="#bob-cvijet" transform="translate(590,860) scale(1.3)"/><use href="#bob-cvijet" transform="translate(530,690) scale(-1.3,1.3)"/>
+<use href="#bob-mahuna" transform="translate(590,760)"/>
+<use href="#koza-cb-zvace" transform="translate(470,975) scale(-.8,.8)"/>
+<!-- zlatni oblak s vratima -->
+<circle cx="560" cy="440" r="260" fill="url(#g-sjaj)"/>
+<use href="#oblak-zlatni" transform="translate(560,450) scale(2.4)"/>
+<path d="M650,560 V420 A60,60 0 0,1 770,420 V560 Z" fill="url(#daske)" class="obris"/>
+<circle cx="752" cy="490" r="5" fill="#D9A441" stroke="#3A2A20" stroke-width="1.5"/>
+<path d="M330,560 H800 L780,582 H350 Z" fill="#E8C878" class="obris"/>
+<use href="#djecak-pozdrav" transform="translate(500,560) scale(1.12)"/>
+<!-- naslov (u verziji bez teksta ga nema; dodaje ga prijelom) -->
+<g font-family="Georgia, 'Times New Roman', serif" text-anchor="middle">
+  <text data-natpis="1" x="500" y="120" font-size="78" fill="#7E2020">Starac u mladosti</text>
+  <text data-natpis="1" x="500" y="176" font-size="30" fill="#3A2A20">Dragan Rapić</text>
+</g>
+<rect x="0" y="0" width="1000" height="1000" filter="url(#tekstura)" opacity=".5"/>
+</svg>

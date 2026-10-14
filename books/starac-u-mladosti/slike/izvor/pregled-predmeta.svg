@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1040" viewBox="0 0 2400 1040" role="img" aria-label="Pregled predmeta i životinja">
+<!-- likovi -->
+<rect width="2400" height="1040" fill="#FAF6EC"/>
+<use href="#ovca" transform="translate(120,260) scale(1)"/>
+<use href="#ovca-zvonce" transform="translate(300,260) scale(1)"/>
+<use href="#koza-ide" transform="translate(470,260) scale(1)" style="fill:#8B5A35"/>
+<use href="#koza-pase" transform="translate(640,260) scale(1)" style="fill:#2A2520"/>
+<use href="#koza-cb-gleda-gore" transform="translate(810,260) scale(1)"/>
+<use href="#koza-cb-zvace" transform="translate(980,260) scale(1)"/>
+<use href="#macka-spava" transform="translate(1140,260) scale(1)"/>
+<use href="#ptica" transform="translate(1270,260) scale(1.6)"/>
+<use href="#ptica-cudi" transform="translate(1380,260) scale(1.6)"/>
+<use href="#kokos" transform="translate(1500,260) scale(1.4)"/>
+<use href="#magarac" transform="translate(1680,260) scale(1)"/>
+<use href="#povjetarac" transform="translate(1960,200) scale(1)"/>
+<use href="#ptica-leti" transform="translate(2200,200) scale(2)"/>
+<use href="#kuca" transform="translate(200,640) scale(1)"/>
+<use href="#crkva" transform="translate(500,640) scale(1)"/>
+<use href="#ognjiste" transform="translate(760,640) scale(1)"/>
+<use href="#sinija" transform="translate(980,640) scale(1)"/>
+<use href="#tronozac" transform="translate(1120,640) scale(1)"/>
+<use href="#stol" transform="translate(1300,640) scale(1)"/>
+<use href="#klupa" transform="translate(1560,640) scale(1)"/>
+<use href="#hrast" transform="translate(1780,640) scale(1)"/>
+<use href="#grm" transform="translate(1940,640) scale(1)"/>
+<use href="#kamen" transform="translate(2060,640) scale(1.4)"/>
+<use href="#oblak" transform="translate(2240,520) scale(0.7)"/>
+<use href="#torba" transform="translate(110,820) scale(1.4)"/>
+<use href="#torba-rasparana" transform="translate(280,820) scale(1.4)"/>
+<use href="#tikvica" transform="translate(430,960) scale(1.5)"/>
+<use href="#velika-tikvica" transform="translate(540,960) scale(1.2)"/>
+<use href="#kruh" transform="translate(660,960) scale(1.2)"/>
+<use href="#smotuljak" transform="translate(780,960) scale(1.2)"/>
+<use href="#kesica" transform="translate(880,960) scale(1.4)"/>
+<use href="#drva" transform="translate(1020,960) scale(1)"/>
+<use href="#motika" transform="translate(1120,920) scale(0.9)"/>
+<use href="#kljucevi-ruke" transform="translate(1480,940) scale(1)"/>
+<use href="#beba" transform="translate(1680,930) scale(1.2)"/>
+<use href="#bob-list" transform="translate(1780,920) scale(0.8)"/>
+<use href="#bob-cvijet" transform="translate(1940,920) scale(1.5)"/>
+<use href="#bob-mahuna" transform="translate(2020,860) scale(0.8)"/>
+<use href="#zrno" transform="translate(2100,940) scale(2)"/>
+<use href="#oblak-zlatni" transform="translate(2260,920) scale(0.6)"/>
+<g font-family="Georgia, serif" font-size="16" fill="#5A4A3A" text-anchor="middle">
+<text x="120" y="290">ovca</text>
+<text x="300" y="290">ovca-zvonce</text>
+<text x="470" y="290">koza-ide</text>
+<text x="640" y="290">koza-pase</text>
+<text x="810" y="290">koza-cb-gleda-gore</text>
+<text x="980" y="290">koza-cb-zvace</text>
+<text x="1140" y="290">macka-spava</text>
+<text x="1270" y="290">ptica</text>
+<text x="1380" y="290">ptica-cudi</text>
+<text x="1500" y="290">kokos</text>
+<text x="1680" y="290">magarac</text>
+<text x="1960" y="230">povjetarac</text>
+<text x="2200" y="230">ptica-leti</text>
+<text x="200" y="670">kuca</text>
+<text x="500" y="670">crkva</text>
+<text x="760" y="670">ognjiste</text>
+<text x="980" y="670">sinija</text>
+<text x="1120" y="670">tronozac</text>
+<text x="1300" y="670">stol</text>
+<text x="1560" y="670">klupa</text>
+<text x="1780" y="670">hrast</text>
+<text x="1940" y="670">grm</text>
+<text x="2060" y="670">kamen</text>
+<text x="2240" y="550">oblak</text>
+<text x="110" y="940">torba</text>
+<text x="280" y="940">torba-rasparana</text>
+<text x="430" y="990">tikvica</text>
+<text x="540" y="990">velika-tikvica</text>
+<text x="660" y="990">kruh</text>
+<text x="780" y="990">smotuljak</text>
+<text x="880" y="990">kesica</text>
+<text x="1020" y="990">drva</text>
+<text x="1120" y="950">motika</text>
+<text x="1480" y="970">kljucevi-ruke</text>
+<text x="1680" y="960">beba</text>
+<text x="1780" y="950">bob-list</text>
+<text x="1940" y="950">bob-cvijet</text>
+<text x="2020" y="890">bob-mahuna</text>
+<text x="2100" y="970">zrno</text>
+<text x="2260" y="950">oblak-zlatni</text>
+</g></svg>

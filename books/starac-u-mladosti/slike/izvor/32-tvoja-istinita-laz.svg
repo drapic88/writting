@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000" role="img" aria-label="Mirna slika: na kamenoj klupi uz suhozid leže rasparana vunena torba i mala tikvica, a pokraj njih je prazno mjesto, kao da čeka nekoga tko će sjesti i pričati.">
+<!-- likovi -->
+<rect x="0" y="0" width="1000" height="640" fill="url(#g-nebo-dan)"/>
+<use href="#oblak" transform="translate(780,420) scale(.45)"/>
+<path d="M0,560 Q250,530 500,548 T1000,540 L1000,700 L0,700 Z" fill="#97A58E"/>
+<path d="M0,640 Q500,610 1000,630 L1000,1000 L0,1000 Z" fill="#BCC385"/>
+<path d="M0,640 Q500,610 1000,630 L1000,1000 L0,1000 Z" fill="url(#trava)" opacity=".8"/>
+<use href="#suhozid" transform="translate(-20,720) scale(1.2,1.8)"/>
+<use href="#suhozid" transform="translate(340,720) scale(1.4,1.8)"/>
+<use href="#suhozid" transform="translate(760,720) scale(.9,1.8)"/>
+<use href="#hrast" transform="translate(900,700) scale(1.2)"/>
+<use href="#klupa" transform="translate(470,880) scale(2.6)"/>
+<use href="#torba-rasparana" transform="translate(300,690) scale(1.5)"/>
+<use href="#tikvica" transform="translate(420,750) scale(1.4)"/>
+<use href="#ptica" transform="translate(840,736) scale(1.4)"/>
+<g>
+  <use href="#cvijet-crveni" transform="translate(120,950) scale(1.8)"/><use href="#cvijet-bijeli" transform="translate(220,965) scale(1.8)"/>
+  <use href="#cvijet-zuti" transform="translate(780,955) scale(1.8)"/><use href="#cvijet-crveni" transform="translate(880,968) scale(1.8)"/>
+</g>
+<rect id="okvir-teksta" data-dvostranica="32" data-najveca="40" data-sredina="1" x="110" y="110" width="780" height="170"/>
+<rect x="0" y="0" width="1000" height="1000" filter="url(#tekstura)" opacity=".5"/>
+</svg>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1000" viewBox="0 0 2000 1000" role="img" aria-label="Lijevo: u sumrak otrcani dječak pada s neba, a povjetarac od lišća ga hvata i usporava. Desno: noga mu je zapela u rupi između dva kamena; točkasta staza vodi od kamena do kuće i natrag, a po njoj mali dječak nosi motiku, dok mu noga cijelo vrijeme ostaje u kamenu. Iz grma vire oči.">
+<!-- likovi -->
+<rect x="0" y="0" width="2000" height="760" fill="url(#g-nebo-vecer)"/>
+<g fill="#FFF3C4">
+  <use href="#zvijezda" transform="translate(120,80) scale(.7)"/><use href="#zvijezda" transform="translate(700,60) scale(.5)"/>
+  <use href="#zvijezda" transform="translate(900,200) scale(.6)"/><use href="#zvijezda" transform="translate(60,300) scale(.4)"/>
+</g>
+<!-- kraj užeta visi s vrha -->
+<path d="M300,-10 C306,40 296,80 300,120" fill="none" stroke="#3A2A20" stroke-width="13" stroke-linecap="round"/>
+<path d="M300,-10 C306,40 296,80 300,120" fill="none" stroke="#8E8A86" stroke-width="9" stroke-linecap="round"/>
+<path d="M300,120 q-8,10 -6,22 M300,120 q8,10 6,22" stroke="#8E8A86" stroke-width="2.5" fill="none"/>
+
+<!-- brda i zemlja -->
+<path d="M0,600 Q260,548 540,586 T1100,566 T1600,560 T2000,548 L2000,760 L0,760 Z" fill="#7E7A96"/>
+<path d="M0,700 Q500,670 1000,690 T2000,684 L2000,1000 L0,1000 Z" fill="#8E9A60"/>
+<path d="M0,700 Q500,670 1000,690 T2000,684 L2000,1000 L0,1000 Z" fill="url(#trava)" opacity=".6"/>
+<use href="#hrast" transform="translate(60,760) scale(1.2)"/>
+<use href="#hrast" transform="translate(760,740) scale(.9)"/>
+<use href="#hrast" transform="translate(1100,720) scale(.7)"/>
+<use href="#hrast" transform="translate(1960,760) scale(1.1)"/>
+
+<!-- kuća daleko i staza do nje i natrag -->
+<use href="#dim" transform="translate(1876,612) scale(.4)"/>
+<use href="#kuca" transform="translate(1840,720) scale(.42)"/>
+<path d="M1300,930 C1420,900 1520,840 1600,800 S1760,740 1800,724" fill="none" stroke="#F4EAD0" stroke-width="5" stroke-dasharray="2 12" stroke-linecap="round"/>
+<path d="M1300,950 C1440,940 1560,880 1660,830 S1800,760 1830,730" fill="none" stroke="#F4EAD0" stroke-width="5" stroke-dasharray="2 12" stroke-linecap="round"/>
+<path d="M1606,792 l14,-2 l-8,12 Z M1520,850 l-14,4 l8,-12 Z" fill="#F4EAD0"/>
+<use href="#djecak-motika-otrcan" transform="translate(1560,892) scale(-.32,.32)"/>
+
+<!-- oči iz grma -->
+<use href="#grm" transform="translate(1520,990) scale(1.6)"/>
+<g fill="#F2E28A"><ellipse cx="1500" cy="950" rx="6" ry="4"/><ellipse cx="1520" cy="950" rx="6" ry="4"/><ellipse cx="1550" cy="962" rx="5" ry="3.5"/><ellipse cx="1568" cy="962" rx="5" ry="3.5"/></g>
+
+<!-- noga zapela među dva kamena -->
+<ellipse cx="1240" cy="968" rx="140" ry="16" fill="#000" opacity=".15"/>
+<use href="#djecak-zaglavljen-otrcan" transform="translate(1270,950) scale(1.15)"/>
+<g>
+  <path d="M1140,980 Q1130,920 1180,906 Q1226,898 1232,940 L1236,990 Z" fill="#B7B2A8" stroke="#6E6A62" stroke-width="2.5"/>
+  <path d="M1222,992 Q1218,930 1258,926 Q1300,926 1302,964 L1300,994 Z" fill="#A9A49A" stroke="#6E6A62" stroke-width="2.5"/>
+  <path d="M1160,926 Q1180,914 1204,918 M1240,940 Q1258,932 1278,938" fill="none" stroke="#DAD6CD" stroke-width="4" stroke-linecap="round"/>
+</g>
+
+<!-- pad: povjetarac hvata dječaka -->
+<use href="#povjetarac" transform="translate(420,540) scale(2.1)"/>
+<use href="#djecak-pada-otrcan" transform="translate(410,470) rotate(-10) scale(1.05)"/>
+<use href="#vjetar-kovrca" transform="translate(600,380) scale(1.3)"/>
+<use href="#vjetar-kovrca" transform="translate(200,420) scale(1.1)"/>
+
+<rect x="0" y="0" width="2000" height="1000" fill="#3A2E5A" opacity=".14" style="mix-blend-mode:multiply"/>
+<rect id="okvir-teksta" data-dvostranica="12" x="1150" y="30" width="800" height="400"/>
+<rect x="0" y="0" width="2000" height="1000" filter="url(#tekstura)" opacity=".5"/>
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1000" viewBox="0 0 2000 1000" role="img" aria-label="Rječnik starih stvari: torba s kitama i resama, tikvica, sinija, ognjište, tronožac, motika, bob i opanci, svaka nacrtana zasebno s mjestom za ime i kratko objašnjenje.">
+<!-- likovi -->
+<rect x="0" y="0" width="2000" height="1000" fill="#F3EAD3"/>
+<rect x="30" y="30" width="1940" height="940" rx="20" fill="none" stroke="#B8A57A" stroke-width="3"/>
+<use href="#torba" transform="translate(260,180) scale(1.6)"/>
+<use href="#tikvica" transform="translate(740,340) scale(1.8)"/>
+<use href="#sinija" transform="translate(1260,340) scale(1.2)"/>
+<use href="#ognjiste" transform="translate(1740,340) scale(0.95)"/>
+<use href="#tronozac" transform="translate(260,780) scale(1.8)"/>
+<use href="#motika" transform="translate(660,700) rotate(15) scale(0.9)"/>
+<use href="#bob-mahuna" transform="translate(1200,620) rotate(-30) scale(1.2)"/>
+<use href="#bob-cvijet" transform="translate(1290,670) scale(2)"/>
+<use href="#zrno" transform="translate(1330,760) scale(2.2)"/>
+<use href="#opanci" transform="translate(1740,780) scale(1.6)"/>
+<g font-family="Georgia, 'Times New Roman', serif" fill="#3A2A20" text-anchor="middle">
+<text data-natpis="1" x="260" y="400" font-size="30" font-weight="bold">torba</text>
+<text data-natpis="1" x="260" y="436" font-size="20" fill="#5A4A3A">vunena torba s kitama i resama</text>
+<text data-natpis="1" x="740" y="400" font-size="30" font-weight="bold">tikvica</text>
+<text data-natpis="1" x="740" y="436" font-size="20" fill="#5A4A3A">osušena tikva u kojoj se nosila voda</text>
+<text data-natpis="1" x="1260" y="400" font-size="30" font-weight="bold">sinija</text>
+<text data-natpis="1" x="1260" y="436" font-size="20" fill="#5A4A3A">nizak okrugli stol za kojim se sjedilo i jelo</text>
+<text data-natpis="1" x="1740" y="400" font-size="30" font-weight="bold">ognjište</text>
+<text data-natpis="1" x="1740" y="436" font-size="20" fill="#5A4A3A">mjesto u kući gdje gori vatra i kuha se jelo</text>
+<text data-natpis="1" x="260" y="840" font-size="30" font-weight="bold">tronožac</text>
+<text data-natpis="1" x="260" y="876" font-size="20" fill="#5A4A3A">stolac s tri noge</text>
+<text data-natpis="1" x="740" y="840" font-size="30" font-weight="bold">motika</text>
+<text data-natpis="1" x="740" y="876" font-size="20" fill="#5A4A3A">alat za kopanje zemlje</text>
+<text data-natpis="1" x="1260" y="840" font-size="30" font-weight="bold">bob</text>
+<text data-natpis="1" x="1260" y="876" font-size="20" fill="#5A4A3A">biljka čije se krupno zrno jede</text>
+<text data-natpis="1" x="1740" y="840" font-size="30" font-weight="bold">opanci</text>
+<text data-natpis="1" x="1740" y="876" font-size="20" fill="#5A4A3A">kožna obuća</text>
+</g>
+<rect x="0" y="0" width="2000" height="1000" filter="url(#tekstura)" opacity=".5"/></svg>

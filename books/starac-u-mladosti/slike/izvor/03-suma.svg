@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1000" viewBox="0 0 2000 1000" role="img" aria-label="U zoru dječak prašnjavim putem iz sela dolazi do šume iz koje se čuju čudni zvukovi; staje pred prvo drvo i podiže ruku na pozdrav, a povjetarac od lišća puše mu u leđa.">
+<!-- likovi -->
+
+<rect x="0" y="0" width="2000" height="700" fill="url(#g-nebo-zora)"/>
+<circle cx="900" cy="478" r="160" fill="url(#g-sjaj)"/>
+<circle cx="900" cy="478" r="44" fill="#FFD27A" stroke="#F2B45A" stroke-width="3"/>
+<use href="#oblak" transform="translate(1180,170) scale(.55)"/>
+<use href="#oblak" transform="translate(1720,120) scale(.45)"/>
+<use href="#ptica-leti" transform="translate(1320,260) scale(1.2)"/>
+<use href="#ptica-leti" transform="translate(1370,236) scale(.9)"/>
+
+<!-- planine i brda -->
+<path d="M0,520 L140,470 L300,505 L460,460 L640,500 L820,468 L1000,505 L1180,458 L1360,498 L1540,462 L1720,500 L1880,468 L2000,490 L2000,660 L0,660 Z" fill="#A9B4C6" stroke="#8F9BB0" stroke-width="2" stroke-linejoin="round"/>
+<path d="M0,580 Q200,532 420,566 T860,560 T1300,556 T1720,566 T2000,556 L2000,720 L0,720 Z" fill="#97A58E" stroke="#7E8C76" stroke-width="2"/>
+<path d="M0,640 Q240,600 480,632 T980,630 T1500,628 T2000,630 L2000,760 L0,760 Z" fill="#A3AE72" stroke="#7F8B57" stroke-width="2"/>
+<g stroke="#8C877C" stroke-width="5" stroke-dasharray="5 3" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M60,668 L220,646 L250,686 L90,706 Z" fill="#C7BC86"/>
+  <path d="M250,686 L220,646 L380,640 L420,676 Z" fill="#93A764"/>
+  <path d="M820,660 L980,642 L1010,676 L850,692 Z" fill="#B9AE78"/>
+  <path d="M1010,676 L980,642 L1140,636 L1180,668 Z" fill="#8FA05F"/>
+</g>
+
+<!-- šuma iza (desno) -->
+<use href="#hrast" transform="translate(1420,700) scale(1.0)"/>
+<use href="#hrast" transform="translate(1560,690) scale(1.1)"/>
+<use href="#hrast" transform="translate(1700,700) scale(1.0)"/>
+<use href="#hrast" transform="translate(1850,690) scale(1.15)"/>
+<use href="#hrast" transform="translate(1990,700) scale(1.0)"/>
+
+<!-- selo (lijevo) -->
+<use href="#dim" transform="translate(272,560) scale(.7)"/>
+<use href="#dim" transform="translate(442,575) scale(.6)"/>
+<use href="#crkva" transform="translate(80,720) scale(.55)"/>
+<use href="#kuca" transform="translate(200,740) scale(.6)"/>
+<use href="#kuca" transform="translate(380,735) scale(.55)"/>
+<use href="#kuca" transform="translate(560,748) scale(.5)"/>
+
+<!-- livada -->
+<path d="M0,740 Q500,712 1000,736 T2000,730 L2000,1000 L0,1000 Z" fill="#BCC385"/>
+<path d="M0,740 Q500,712 1000,736 T2000,730 L2000,1000 L0,1000 Z" fill="url(#trava)" opacity=".8"/>
+
+<!-- život u selu -->
+<use href="#bunar" transform="translate(690,790) scale(.8)"/>
+<use href="#zena-stoji" transform="translate(640,800) scale(.42)" style="--haljina:#3A2E2A"/>
+<use href="#kokos" transform="translate(300,800) scale(.8)"/>
+<use href="#kokos" transform="translate(340,808) scale(-.8,.8)"/>
+<use href="#magarac" transform="translate(150,830) scale(.75)"/>
+<use href="#muskarac-stoji" transform="translate(95,840) scale(.5)"/>
+
+<!-- put iz sela do šume -->
+<path d="M420,760 C620,790 760,800 900,830 S1180,880 1320,900 S1500,940 1560,1000 L1700,1000 C1640,930 1520,880 1380,860 S1080,800 900,790 S560,764 460,752 Z" fill="#D9C9A0" stroke="#BFAE84" stroke-width="2"/>
+
+<!-- suhozid u prvom planu -->
+<use href="#suhozid" transform="translate(-20,910)"/>
+<use href="#suhozid" transform="translate(300,920)"/>
+<use href="#suhozid" transform="translate(620,930) scale(.9,1)"/>
+
+<!-- šuma, prednji red -->
+<use href="#hrast" transform="translate(1440,880) scale(1.75)"/>
+<use href="#hrast" transform="translate(1640,860) scale(1.6)"/>
+<use href="#hrast" transform="translate(1820,890) scale(1.9)"/>
+<use href="#hrast" transform="translate(1990,870) scale(1.7)"/>
+<!-- čudni zvukovi: kovrče vjetra u krošnjama -->
+<use href="#vjetar-kovrca" transform="translate(1380,560) scale(1.4)"/>
+<use href="#vjetar-kovrca" transform="translate(1600,520) scale(1.2)"/>
+<use href="#vjetar-kovrca" transform="translate(1760,600) scale(1.5)"/>
+<use href="#vjetar-kovrca" transform="translate(1900,540) scale(1.1)"/>
+<use href="#vjetar-kovrca" transform="translate(1520,640) scale(1)"/>
+
+<!-- dječak se javlja šumi, povjetarac mu puše u leđa -->
+<ellipse cx="1240" cy="912" rx="60" ry="11" fill="#000" opacity=".12"/>
+<use href="#djecak-pozdrav" transform="translate(1240,908) scale(-1.1,1.1)"/>
+<use href="#povjetarac" transform="translate(1110,760) scale(1.05)"/>
+
+<!-- cvijeće uz put -->
+<g>
+  <use href="#cvijet-crveni" transform="translate(860,880) scale(1.6)"/><use href="#cvijet-bijeli" transform="translate(890,900) scale(1.6)"/>
+  <use href="#cvijet-zuti" transform="translate(1120,950) scale(1.6)"/><use href="#cvijet-bijeli" transform="translate(1150,966) scale(1.6)"/>
+  <use href="#cvijet-crveni" transform="translate(1760,960) scale(1.6)"/><use href="#cvijet-zuti" transform="translate(1800,975) scale(1.6)"/>
+  <use href="#cvijet-bijeli" transform="translate(140,980) scale(1.6)"/><use href="#cvijet-crveni" transform="translate(470,975) scale(1.6)"/>
+</g>
+<use href="#kamen" transform="translate(1040,980) scale(1.1)"/>
+
+<rect id="okvir-teksta" data-dvostranica="3" x="50" y="40" width="760" height="420"/>
+<rect x="0" y="0" width="2000" height="1000" filter="url(#tekstura)" opacity=".5"/>
+</svg>

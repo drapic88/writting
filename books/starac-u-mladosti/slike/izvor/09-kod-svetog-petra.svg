@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1000" viewBox="0 0 2000 1000" role="img" aria-label="Zlatni, blještavi hodnik u nebu pun vrata s natpisima i znakovima svetaca; ljudi mirno prolaze kroz vrata. Na kraju, iza šaltera, vide se samo dvije ruke i svežanj ključeva; ruke pružaju dječaku posudu svete vode, a on je tek napola podigao ruku na pozdrav.">
+<!-- likovi -->
+
+<rect x="0" y="0" width="2000" height="1000" fill="url(#g-nebo-zlato)"/>
+<g fill="#FFFFFF" opacity=".9">
+  <use href="#zvijezda" transform="translate(900,90) scale(1.2)"/><use href="#zvijezda" transform="translate(1120,180) scale(.8)"/>
+  <use href="#zvijezda" transform="translate(1900,120) scale(1)"/><use href="#zvijezda" transform="translate(1060,60) scale(.6)"/>
+</g>
+<use href="#oblak-zlatni" transform="translate(1000,250) scale(.9)"/>
+<use href="#oblak-zlatni" transform="translate(1850,280) scale(.8)"/>
+
+<!-- zid hodnika -->
+<rect x="0" y="330" width="2000" height="500" fill="#FBEFC8"/>
+<rect x="0" y="330" width="2000" height="500" fill="url(#zid-kamen)" opacity=".18"/>
+<path d="M0,330 H2000" stroke="#D9B864" stroke-width="10"/>
+<g fill="#E8C878" opacity=".7">
+  <circle cx="60" cy="340" r="14"/><circle cx="180" cy="340" r="14"/><circle cx="300" cy="340" r="14"/><circle cx="420" cy="340" r="14"/>
+  <circle cx="540" cy="340" r="14"/><circle cx="660" cy="340" r="14"/><circle cx="780" cy="340" r="14"/><circle cx="900" cy="340" r="14"/>
+  <circle cx="1100" cy="340" r="14"/><circle cx="1220" cy="340" r="14"/><circle cx="1340" cy="340" r="14"/><circle cx="1460" cy="340" r="14"/>
+  <circle cx="1580" cy="340" r="14"/><circle cx="1700" cy="340" r="14"/><circle cx="1820" cy="340" r="14"/><circle cx="1940" cy="340" r="14"/>
+</g>
+<!-- pod -->
+<rect x="0" y="820" width="2000" height="180" fill="url(#pod-zlatni)"/>
+<path d="M0,820 H2000" stroke="#C9A24E" stroke-width="5"/>
+
+<!-- vrata svetaca -->
+<use href="#vrata-raj" transform="translate(150,822)"/>
+<use href="#vrata-raj" transform="translate(470,822)"/>
+<use href="#vrata-raj" transform="translate(790,822)"/>
+<use href="#vrata-raj" transform="translate(1180,822)"/>
+<use href="#znak-ljiljan" transform="translate(240,812)"/>
+<use href="#znak-resetka" transform="translate(560,812)"/>
+<use href="#znak-zmaj" transform="translate(880,812)"/>
+<use href="#znak-kugle" transform="translate(1090,812)"/>
+
+<!-- ljudi prolaze kroz vrata -->
+<use href="#muskarac-stoji" transform="translate(150,822) scale(.62)" style="--prsluk:#E9DFC8;--hlace:#B9AE96"/>
+<use href="#zena-stoji" transform="translate(370,900) scale(.85)" style="--haljina:#7A8AB0;--pregaca:#F1E7D0"/>
+<use href="#zena-stoji" transform="translate(470,822) scale(.6)" style="--bore:inline;--haljina:#B9A0B8"/>
+<use href="#muskarac-stoji" transform="translate(660,905) scale(.85)" style="--kosa:#E9E4DA;--brci:#E9E4DA;--bore:inline;--prsluk:#8A9A6A"/>
+<use href="#dijete-djevojcica" transform="translate(735,910) scale(1.1)"/>
+<use href="#muskarac-stoji" transform="translate(1180,822) scale(.62)" style="--prsluk:#B8605A"/>
+
+<!-- šalter svetog Petra -->
+<g>
+  <rect x="1420" y="380" width="460" height="450" fill="#F1D99A" class="obris"/>
+  <path d="M1500,760 V540 A150,150 0 0,1 1800,540 V760 Z" fill="#FFF6DA" class="obris"/>
+  <circle cx="1650" cy="600" r="210" fill="url(#g-sjaj)"/>
+  <use href="#kljucevi-ruke" transform="translate(1650,700) scale(1.45)"/>
+  <rect x="1460" y="752" width="380" height="30" rx="6" fill="#C9A24E" class="obris"/>
+  <rect x="1440" y="782" width="420" height="48" fill="#E8C878" class="obris"/>
+  <rect x="1560" y="398" width="180" height="44" rx="8" fill="#FBF3DC" class="obris"/>
+</g>
+
+<!-- dječak, ruka napola podignuta -->
+<ellipse cx="1300" cy="932" rx="60" ry="11" fill="#000" opacity=".1"/>
+<use href="#djecak-pozdrav-pola" transform="translate(1300,928) scale(-1.1,1.1)"/>
+
+<!-- natpisi (u verziji bez teksta ih nema; dodaje ih prijelom) -->
+<g font-family="Georgia, 'Times New Roman', serif" font-size="17" fill="#5A3B26" text-anchor="middle">
+  <text data-natpis="1" x="150" y="561">Sveti Ante</text>
+  <text data-natpis="1" x="470" y="561">Sveti Lovre</text>
+  <text data-natpis="1" x="790" y="561">Sveti Juraj</text>
+  <text data-natpis="1" x="1180" y="561">Sveti Nikola</text>
+  <text data-natpis="1" x="1650" y="428" font-size="24">Sveti Petar</text>
+</g>
+
+<rect id="okvir-teksta" data-dvostranica="9" x="50" y="30" width="780" height="420"/>
+<rect x="0" y="0" width="2000" height="1000" filter="url(#tekstura)" opacity=".45"/>
+</svg>

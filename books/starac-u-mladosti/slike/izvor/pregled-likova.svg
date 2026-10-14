@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1400" viewBox="0 0 2400 1400" role="img" aria-label="Pregled likova">
+<!-- likovi -->
+<rect width="2400" height="1400" fill="#FAF6EC"/>
+<g fill="#E6DECB">
+<ellipse cx="120" cy="424" rx="70" ry="9"/>
+<ellipse cx="370" cy="424" rx="70" ry="9"/>
+<ellipse cx="620" cy="424" rx="70" ry="9"/>
+<ellipse cx="870" cy="424" rx="70" ry="9"/>
+<ellipse cx="1120" cy="424" rx="70" ry="9"/>
+<ellipse cx="1370" cy="424" rx="70" ry="9"/>
+<ellipse cx="1620" cy="424" rx="70" ry="9"/>
+<ellipse cx="1870" cy="424" rx="70" ry="9"/>
+<ellipse cx="2140" cy="424" rx="70" ry="9"/>
+<ellipse cx="300" cy="804" rx="70" ry="9"/>
+<ellipse cx="560" cy="834" rx="70" ry="9"/>
+<ellipse cx="820" cy="834" rx="70" ry="9"/>
+<ellipse cx="1080" cy="834" rx="70" ry="9"/>
+<ellipse cx="1340" cy="834" rx="70" ry="9"/>
+<ellipse cx="1600" cy="834" rx="70" ry="9"/>
+<ellipse cx="1880" cy="834" rx="70" ry="9"/>
+<ellipse cx="2140" cy="834" rx="70" ry="9"/>
+<ellipse cx="120" cy="1334" rx="70" ry="9"/>
+<ellipse cx="330" cy="1334" rx="70" ry="9"/>
+<ellipse cx="640" cy="1334" rx="70" ry="9"/>
+<ellipse cx="880" cy="1334" rx="70" ry="9"/>
+<ellipse cx="1100" cy="1334" rx="70" ry="9"/>
+<ellipse cx="1290" cy="1334" rx="70" ry="9"/>
+<ellipse cx="1540" cy="1334" rx="70" ry="9"/>
+<ellipse cx="1760" cy="1334" rx="70" ry="9"/>
+<ellipse cx="1980" cy="1334" rx="70" ry="9"/>
+<ellipse cx="2170" cy="1334" rx="70" ry="9"/>
+<ellipse cx="2290" cy="1334" rx="70" ry="9"/>
+</g>
+<use href="#djecak-stoji" transform="translate(120,420) scale(1)"/>
+<use href="#djecak-pozdrav" transform="translate(370,420) scale(1)"/>
+<use href="#djecak-pozdrav-pola" transform="translate(620,420) scale(1)"/>
+<use href="#djecak-hoda" transform="translate(870,420) scale(1)"/>
+<use href="#djecak-slusa" transform="translate(1120,420) scale(1)"/>
+<use href="#djecak-sjedi-trlja" transform="translate(1370,420) scale(1)"/>
+<use href="#djecak-nosi-drva" transform="translate(1620,420) scale(1)"/>
+<use href="#djecak-penje" transform="translate(1870,420) scale(1)"/>
+<use href="#djecak-drzi-glavu" transform="translate(2140,420) scale(1)"/>
+<use href="#djecak-spava" transform="translate(300,800) scale(1)"/>
+<use href="#djecak-visi-otrcan" transform="translate(560,830) scale(1)"/>
+<use href="#djecak-pada-otrcan" transform="translate(820,830) scale(1)"/>
+<use href="#djecak-zaglavljen-otrcan" transform="translate(1080,830) scale(1)"/>
+<use href="#djecak-motika-otrcan" transform="translate(1340,830) scale(1)"/>
+<use href="#djecak-predaje-otrcan" transform="translate(1600,830) scale(1)"/>
+<use href="#djecak-prozor-otrcan" transform="translate(1880,830) scale(1)"/>
+<use href="#djecak-pozdrav-otrcan" transform="translate(2140,830) scale(1)"/>
+<use href="#muskarac-stoji" transform="translate(120,1330) scale(1)"/>
+<use href="#muskarac-pokazuje" transform="translate(330,1330) scale(1)" style="--prsluk:#2E3E6E"/>
+<use href="#tronozac" transform="translate(640,1330)"/>
+<use href="#muskarac-sjedi" transform="translate(640,1330) scale(1)" style="--kosa:#E9E4DA;--brci:#E9E4DA;--obrve:#B9B2A6;--bore:inline;--koza:#E8B994"/>
+<use href="#starac-stap" transform="translate(880,1330) scale(1)" style="--kosa:#ECE8E0;--brci:#ECE8E0;--obrve:#C9C2B6;--prsluk:#3E4659"/>
+<use href="#zena-stoji" transform="translate(1100,1330) scale(1)"/>
+<use href="#zena-pruza" transform="translate(1290,1330) scale(1)" style="--bore:inline;--haljina:#3A2E2A"/>
+<use href="#tronozac" transform="translate(1540,1330)"/>
+<use href="#zena-sjedi" transform="translate(1540,1330) scale(1)" style="--bore:inline"/>
+<use href="#zena-dijete" transform="translate(1760,1330) scale(1)"/>
+<use href="#pastirica" transform="translate(1980,1330) scale(1)"/>
+<use href="#dijete-djecak" transform="translate(2170,1330) scale(1)"/>
+<use href="#dijete-djevojcica" transform="translate(2290,1330) scale(1)"/>
+<g font-family="Georgia, serif" font-size="17" fill="#5A4A3A" text-anchor="middle">
+<text x="120" y="454">stoji</text>
+<text x="370" y="454">pozdrav</text>
+<text x="620" y="454">pozdrav-pola</text>
+<text x="870" y="454">hoda</text>
+<text x="1120" y="454">slusa</text>
+<text x="1370" y="454">sjedi-trlja</text>
+<text x="1620" y="454">nosi-drva</text>
+<text x="1870" y="454">penje</text>
+<text x="2140" y="454">drzi-glavu</text>
+<text x="300" y="834">spava</text>
+<text x="560" y="864">visi-otrcan</text>
+<text x="820" y="864">pada-otrcan</text>
+<text x="1080" y="864">zaglavljen-otrcan</text>
+<text x="1340" y="864">motika-otrcan</text>
+<text x="1600" y="864">predaje-otrcan</text>
+<text x="1880" y="864">prozor-otrcan</text>
+<text x="2140" y="864">pozdrav-otrcan</text>
+<text x="120" y="1364">muskarac-stoji</text>
+<text x="330" y="1364">muskarac-pokazuje</text>
+<text x="640" y="1364">muskarac-sjedi (starac)</text>
+<text x="880" y="1364">starac-stap (susjed)</text>
+<text x="1100" y="1364">zena-stoji</text>
+<text x="1290" y="1364">zena-pruza (starica)</text>
+<text x="1540" y="1364">zena-sjedi</text>
+<text x="1760" y="1364">zena-dijete</text>
+<text x="1980" y="1364">pastirica</text>
+<text x="2170" y="1364">dijete-djecak</text>
+<text x="2290" y="1364">djevojcica</text>
+</g></svg>

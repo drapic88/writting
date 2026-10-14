@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1000" viewBox="0 0 2000 1000" role="img" aria-label="Navečer uz ognjište ukućani pakiraju torbu s kruhom i dvije tikvice; mala okićena tikvica zamata se u smotuljak, a djed kroz prozor pokazuje dječaku put preko šume i brda.">
+<!-- likovi -->
+
+<!-- zid i strop -->
+<rect x="0" y="0" width="2000" height="800" fill="url(#zid-kamen)"/>
+<rect x="0" y="0" width="2000" height="70" fill="#4A3020"/>
+<g fill="#5E4028" class="obris">
+  <rect x="-10" y="58" width="2020" height="26"/>
+  <rect x="640" y="0" width="34" height="96"/><rect x="1300" y="0" width="34" height="96"/><rect x="1720" y="0" width="34" height="96"/>
+</g>
+
+<!-- prozor s pogledom na put -->
+<g>
+  <rect x="120" y="150" width="420" height="330" fill="#5A5248" class="obris"/>
+  <svg x="140" y="168" width="380" height="294" viewBox="0 0 380 294">
+    <rect width="380" height="294" fill="url(#g-nebo-vecer)"/>
+    <use href="#zvijezda" transform="translate(300,40) scale(.7)" fill="#FFF3C4"/>
+    <use href="#zvijezda" transform="translate(80,60) scale(.5)" fill="#FFF3C4"/>
+    <path d="M0,170 L60,130 L130,160 L200,110 L280,150 L380,120 L380,294 L0,294 Z" fill="#7E86A6"/>
+    <path d="M0,210 Q90,170 190,200 T380,190 L380,294 L0,294 Z" fill="#6E7C5A"/>
+    <path d="M0,250 Q100,230 200,246 T380,240 L380,294 L0,294 Z" fill="#8A9662"/>
+    <use href="#hrast" transform="translate(70,226) scale(.32)"/><use href="#hrast" transform="translate(110,222) scale(.28)"/>
+    <use href="#hrast" transform="translate(150,228) scale(.3)"/><use href="#hrast" transform="translate(190,222) scale(.26)"/>
+    <use href="#kuca" transform="translate(300,214) scale(.14)"/>
+    <path d="M20,294 C60,260 120,262 160,240 S260,214 300,214" fill="none" stroke="#D9C9A0" stroke-width="5" stroke-dasharray="2 8" stroke-linecap="round"/>
+    <use href="#ovca" transform="translate(250,268) scale(.18)"/><use href="#ovca" transform="translate(268,272) scale(.18)"/>
+  </svg>
+  <path d="M330,168 V462 M140,315 H520" stroke="#5E4028" stroke-width="8"/>
+  <rect x="106" y="474" width="448" height="18" fill="#B7B2A8" class="obris"/>
+</g>
+
+<!-- pod -->
+<rect x="0" y="790" width="2000" height="210" fill="url(#pod-ploce)"/>
+<path d="M0,790 H2000" stroke="#7A6A55" stroke-width="5"/>
+
+<!-- ognjište -->
+<path d="M1800,84 V650" stroke="#2A2520" stroke-width="4" stroke-dasharray="7 4"/>
+<use href="#ognjiste" transform="translate(1800,880) scale(1.15)"/>
+<use href="#macka-spava" transform="translate(1660,935) scale(-1.1,1.1)"/>
+<use href="#tronozac" transform="translate(1590,906) scale(1.15)"/>
+<use href="#zena-sjedi" transform="translate(1590,906) scale(1.15)" style="--bore:inline;--haljina:#3A2E2A;--pregaca:#2E3E6E"/>
+
+<!-- majka iza stola, stol s torbom, kruhom i tikvicama -->
+<use href="#zena-stoji" transform="translate(1330,870) scale(1.2)"/>
+<use href="#stol" transform="translate(1330,920) scale(1.35)"/>
+<g transform="translate(1330,812)">
+  <use href="#torba" transform="translate(-110,-66) scale(1.05)"/>
+  <use href="#kruh" transform="translate(-14,0) scale(1.1)"/>
+  <use href="#velika-tikvica" transform="translate(54,0) scale(.95)"/>
+  <use href="#smotuljak" transform="translate(116,0) scale(1.05)"/>
+  <use href="#tikvica" transform="translate(150,0) scale(.85)"/>
+  <!-- uljanica -->
+  <path d="M-170,0 Q-174,-16 -156,-18 L-140,-18 Q-128,-14 -132,0 Z" fill="#B8603A" class="obris"/>
+  <path d="M-150,-18 Q-160,-40 -148,-52 Q-144,-36 -140,-22 Z" fill="#FFC94A" stroke="#E8742A" stroke-width="2"/>
+</g>
+
+<!-- dječak sluša, djed pokazuje kroz prozor -->
+<g fill="#000" opacity=".14">
+  <ellipse cx="640" cy="912" rx="80" ry="12"/><ellipse cx="820" cy="918" rx="60" ry="11"/>
+  <ellipse cx="260" cy="918" rx="50" ry="10"/><ellipse cx="380" cy="920" rx="50" ry="10"/>
+</g>
+<use href="#skrinja" transform="translate(300,800) scale(.9)"/>
+<use href="#dijete-djevojcica" transform="translate(260,918) scale(1.25)"/>
+<use href="#dijete-djecak" transform="translate(380,922) scale(1.1)" style="--prsluk:#2E3E6E"/>
+<use href="#muskarac-pokazuje-gore" transform="translate(640,908) scale(-1.25,1.25)" style="--kosa:#E9E4DA;--brci:#E9E4DA;--obrve:#B9B2A6;--bore:inline;--koza:#E8B994;--prsluk:#3E4659"/>
+<use href="#djecak-slusa" transform="translate(820,916) scale(1.05)"/>
+
+<!-- večernje svjetlo -->
+<rect x="0" y="0" width="2000" height="1000" fill="#5A3A5A" opacity=".22" style="mix-blend-mode:multiply"/>
+<rect x="0" y="0" width="2000" height="1000" fill="#F2A65A" opacity=".10" style="mix-blend-mode:screen"/>
+<g style="mix-blend-mode:screen">
+  <circle cx="1800" cy="800" r="420" fill="url(#g-sjaj-vatra)"/>
+  <circle cx="1188" cy="770" r="260" fill="url(#g-sjaj-vatra)"/>
+</g>
+
+<rect id="okvir-teksta" data-dvostranica="2" x="1170" y="110" width="760" height="420"/>
+<rect x="0" y="0" width="2000" height="1000" filter="url(#tekstura)" opacity=".5"/>
+</svg>

@@ -1,0 +1,1267 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10">
+<!--
+  Knjižnica likova i predmeta za "Starac u mladosti". Upute: ../../svg-upute.md
+  Svaki lik je nacrtan jednom, ovdje. Slike u izvor/ ga pozivaju s <use href="#...">,
+  a sastavi.py ovaj <defs> umeće u svaku sliku.
+
+  Ishodišta: likovi, životinje i predmeti stoje na (0,0) = tlo ispod sredine; dijelovi tijela
+  (d-*, m-*, z-*) imaju ishodište u sredini bokova (glave u svom središtu).
+  Boje odjeće su CSS varijable (s dvije crtice ispred imena): kosulja, prsluk, hlace, kapa,
+  kosa, brci, obrve, koza, haljina, pregaca, marama, a "bore" s vrijednošću inline pokazuje bore.
+  Primjer je u ../../svg-upute.md.
+  Nošnja, torba, tikvica, sinija, ognjište i kuća su pretpostavke dok ne stignu fotografije.
+-->
+<defs id="likovi">
+
+<style>
+  .lo  { fill: none; stroke: #3A2A20; stroke-linecap: round; stroke-linejoin: round; }
+  .ruo { stroke-width: 19; }
+  .ru  { fill: none; stroke: var(--kosulja, #FBF7EE); stroke-width: 14; stroke-linecap: round; stroke-linejoin: round; }
+  .rko { stroke-width: 15; }
+  .rk  { fill: none; stroke: var(--koza, #F1C7A0); stroke-width: 10.5; stroke-linecap: round; stroke-linejoin: round; }
+  .noo { stroke-width: 25; }
+  .no  { fill: none; stroke: var(--hlace, #3E4659); stroke-width: 20; stroke-linecap: round; stroke-linejoin: round; }
+  .nko { stroke-width: 15; }
+  .nk  { fill: none; stroke: var(--koza, #F1C7A0); stroke-width: 10.5; stroke-linecap: round; stroke-linejoin: round; }
+  .mruo { stroke-width: 21; }
+  .mru  { fill: none; stroke: var(--kosulja, #FBF7EE); stroke-width: 16; stroke-linecap: round; stroke-linejoin: round; }
+  .mnoo { stroke-width: 28; }
+  .mno  { fill: none; stroke: var(--hlace, #3E4659); stroke-width: 23; stroke-linecap: round; stroke-linejoin: round; }
+  .saka { fill: var(--koza, #F1C7A0); stroke: #3A2A20; stroke-width: 2.2; }
+  .opanak { fill: #8A5A35; stroke: #3A2A20; stroke-width: 2; }
+  .obris { stroke: #3A2A20; stroke-width: 2.4; stroke-linejoin: round; }
+</style>
+
+<!-- ===================== zajedničko: uzorci, filtri ===================== -->
+<pattern id="lisce" width="22" height="22" patternUnits="userSpaceOnUse">
+  <ellipse cx="6" cy="7" rx="5" ry="2.6" transform="rotate(-30 6 7)" fill="#5E8F48"/>
+  <ellipse cx="16" cy="15" rx="5" ry="2.6" transform="rotate(25 16 15)" fill="#6FA055"/>
+  <ellipse cx="17" cy="4" rx="3.5" ry="2" transform="rotate(10 17 4)" fill="#4C7A3C"/>
+  <ellipse cx="5" cy="18" rx="3.5" ry="2" transform="rotate(-10 5 18)" fill="#80B061"/>
+</pattern>
+<pattern id="vez" width="22" height="22" patternUnits="userSpaceOnUse">
+  <rect width="22" height="22" fill="#F3EAD3"/>
+  <g fill="#B8322A">
+    <rect x="9" y="3" width="4" height="4"/><rect x="3" y="9" width="4" height="4"/>
+    <rect x="15" y="9" width="4" height="4"/><rect x="9" y="15" width="4" height="4"/>
+  </g>
+  <rect x="9" y="9" width="4" height="4" fill="#2E3E6E"/>
+</pattern>
+<pattern id="zid-kamen" width="150" height="96" patternUnits="userSpaceOnUse">
+  <rect width="150" height="96" fill="#C9BFAB"/>
+  <g stroke="#A39884" stroke-width="1.6" stroke-linejoin="round">
+    <path d="M3,4 Q2,2 6,2 L50,3 Q56,4 55,10 L54,26 Q53,31 47,31 L8,30 Q2,29 3,24 Z" fill="#DCD3C1"/>
+    <path d="M60,3 L104,2 Q110,3 109,9 L110,22 Q109,28 103,28 L64,29 Q58,28 59,22 Z" fill="#D3C9B5"/>
+    <path d="M115,3 L146,4 Q150,5 149,10 L148,30 Q147,34 142,34 L118,33 Q113,32 113,27 L113,8 Q113,3 115,3 Z" fill="#E1D9C8"/>
+    <path d="M4,36 L34,35 Q40,36 39,42 L40,60 Q39,65 33,65 L7,66 Q2,65 2,59 L2,42 Q2,36 4,36 Z" fill="#D7CDBA"/>
+    <path d="M45,35 L96,34 Q102,35 101,41 L100,58 Q99,63 93,63 L49,64 Q43,63 43,57 L43,40 Q43,35 45,35 Z" fill="#E0D8C6"/>
+    <path d="M107,39 L146,38 Q150,39 149,44 L150,62 Q149,66 144,66 L110,67 Q105,66 105,61 L105,44 Q105,39 107,39 Z" fill="#D1C6B1"/>
+    <path d="M5,70 L60,70 Q66,71 65,77 L65,90 Q64,94 58,94 L8,94 Q3,93 3,88 L3,75 Q3,70 5,70 Z" fill="#DED5C3"/>
+    <path d="M71,69 L122,70 Q128,71 127,77 L127,89 Q126,94 120,94 L74,94 Q69,93 69,88 L69,74 Q69,69 71,69 Z" fill="#D6CCB8"/>
+    <path d="M132,71 L150,71 L150,94 L134,94 Q130,93 130,88 L130,75 Q130,71 132,71 Z" fill="#E1D9C8"/>
+  </g>
+</pattern>
+<pattern id="ploce" width="44" height="16" patternUnits="userSpaceOnUse">
+  <rect width="44" height="16" fill="#8E8476"/>
+  <path d="M0,15 H44 M0,7 H44" stroke="#6F665A" stroke-width="1.6"/>
+  <path d="M10,7 V15 M32,0 V7" stroke="#6F665A" stroke-width="1.4"/>
+</pattern>
+<pattern id="daske" width="16" height="100" patternUnits="userSpaceOnUse">
+  <rect width="16" height="100" fill="#7A5234"/>
+  <path d="M15,0 V100" stroke="#5A3B26" stroke-width="2"/>
+  <path d="M5,20 q3,6 0,12 M9,62 q3,6 0,12" fill="none" stroke="#8E6442" stroke-width="1.5"/>
+</pattern>
+<filter id="tekstura" x="0" y="0" width="100%" height="100%">
+  <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="7"/>
+  <feColorMatrix type="matrix" values="0 0 0 0 .22  0 0 0 0 .16  0 0 0 0 .1  .7 0 0 0 -.2"/>
+</filter>
+<filter id="meko" x="-30%" y="-30%" width="160%" height="160%">
+  <feGaussianBlur stdDeviation="14"/>
+</filter>
+
+<linearGradient id="g-nebo-zora" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9EC3E3"/><stop offset=".55" stop-color="#D8DDE2"/><stop offset="1" stop-color="#F6D3AE"/></linearGradient>
+<linearGradient id="g-nebo-dan" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#86B6E0"/><stop offset=".6" stop-color="#C9E0F0"/><stop offset="1" stop-color="#EEF1E4"/></linearGradient>
+<linearGradient id="g-nebo-vecer" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5E6AA6"/><stop offset=".6" stop-color="#B994B8"/><stop offset="1" stop-color="#F0BE90"/></linearGradient>
+<linearGradient id="g-nebo-zalazak" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4E5A9A"/><stop offset=".55" stop-color="#E0855A"/><stop offset="1" stop-color="#F7C46A"/></linearGradient>
+<linearGradient id="g-nebo-noc" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#18223F"/><stop offset=".7" stop-color="#2B3A66"/><stop offset="1" stop-color="#46578A"/></linearGradient>
+<linearGradient id="g-nebo-zlato" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F3D58A"/><stop offset=".5" stop-color="#FFF6DA"/><stop offset="1" stop-color="#F1CF7C"/></linearGradient>
+<radialGradient id="g-sjaj"><stop offset="0" stop-color="#FFE7AA" stop-opacity=".95"/><stop offset="1" stop-color="#FFE7AA" stop-opacity="0"/></radialGradient>
+<radialGradient id="g-sjaj-vatra"><stop offset="0" stop-color="#FFB45A" stop-opacity=".55"/><stop offset="1" stop-color="#FFB45A" stop-opacity="0"/></radialGradient>
+<pattern id="trava" width="40" height="30" patternUnits="userSpaceOnUse">
+  <path d="M6,24 l3,-8 l2,8 M24,12 l3,-7 l2,7" stroke="#7E8C4A" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+</pattern>
+<pattern id="pod-ploce" width="120" height="40" patternUnits="userSpaceOnUse">
+  <rect width="120" height="40" fill="#B8A98C"/>
+  <path d="M0,39 H120 M40,0 V39 M100,0 V39" stroke="#9A8B70" stroke-width="2"/>
+</pattern>
+<filter id="magla" x="-20%" y="-300%" width="140%" height="700%"><feGaussianBlur stdDeviation="16"/></filter>
+
+<!-- ===================== sitni zajednički dijelovi ===================== -->
+<g id="kita">
+  <circle cx="0" cy="0" r="4" fill="#E3B23C" stroke="#3A2A20" stroke-width="1.2"/>
+  <path d="M-5,3 L5,3 L7,20 L-7,20 Z" fill="#C0312B" stroke="#3A2A20" stroke-width="1.2" stroke-linejoin="round"/>
+  <path d="M-3,8 L-4,19 M0,8 L0,19 M3,8 L4,19" stroke="#E3B23C" stroke-width="1.2"/>
+</g>
+<path id="zvijezda" d="M0,-10 Q1.5,-1.5 10,0 Q1.5,1.5 0,10 Q-1.5,1.5 -10,0 Q-1.5,-1.5 0,-10 Z"/>
+<path id="mjesec" d="M0,-40 A40,40 0 1,0 0,40 A30,32 0 1,1 0,-40 Z"/>
+
+<!-- ===================== PREDMETI ===================== -->
+<!-- torba s kitama i resama (ishodište: sredina gornjeg ruba) -->
+<g id="torba">
+  <path d="M-26,53 V64 M-22,54 V65 M-18,54 V64 M-14,54 V65 M-10,54 V64 M-6,54 V65 M-2,54 V64 M2,54 V65 M6,54 V64 M10,54 V65 M14,54 V64 M18,54 V65 M22,54 V64 M26,53 V64" stroke="#C9402F" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M-32,0 H32 V44 Q32,54 22,54 H-22 Q-32,54 -32,44 Z" fill="#A8292A"/>
+  <rect x="-32" y="9" width="64" height="8" fill="#EFE3C8"/>
+  <rect x="-32" y="27" width="64" height="6" fill="#2E3E6E"/>
+  <rect x="-32" y="40" width="64" height="5" fill="#4F7A3A"/>
+  <path d="M-24,13 l4,-3 4,3 -4,3 Z M-8,13 l4,-3 4,3 -4,3 Z M8,13 l4,-3 4,3 -4,3 Z M24,13 l-4,-3 -4,3 4,3 Z" fill="#A8292A"/>
+  <path d="M-20,22 l3,-2.5 3,2.5 -3,2.5 Z M-4,22 l3,-2.5 3,2.5 -3,2.5 Z M12,22 l3,-2.5 3,2.5 -3,2.5 Z" fill="#EFE3C8"/>
+  <path d="M-32,0 H32 V44 Q32,54 22,54 H-22 Q-32,54 -32,44 Z" fill="none" class="obris"/>
+  <use href="#kita" transform="translate(-31,48)"/>
+  <use href="#kita" transform="translate(31,48)"/>
+</g>
+<!-- rasparana torba: pola pruga nema, rese i kite otpale, vise niti -->
+<g id="torba-rasparana">
+  <path d="M-32,0 H32 V30 L26,36 L20,30 L12,38 L4,30 L-4,36 L-12,30 L-20,38 L-26,31 L-32,36 Z" fill="#A8292A" class="obris"/>
+  <rect x="-31" y="9" width="62" height="8" fill="#EFE3C8"/>
+  <rect x="-31" y="23" width="62" height="5" fill="#2E3E6E"/>
+  <path d="M-24,13 l4,-3 4,3 -4,3 Z M-8,13 l4,-3 4,3 -4,3 Z M8,13 l4,-3 4,3 -4,3 Z" fill="#A8292A"/>
+  <path d="M-20,34 q4,14 -2,26 M2,32 q-6,12 2,30 M18,34 q6,10 0,22" fill="none" stroke="#C9402F" stroke-width="2" stroke-linecap="round"/>
+</g>
+
+<!-- mala okićena tikvica (ishodište: dno) -->
+<g id="tikvica">
+  <path d="M-4,-36 C-4,-30 -15,-30 -15,-14 C-15,-3 -8,0 0,0 C8,0 15,-3 15,-14 C15,-30 4,-30 4,-36 C4,-40 9,-42 9,-48 C9,-55 -9,-55 -9,-48 C-9,-42 -4,-40 -4,-36 Z" fill="#D9A441" stroke="#3A2A20" stroke-width="2"/>
+  <ellipse cx="-6" cy="-16" rx="3" ry="6" fill="#F2D58A" opacity=".85"/>
+  <rect x="-3" y="-61" width="6" height="8" rx="1.5" fill="#7A4E2D" stroke="#3A2A20" stroke-width="1.5"/>
+  <path d="M-5,-41 L5,-38 M-5,-37 L5,-34" stroke="#B8322A" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M5,-36 q7,3 7,12" fill="none" stroke="#B8322A" stroke-width="2"/>
+  <use href="#kita" transform="translate(12,-25) scale(.6)"/>
+</g>
+<!-- tikvica na vrpci oko vrata (ishodište: vrat lika) -->
+<g id="tikvica-oko-vrata">
+  <path d="M-10,0 Q-14,30 -4,52 M10,0 Q14,30 4,52" fill="none" stroke="#B8322A" stroke-width="2.6"/>
+  <use href="#tikvica" transform="translate(0,84) scale(.55)"/>
+</g>
+<g id="velika-tikvica">
+  <path d="M-5,-50 C-5,-42 -22,-42 -22,-20 C-22,-5 -12,0 0,0 C12,0 22,-5 22,-20 C22,-42 5,-42 5,-50 C5,-56 11,-58 11,-66 C11,-75 -11,-75 -11,-66 C-11,-58 -5,-56 -5,-50 Z" fill="#C99A4A" stroke="#3A2A20" stroke-width="2"/>
+  <ellipse cx="-9" cy="-22" rx="4" ry="9" fill="#E3BE78" opacity=".8"/>
+  <rect x="-4" y="-82" width="8" height="9" rx="2" fill="#7A4E2D" stroke="#3A2A20" stroke-width="1.5"/>
+</g>
+<g id="kruh">
+  <path d="M-34,0 Q-36,-26 0,-28 Q36,-26 34,0 Z" fill="#C88A48" stroke="#3A2A20" stroke-width="2"/>
+  <path d="M-18,-12 L18,-12 M0,-24 L0,-2" stroke="#9A6430" stroke-width="2.5" stroke-linecap="round"/>
+</g>
+<g id="smotuljak">
+  <path d="M-22,0 Q-28,-24 -6,-30 L0,-38 L6,-30 Q28,-24 22,0 Z" fill="#F4EFE3" class="obris"/>
+  <path d="M-7,-30 Q0,-26 7,-30" fill="none" stroke="#B8322A" stroke-width="3"/>
+  <path d="M-14,-10 L14,-14 M-16,-18 L12,-22" stroke="#DCD3C0" stroke-width="2"/>
+</g>
+<g id="kesica">
+  <path d="M-14,0 Q-18,-18 -5,-24 L-7,-30 L7,-30 L5,-24 Q18,-18 14,0 Z" fill="#E8DCC2" class="obris"/>
+  <path d="M-7,-25 Q0,-21 7,-25" fill="none" stroke="#A8292A" stroke-width="3"/>
+  <path d="M5,-24 q8,4 6,12" fill="none" stroke="#A8292A" stroke-width="2"/>
+</g>
+<g id="drva">
+  <g class="obris" fill="#8A5E3A">
+    <rect x="-50" y="-16" width="100" height="14" rx="7"/>
+    <rect x="-46" y="-30" width="96" height="14" rx="7"/>
+    <rect x="-52" y="-44" width="98" height="14" rx="7"/>
+  </g>
+  <g fill="#D9B98A" stroke="#3A2A20" stroke-width="1.5">
+    <ellipse cx="-50" cy="-9" rx="5" ry="7"/><ellipse cx="-46" cy="-23" rx="5" ry="7"/><ellipse cx="-52" cy="-37" rx="5" ry="7"/>
+  </g>
+  <path d="M-10,-48 V2 M14,-48 V2" stroke="#A8292A" stroke-width="3"/>
+</g>
+<!-- motika: držalo vodoravno od (0,0) do (150,0), oštrica na kraju -->
+<g id="motika">
+  <path d="M0,0 L150,0" stroke="#3A2A20" stroke-width="9" stroke-linecap="round"/>
+  <path d="M0,0 L150,0" stroke="#A7784A" stroke-width="5.5" stroke-linecap="round"/>
+  <path d="M146,-6 L162,-6 L170,34 L142,34 Z" fill="#6E6A66" class="obris"/>
+  <path d="M146,30 L166,30" stroke="#A5A19B" stroke-width="2"/>
+</g>
+<g id="sinija">
+  <rect x="-8" y="-30" width="16" height="30" fill="#7A5234" class="obris"/>
+  <rect x="-58" y="-24" width="12" height="24" fill="#7A5234" class="obris"/>
+  <rect x="46" y="-24" width="12" height="24" fill="#7A5234" class="obris"/>
+  <path d="M-74,-38 A74,18 0 0,0 74,-38 L74,-30 A74,18 0 0,1 -74,-30 Z" fill="#6E4A2E" class="obris"/>
+  <ellipse cx="0" cy="-38" rx="74" ry="18" fill="#9A6B42" class="obris"/>
+  <ellipse cx="0" cy="-38" rx="58" ry="12" fill="none" stroke="#B3835A" stroke-width="2"/>
+</g>
+<g id="tronozac">
+  <path d="M-18,-30 L-26,0 M18,-30 L26,0 M0,-28 L0,2" stroke="#3A2A20" stroke-width="7" stroke-linecap="round"/>
+  <path d="M-18,-30 L-26,0 M18,-30 L26,0 M0,-28 L0,2" stroke="#8A5E3A" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="0" cy="-32" rx="26" ry="7" fill="#9A6B42" class="obris"/>
+</g>
+<g id="stol">
+  <rect x="-100" y="-62" width="12" height="62" fill="#7A5234" class="obris"/>
+  <rect x="88" y="-62" width="12" height="62" fill="#7A5234" class="obris"/>
+  <rect x="-116" y="-80" width="232" height="16" rx="3" fill="#9A6B42" class="obris"/>
+  <path d="M-110,-72 H110" stroke="#B3835A" stroke-width="2"/>
+</g>
+<g id="klupa">
+  <rect x="-80" y="-34" width="34" height="34" rx="4" fill="#B7B2A8" class="obris"/>
+  <rect x="46" y="-34" width="34" height="34" rx="4" fill="#B7B2A8" class="obris"/>
+  <rect x="-96" y="-50" width="192" height="18" rx="5" fill="#C9C4BA" class="obris"/>
+</g>
+<!-- ognjište: kameni krug, vatra, kotao na komoštrama (lanac ide 200 gore) -->
+<g id="ognjiste">
+  <path d="M0,-200 V-96" stroke="#2A2520" stroke-width="4" stroke-dasharray="7 4"/>
+  <ellipse cx="0" cy="-8" rx="78" ry="20" fill="#6E665E" class="obris"/>
+  <ellipse cx="0" cy="-10" rx="62" ry="13" fill="#4A403A"/>
+  <path d="M-40,-12 L40,-26 M-40,-26 L40,-12" stroke="#5A3B26" stroke-width="10" stroke-linecap="round"/>
+  <path d="M-34,-14 Q-40,-50 -16,-70 Q-20,-46 -2,-40 Q-6,-72 14,-92 Q12,-58 30,-46 Q36,-30 30,-14 Z" fill="#E8742A"/>
+  <path d="M-20,-16 Q-24,-40 -8,-52 Q-8,-34 4,-30 Q4,-52 16,-62 Q16,-40 22,-30 Q24,-22 20,-16 Z" fill="#FFC94A"/>
+  <path d="M-34,-80 Q-36,-58 0,-56 Q36,-58 34,-80 Z" fill="#2A2520" class="obris"/>
+  <path d="M-30,-82 Q0,-108 30,-82" fill="none" stroke="#2A2520" stroke-width="3"/>
+  <g fill="#9A928A" class="obris">
+    <ellipse cx="-74" cy="-8" rx="14" ry="10"/><ellipse cx="-52" cy="4" rx="15" ry="10"/><ellipse cx="-20" cy="10" rx="16" ry="10"/>
+    <ellipse cx="16" cy="10" rx="16" ry="10"/><ellipse cx="50" cy="5" rx="15" ry="10"/><ellipse cx="74" cy="-7" rx="14" ry="10"/>
+  </g>
+</g>
+<g id="kolijevka">
+  <path d="M-70,0 Q0,22 70,0" fill="none" stroke="#3A2A20" stroke-width="9" stroke-linecap="round"/>
+  <path d="M-70,0 Q0,22 70,0" fill="none" stroke="#8A5E3A" stroke-width="5" stroke-linecap="round"/>
+  <path d="M-58,4 L-54,-60 L54,-60 L58,4 Z" fill="#9A6B42" class="obris"/>
+  <path d="M-50,-12 H50 M-52,-30 H52" stroke="#7A5234" stroke-width="2"/>
+  <path d="M-30,-48 l8,-8 8,8 -8,8 Z M0,-48 l8,-8 8,8 -8,8 Z M30,-48 l8,-8 8,8 -8,8 Z" fill="#C9402F" transform="translate(-8,0)"/>
+  <path d="M-54,-60 Q0,-80 54,-60" fill="#FBF7EE" class="obris"/>
+  <path d="M-58,-60 L-62,-74 M58,-60 L62,-74" stroke="#3A2A20" stroke-width="6" stroke-linecap="round"/>
+</g>
+<g id="skrinja">
+  <rect x="-110" y="-90" width="220" height="90" fill="#8A5E3A" class="obris"/>
+  <rect x="-116" y="-104" width="232" height="18" rx="4" fill="#7A5234" class="obris"/>
+  <path d="M-90,-70 l12,-12 12,12 -12,12 Z M-30,-70 l12,-12 12,12 -12,12 Z M30,-70 l12,-12 12,12 -12,12 Z" fill="#C9402F" stroke="#3A2A20" stroke-width="1.2"/>
+  <path d="M-96,-30 H96 M-96,-24 H96" stroke="#C9402F" stroke-width="3"/>
+  <rect x="-10" y="-86" width="20" height="16" fill="#D9A441" class="obris"/>
+</g>
+<g id="bakrenjak">
+  <path d="M-30,-40 Q-34,0 0,4 Q34,0 30,-40 Z" fill="#C46A3A" class="obris"/>
+  <path d="M-30,-40 Q0,-58 30,-40" fill="none" stroke="#3A2A20" stroke-width="3"/>
+  <path d="M-18,-24 Q-14,-6 4,-4" fill="none" stroke="#E8A070" stroke-width="4" stroke-linecap="round"/>
+</g>
+<g id="bunar">
+  <ellipse cx="0" cy="-40" rx="34" ry="9" fill="#5A5248" class="obris"/>
+  <path d="M-34,-40 V-4 Q0,6 34,-4 V-40 Q0,-30 -34,-40 Z" fill="url(#zid-kamen)" class="obris"/>
+  <path d="M-26,-40 V-90 M26,-40 V-90 M-32,-90 H32" stroke="#6B4A2E" stroke-width="6" stroke-linecap="round"/>
+  <path d="M0,-90 V-60" stroke="#3A2A20" stroke-width="2"/>
+  <path d="M-8,-60 h16 l-2,14 h-12 Z" fill="#8A5E3A" class="obris"/>
+</g>
+<pattern id="suhozid-kamenje" width="40" height="30" patternUnits="userSpaceOnUse">
+  <rect width="40" height="30" fill="#8C877C"/>
+  <g fill="#C3BEB3" stroke="#77736A" stroke-width="1.4">
+    <ellipse cx="10" cy="8" rx="9" ry="6"/><ellipse cx="30" cy="7" rx="9" ry="6"/>
+    <ellipse cx="0" cy="22" rx="9" ry="6"/><ellipse cx="20" cy="22" rx="9" ry="6"/><ellipse cx="40" cy="22" rx="9" ry="6"/>
+  </g>
+</pattern>
+<g id="suhozid">
+  <path d="M0,0 V-24 Q4,-32 14,-31 L286,-31 Q298,-32 300,-24 V0 Z" fill="url(#suhozid-kamenje)" class="obris"/>
+</g>
+<g id="vjetar-kovrca">
+  <path d="M0,0 C20,-14 44,-6 40,10 C36,22 18,16 22,6" fill="none" stroke="#F4F8FA" stroke-width="4" stroke-linecap="round"/>
+</g>
+<g id="vrata-raj">
+  <path d="M-62,0 V-190 A62,62 0 0,1 62,-190 V0 Z" fill="#E8C878" class="obris"/>
+  <path d="M-48,0 V-186 A48,48 0 0,1 48,-186 V0 Z" fill="#FFF6DA"/>
+  <path d="M-48,0 V-186 A48,48 0 0,1 0,-234 V0 Z" fill="url(#daske)" class="obris" transform="skewY(-6) translate(-48,-6) scale(.6,1) translate(48,0)"/>
+  <rect x="-58" y="-286" width="116" height="34" rx="6" fill="#FBF3DC" class="obris"/>
+</g>
+<g id="znak-ljiljan">
+  <path d="M0,0 V-40" stroke="#5E8A4E" stroke-width="3"/>
+  <path d="M0,-40 C-10,-50 -6,-66 0,-72 C6,-66 10,-50 0,-40 Z M0,-42 C-14,-44 -22,-54 -20,-62 C-10,-58 -4,-50 0,-42 Z M0,-42 C14,-44 22,-54 20,-62 C10,-58 4,-50 0,-42 Z" fill="#FFFFFF" class="obris"/>
+</g>
+<g id="znak-resetka">
+  <rect x="-22" y="-60" width="44" height="54" rx="3" fill="none" stroke="#6E6A66" stroke-width="5"/>
+  <path d="M-11,-60 V-6 M0,-60 V-6 M11,-60 V-6" stroke="#6E6A66" stroke-width="4"/>
+  <path d="M0,-6 V6" stroke="#6E6A66" stroke-width="5"/>
+</g>
+<g id="znak-zmaj">
+  <path d="M-30,-10 C-20,-40 10,-40 18,-24 L34,-34 L28,-18 C24,-6 6,0 -10,-4 L-30,6 Z" fill="#6E9E4C" class="obris"/>
+  <path d="M-6,-30 L0,-46 L6,-30 M6,-28 L14,-42 L16,-26" fill="#C9402F" class="obris"/>
+  <circle cx="22" cy="-26" r="2" fill="#2A2520"/>
+</g>
+<g id="znak-kugle">
+  <circle cx="-14" cy="-10" r="10" fill="#D9A441" class="obris"/><circle cx="14" cy="-10" r="10" fill="#D9A441" class="obris"/><circle cx="0" cy="-30" r="10" fill="#D9A441" class="obris"/>
+</g>
+<pattern id="pod-zlatni" width="80" height="40" patternUnits="userSpaceOnUse">
+  <rect width="80" height="40" fill="#F1D99A"/>
+  <path d="M0,39 H80 M40,0 V39" stroke="#D9B864" stroke-width="2"/>
+  <path d="M40,20 l6,-6 6,6 -6,6 Z" fill="#E8C878"/>
+</pattern>
+<g id="supa">
+  <rect x="-80" y="-110" width="160" height="110" fill="url(#zid-kamen)" class="obris"/>
+  <path d="M-94,-106 L0,-160 L94,-106 Z" fill="url(#ploce)" class="obris"/>
+  <rect x="-26" y="-80" width="52" height="80" fill="url(#daske)" class="obris"/>
+</g>
+<g id="opanci">
+  <g transform="translate(-34,0)">
+    <path d="M-30,0 Q-34,-20 -10,-24 L22,-22 Q34,-18 30,-4 Q20,4 -30,0 Z" fill="#8A5A35" class="obris"/>
+    <path d="M-18,-22 L-14,-4 M-6,-24 L-2,-2 M6,-24 L10,-2 M18,-22 L20,-4" stroke="#5A3B26" stroke-width="2"/>
+    <path d="M-24,-20 Q0,-30 24,-18" fill="none" stroke="#5A3B26" stroke-width="3"/>
+  </g>
+  <g transform="translate(34,6)">
+    <path d="M-30,0 Q-34,-20 -10,-24 L22,-22 Q34,-18 30,-4 Q20,4 -30,0 Z" fill="#8A5A35" class="obris"/>
+    <path d="M-18,-22 L-14,-4 M-6,-24 L-2,-2 M6,-24 L10,-2 M18,-22 L20,-4" stroke="#5A3B26" stroke-width="2"/>
+    <path d="M-24,-20 Q0,-30 24,-18" fill="none" stroke="#5A3B26" stroke-width="3"/>
+  </g>
+</g>
+<g id="kamen">
+  <path d="M-30,0 Q-34,-16 -18,-22 Q-4,-30 14,-24 Q32,-18 30,0 Z" fill="#B7B2A8" stroke="#6E6A62" stroke-width="2"/>
+  <path d="M-16,-14 Q-6,-20 6,-17" fill="none" stroke="#DAD6CD" stroke-width="3" stroke-linecap="round"/>
+</g>
+<!-- kuća od kamena s krovom od ploča (ishodište: sredina dna) -->
+<g id="kuca">
+  <rect x="80" y="-226" width="24" height="44" fill="#CFC5B2" class="obris"/>
+  <rect x="76" y="-232" width="32" height="8" fill="#8E8476" class="obris"/>
+  <rect x="-140" y="-150" width="280" height="150" fill="url(#zid-kamen)" class="obris"/>
+  <path d="M-160,-146 L0,-236 L160,-146 Z" fill="url(#ploce)" class="obris"/>
+  <path d="M-160,-146 L160,-146" stroke="#5A5248" stroke-width="5"/>
+  <rect x="-80" y="-100" width="52" height="100" fill="url(#daske)" class="obris"/>
+  <circle cx="-38" cy="-50" r="4" fill="none" stroke="#2A2520" stroke-width="2.5"/>
+  <rect x="34" y="-110" width="40" height="40" style="fill:var(--prozor, #34405A)" class="obris"/>
+  <rect x="16" y="-112" width="18" height="44" fill="#4F7A3A" class="obris"/>
+  <rect x="74" y="-112" width="18" height="44" fill="#4F7A3A" class="obris"/>
+  <rect x="-96" y="-6" width="84" height="8" fill="#B7B2A8" class="obris"/>
+</g>
+<g id="dim">
+  <path d="M0,0 C-14,-20 14,-30 0,-50 C-14,-70 14,-80 4,-104" fill="none" stroke="#E9EEF3" stroke-width="10" stroke-linecap="round" opacity=".85"/>
+</g>
+<!-- mala crkva s preslicom (zvonik na pročelju) -->
+<g id="crkva">
+  <rect x="-64" y="-120" width="128" height="120" fill="url(#zid-kamen)" class="obris"/>
+  <path d="M-76,-116 L0,-166 L76,-116 Z" fill="url(#ploce)" class="obris"/>
+  <path d="M-22,-166 V-216 H22 V-166 Z" fill="#DDD5C4" class="obris"/>
+  <path d="M-12,-176 V-198 A12,12 0 0,1 12,-198 V-176 Z" fill="#3A3330"/>
+  <path d="M-7,-182 Q0,-198 7,-182 Z" fill="#D9A441" stroke="#3A2A20" stroke-width="1.5"/>
+  <path d="M0,-216 V-232 M-7,-226 H7" stroke="#3A2A20" stroke-width="3"/>
+  <path d="M-20,0 V-56 A20,20 0 0,1 20,-56 V0 Z" fill="url(#daske)" class="obris"/>
+  <circle cx="0" cy="-92" r="12" fill="#E3D9C2" class="obris"/>
+  <path d="M0,-104 V-80 M-12,-92 H12" stroke="#7A6A5A" stroke-width="2"/>
+</g>
+<!-- ruke iza šaltera s posudom svete vode i svežnjem ključeva -->
+<g id="kljucevi-ruke">
+  <circle cx="74" cy="-120" r="18" fill="none" stroke="#3A2A20" stroke-width="6"/>
+  <circle cx="74" cy="-120" r="18" fill="none" stroke="#B8922E" stroke-width="3"/>
+  <g class="obris">
+    <path d="M60,-104 l-10,62 h8 v-8 h8 v8 h-4 l10,-62 Z" fill="#D9A441"/>
+    <path d="M74,-102 l2,70 h8 v-10 h8 v10 h-6 l-2,-70 Z" fill="#C8CCD2"/>
+    <path d="M88,-104 l12,56 h8 v-8 h8 v8 h-4 l-14,-58 Z" fill="#D9A441"/>
+  </g>
+  <path d="M-86,40 Q-80,0 -44,-14 L-30,6 Q-54,16 -60,40 Z" fill="#FBF7EE" class="obris"/>
+  <path d="M86,40 Q80,0 44,-14 L30,6 Q54,16 60,40 Z" fill="#FBF7EE" class="obris"/>
+  <path d="M-58,30 L-80,36 M58,30 L80,36" stroke="#D9A441" stroke-width="4"/>
+  <ellipse cx="-36" cy="-12" rx="14" ry="11" fill="#EBBE98" class="obris"/>
+  <ellipse cx="36" cy="-12" rx="14" ry="11" fill="#EBBE98" class="obris"/>
+  <path d="M-46,-26 Q0,10 46,-26 Z" fill="#DCE6EA" class="obris"/>
+  <ellipse cx="0" cy="-26" rx="46" ry="10" fill="#9CC9E0" class="obris"/>
+  <path d="M-18,-28 q8,-4 16,0 M8,-24 q8,-4 14,0" fill="none" stroke="#E6F4FA" stroke-width="2.5" stroke-linecap="round"/>
+</g>
+
+<!-- ===================== PRIRODA ===================== -->
+<g id="kruna">
+  <circle cx="0" cy="-118" r="50"/><circle cx="-36" cy="-98" r="30"/><circle cx="36" cy="-98" r="30"/>
+  <circle cx="-20" cy="-142" r="32"/><circle cx="22" cy="-144" r="32"/><circle cx="0" cy="-90" r="34"/>
+</g>
+<g id="hrast">
+  <path d="M-9,0 L-6,-58 L-22,-80 L-16,-82 L-3,-66 L-2,-92 L4,-92 L5,-68 L18,-84 L23,-80 L7,-58 L9,0 Z" fill="#6B4A2E" stroke="#3A2A20" stroke-width="2" stroke-linejoin="round"/>
+  <use href="#kruna" fill="#2B4A28" stroke="#2B4A28" stroke-width="6"/>
+  <use href="#kruna" fill="#3A6636"/>
+  <use href="#kruna" fill="url(#lisce)"/>
+</g>
+<g id="grm">
+  <circle cx="-22" cy="-20" r="22" fill="#2B4A28"/><circle cx="18" cy="-22" r="24" fill="#2B4A28"/><circle cx="0" cy="-36" r="24" fill="#2B4A28"/>
+  <circle cx="-22" cy="-20" r="19" fill="#4A7A40"/><circle cx="18" cy="-22" r="21" fill="#4A7A40"/><circle cx="0" cy="-36" r="21" fill="#4A7A40"/>
+  <circle cx="-22" cy="-20" r="19" fill="url(#lisce)"/><circle cx="18" cy="-22" r="21" fill="url(#lisce)"/><circle cx="0" cy="-36" r="21" fill="url(#lisce)"/>
+</g>
+<g id="cvijet-bijeli"><circle cx="0" cy="-6" r="4.5" fill="#FBFAF2" stroke="#9C9478" stroke-width="1"/><circle cx="0" cy="-6" r="1.8" fill="#E3B23C"/><path d="M0,-2 V4" stroke="#6E8A4A" stroke-width="1.5"/></g>
+<g id="cvijet-zuti"><circle cx="0" cy="-6" r="4" fill="#F2C842" stroke="#A88A2A" stroke-width="1"/><path d="M0,-2 V4" stroke="#6E8A4A" stroke-width="1.5"/></g>
+<g id="cvijet-crveni"><circle cx="0" cy="-7" r="5" fill="#C9402F" stroke="#7E2020" stroke-width="1"/><circle cx="0" cy="-7" r="1.6" fill="#2A2520"/><path d="M0,-2 V4" stroke="#6E8A4A" stroke-width="1.5"/></g>
+<g id="oblak-oblik">
+  <circle cx="-60" cy="0" r="38"/><circle cx="-10" cy="-22" r="48"/><circle cx="46" cy="-8" r="40"/>
+  <circle cx="86" cy="12" r="26"/><circle cx="-92" cy="16" r="22"/><circle cx="10" cy="18" r="34"/>
+</g>
+<g id="oblak">
+  <use href="#oblak-oblik" fill="#B7C5D8" stroke="#B7C5D8" stroke-width="7"/>
+  <use href="#oblak-oblik" fill="#FFFFFF"/>
+</g>
+<g id="oblak-zlatni">
+  <use href="#oblak-oblik" fill="#E8C878" stroke="#E8C878" stroke-width="7"/>
+  <use href="#oblak-oblik" fill="#FFF6DC"/>
+</g>
+<!-- povjetarac: uvijek isti oblik, spirala lišća bez lica -->
+<g id="povjetarac">
+  <path d="M-150,40 C-110,10 -70,60 -30,30 M-160,0 C-120,-24 -80,20 -40,0 M-140,-40 C-100,-60 -70,-20 -30,-36" fill="none" stroke="#DDE8EE" stroke-width="5" stroke-linecap="round"/>
+  <path d="M-30,30 C10,40 60,30 60,-10 C60,-50 10,-60 -10,-30 C-26,-6 0,16 20,4 C34,-4 28,-24 14,-24" fill="none" stroke="#C8D6DE" stroke-width="7" stroke-linecap="round"/>
+  <path d="M-30,30 C10,40 60,30 60,-10 C60,-50 10,-60 -10,-30 C-26,-6 0,16 20,4 C34,-4 28,-24 14,-24" fill="none" stroke="#F4F8FA" stroke-width="3" stroke-linecap="round"/>
+  <g stroke="#3E6B33" stroke-width="1.5">
+    <ellipse cx="-24" cy="28" rx="11" ry="5" transform="rotate(-20 -24 28)" fill="#86AE70"/>
+    <ellipse cx="22" cy="34" rx="11" ry="5" transform="rotate(10 22 34)" fill="#B9C9C8"/>
+    <ellipse cx="56" cy="8" rx="11" ry="5" transform="rotate(70 56 8)" fill="#86AE70"/>
+    <ellipse cx="50" cy="-34" rx="11" ry="5" transform="rotate(120 50 -34)" fill="#B9C9C8"/>
+    <ellipse cx="12" cy="-50" rx="11" ry="5" transform="rotate(170 12 -50)" fill="#86AE70"/>
+    <ellipse cx="-16" cy="-24" rx="10" ry="4.5" transform="rotate(240 -16 -24)" fill="#B9C9C8"/>
+    <ellipse cx="2" cy="10" rx="9" ry="4" transform="rotate(330 2 10)" fill="#86AE70"/>
+    <ellipse cx="-80" cy="12" rx="10" ry="4.5" transform="rotate(-10 -80 12)" fill="#86AE70"/>
+    <ellipse cx="-100" cy="-38" rx="10" ry="4.5" transform="rotate(-25 -100 -38)" fill="#B9C9C8"/>
+  </g>
+</g>
+
+<!-- ===================== BOB ===================== -->
+<g id="bob-list">
+  <path d="M0,0 Q20,-8 46,-14" fill="none" stroke="#3E6B33" stroke-width="5" stroke-linecap="round"/>
+  <g fill="#86AE70" stroke="#3E6B33" stroke-width="2.2">
+    <ellipse cx="62" cy="-26" rx="34" ry="15" transform="rotate(-20 62 -26)"/>
+    <ellipse cx="50" cy="4" rx="30" ry="13" transform="rotate(15 50 4)"/>
+    <ellipse cx="90" cy="-6" rx="28" ry="13" transform="rotate(5 90 -6)"/>
+  </g>
+  <path d="M32,-16 L92,-36 M24,-2 L76,10 M64,-8 L116,-4" fill="none" stroke="#5E8A4E" stroke-width="1.6"/>
+</g>
+<g id="bob-cvijet-jedan">
+  <path d="M0,0 C-4,-10 2,-20 12,-20 C22,-20 24,-8 16,-2 C10,2 4,2 0,0 Z" fill="#FBFAF6" stroke="#7D7590" stroke-width="1.3"/>
+  <path d="M4,-4 C8,-12 16,-14 18,-8" fill="none" stroke="#C9C2DA" stroke-width="1.2"/>
+  <path d="M2,0 C4,6 12,8 16,2 C12,0 6,-1 2,0 Z" fill="#F1EEF6" stroke="#7D7590" stroke-width="1.2"/>
+  <path d="M7,3 q3,2 6,0" fill="none" stroke="#221C1A" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M0,0 l-6,3 l1,-6 Z" fill="#5E8A4E"/>
+</g>
+<g id="bob-cvijet">
+  <use href="#bob-cvijet-jedan" transform="rotate(-20)"/>
+  <use href="#bob-cvijet-jedan" transform="translate(8,14) rotate(25) scale(.85)"/>
+</g>
+<g id="bob-mahuna">
+  <path d="M0,0 C12,20 16,62 5,92 C1,99 -8,97 -6,88 C3,62 -2,24 -8,4 Z" fill="#6E9E4C" stroke="#3E6B33" stroke-width="2.2" stroke-linejoin="round"/>
+  <path d="M2,22 q4,6 0,12 M4,46 q4,6 0,12 M2,70 q4,6 0,12" fill="none" stroke="#4E7E3A" stroke-width="1.8" stroke-linecap="round"/>
+</g>
+<g id="zrno">
+  <ellipse cx="0" cy="0" rx="9" ry="6" fill="#8E5E37" stroke="#3A2A20" stroke-width="1.6"/>
+  <path d="M-4,-2 q3,3 7,1" fill="none" stroke="#3A2A20" stroke-width="1.4"/>
+</g>
+
+<!-- ===================== ŽIVOTINJE ===================== -->
+<g id="ovca-runo">
+  <circle cx="-26" cy="-40" r="17"/><circle cx="-10" cy="-50" r="20"/><circle cx="10" cy="-52" r="20"/>
+  <circle cx="28" cy="-44" r="18"/><circle cx="-2" cy="-32" r="20"/><circle cx="20" cy="-32" r="17"/>
+  <circle cx="-22" cy="-30" r="15"/><circle cx="38" cy="-36" r="12"/>
+</g>
+<g id="ovca">
+  <path d="M-24,-26 V-2 M-12,-24 V0 M16,-24 V0 M28,-26 V-2" stroke="#3A2E26" stroke-width="5" stroke-linecap="round"/>
+  <use href="#ovca-runo" fill="#5A4E44" stroke="#5A4E44" stroke-width="5"/>
+  <use href="#ovca-runo" fill="#F6F1E6"/>
+  <path d="M-14,-46 q4,-4 8,0 M6,-50 q4,-4 8,0 M18,-38 q4,-4 8,0 M-4,-34 q4,-4 8,0" fill="none" stroke="#D3C8B2" stroke-width="2" stroke-linecap="round"/>
+  <ellipse cx="-42" cy="-57" rx="8" ry="3.5" fill="#4A4038" transform="rotate(-30 -42 -57)"/>
+  <ellipse cx="-50" cy="-46" rx="15" ry="11" fill="#4A4038" stroke="#2A221C" stroke-width="2" transform="rotate(-12 -50 -46)"/>
+  <circle cx="-55" cy="-49" r="1.8" fill="#fff"/>
+</g>
+<g id="ovca-zvonce">
+  <use href="#ovca"/>
+  <path d="M-46,-40 q4,8 10,8" fill="none" stroke="#6B4A2E" stroke-width="2.5"/>
+  <path d="M-40,-34 h9 l3,11 h-15 Z" fill="#D9A441" stroke="#3A2A20" stroke-width="1.6" stroke-linejoin="round"/>
+  <circle cx="-35" cy="-21" r="2" fill="#3A2A20"/>
+</g>
+<g id="koza-tijelo">
+  <path d="M-24,-34 V-2 M-12,-32 V0 M18,-32 V0 M28,-34 V-2" fill="none" stroke="#2A221C" stroke-width="4" stroke-linecap="round"/>
+  <path d="M37,-56 l9,-14 l-2,17 Z" stroke="#2A221C" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M-36,-50 Q-30,-64 0,-62 Q30,-62 38,-52 Q40,-36 26,-32 Q0,-29 -24,-32 Q-38,-36 -36,-50 Z" stroke="#2A221C" stroke-width="2.4" stroke-linejoin="round"/>
+</g>
+<g id="koza-glava">
+  <path d="M6,6 L-4,-14 L-14,-22 L-2,-26 L12,-4 Z" stroke="#2A221C" stroke-width="2.2" stroke-linejoin="round"/>
+  <path d="M-10,-30 Q0,-46 14,-40" fill="none" stroke="#6E6255" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M-5,-29 Q5,-43 17,-34" fill="none" stroke="#6E6255" stroke-width="3.5" stroke-linecap="round"/>
+  <ellipse cx="-16" cy="-22" rx="14" ry="9" transform="rotate(-25 -16 -22)" stroke="#2A221C" stroke-width="2.2"/>
+  <ellipse cx="-3" cy="-25" rx="9" ry="3.5" transform="rotate(20 -3 -25)" stroke="#2A221C" stroke-width="1.8"/>
+  <path d="M-26,-13 l-3,12 l7,-9 Z" fill="#5A5048"/>
+  <circle cx="-19" cy="-26" r="2.2" fill="#F4E9B0" stroke="#2A221C" stroke-width="1"/>
+</g>
+<g id="koza-ide">
+  <use href="#koza-tijelo"/>
+  <use href="#koza-glava" transform="translate(-30,-56)"/>
+</g>
+<g id="koza-pase">
+  <use href="#koza-tijelo"/>
+  <use href="#koza-glava" transform="translate(-30,-56) rotate(-55)"/>
+</g>
+<g id="koza-cb-tijelo">
+  <use href="#koza-tijelo" fill="#F4F0E6"/>
+  <path d="M-36,-50 Q-30,-64 -14,-62 Q-12,-46 -18,-31 Q-24,-31 -28,-33 Q-38,-37 -36,-50 Z" fill="#2A2520"/>
+</g>
+<!-- crno-bijela koza, lik koji se ponavlja (7, 10) -->
+<g id="koza-cb-gleda-gore">
+  <use href="#koza-cb-tijelo"/>
+  <use href="#koza-glava" fill="#2A2520" transform="translate(-30,-56) rotate(32)"/>
+</g>
+<g id="koza-cb-zvace">
+  <use href="#koza-cb-tijelo"/>
+  <g transform="translate(-30,-56) rotate(28)">
+    <use href="#koza-glava" fill="#2A2520"/>
+    <path d="M-30,-14 q-14,-10 -26,2 q12,8 26,-2 Z" fill="#86AE70" stroke="#3E6B33" stroke-width="1.6"/>
+  </g>
+</g>
+<g id="macka-spava">
+  <path d="M30,-8 C56,-10 60,-34 40,-36" fill="none" stroke="#3A2A20" stroke-width="11" stroke-linecap="round"/>
+  <path d="M30,-8 C56,-10 60,-34 40,-36" fill="none" stroke="#8E8A86" stroke-width="7" stroke-linecap="round"/>
+  <ellipse cx="4" cy="-16" rx="36" ry="17" fill="#8E8A86" class="obris"/>
+  <path d="M-6,-32 q4,8 0,14 M8,-33 q4,8 0,14 M22,-30 q4,8 0,12" fill="none" stroke="#6E6A66" stroke-width="3" stroke-linecap="round"/>
+  <path d="M-38,-14 L-40,-36 L-30,-28 L-20,-36 L-20,-14 Z" fill="#8E8A86" class="obris"/>
+  <circle cx="-28" cy="-16" r="14" fill="#8E8A86" class="obris"/>
+  <path d="M-36,-18 q3,3 6,0 M-26,-18 q3,3 6,0" fill="none" stroke="#2A2520" stroke-width="1.6" stroke-linecap="round"/>
+  <circle cx="-28" cy="-11" r="1.8" fill="#C97E7E"/>
+</g>
+<!-- ptica (gleda nalijevo) -->
+<g id="ptica">
+  <path d="M12,-14 L30,-22 L28,-8 Z" fill="#6B4A2E" class="obris"/>
+  <ellipse cx="0" cy="-14" rx="18" ry="13" fill="#8B5E3C" class="obris"/>
+  <path d="M-12,-10 Q0,2 12,-8 Q4,-4 -12,-10 Z" fill="#F1E2C6"/>
+  <path d="M-2,-18 Q8,-24 16,-14 Q6,-12 -2,-18 Z" fill="#6B4A2E"/>
+  <circle cx="-12" cy="-24" r="10" fill="#8B5E3C" class="obris"/>
+  <path d="M-21,-26 L-30,-23 L-21,-21 Z" fill="#E39A2E" stroke="#3A2A20" stroke-width="1"/>
+  <circle cx="-15" cy="-26" r="2" fill="#2A2520"/>
+  <path d="M-4,-1 V4 M4,-1 V4" stroke="#3A2A20" stroke-width="2"/>
+</g>
+<g id="ptica-cudi">
+  <use href="#ptica"/>
+  <path d="M-12,-34 l-3,-8 M-8,-34 l1,-9 M-4,-32 l4,-7" stroke="#3A2A20" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="-15" cy="-26" r="3.2" fill="#fff" stroke="#2A2520" stroke-width="1.2"/>
+  <circle cx="-15.5" cy="-26" r="1.6" fill="#2A2520"/>
+</g>
+<g id="ptica-leti">
+  <path d="M-20,0 Q-10,-14 0,-2 Q10,-14 20,0" fill="none" stroke="#3A2A20" stroke-width="3" stroke-linecap="round"/>
+</g>
+<g id="sova">
+  <path d="M-16,-50 L-12,-62 L-4,-52 Z M16,-50 L12,-62 L4,-52 Z" fill="#7A5A3A" class="obris"/>
+  <ellipse cx="0" cy="-30" rx="20" ry="26" fill="#8A6A48" class="obris"/>
+  <path d="M-12,-22 q4,4 8,0 M4,-16 q4,4 8,0 M-8,-10 q4,4 8,0" fill="none" stroke="#C9B08A" stroke-width="2"/>
+  <circle cx="-8" cy="-40" r="8" fill="#F2E3B0" class="obris"/><circle cx="8" cy="-40" r="8" fill="#F2E3B0" class="obris"/>
+  <circle cx="-8" cy="-40" r="3.5" fill="#2A2520"/><circle cx="8" cy="-40" r="3.5" fill="#2A2520"/>
+  <path d="M-3,-33 L0,-28 L3,-33 Z" fill="#E39A2E"/>
+</g>
+<g id="kokos">
+  <path d="M14,-30 L28,-40 L24,-20 Z" fill="#7A5234" class="obris"/>
+  <path d="M-16,-20 Q-18,-34 -6,-36 Q18,-38 22,-20 Q20,-4 0,-4 Q-14,-4 -16,-20 Z" fill="#F1E7D3" class="obris"/>
+  <circle cx="-14" cy="-38" r="8" fill="#F1E7D3" class="obris"/>
+  <path d="M-18,-46 q2,-6 5,-2 q2,-6 5,0 q2,4 -2,4 Z" fill="#C9402F"/>
+  <path d="M-22,-38 L-28,-36 L-22,-34 Z" fill="#E39A2E"/>
+  <circle cx="-16" cy="-39" r="1.5" fill="#2A2520"/>
+  <path d="M-4,-4 V2 M4,-4 V2" stroke="#C98A2E" stroke-width="2"/>
+</g>
+<g id="magarac">
+  <path d="M-30,-44 V-2 M-16,-42 V0 M22,-42 V0 M34,-44 V-2" fill="none" stroke="#3A2A20" stroke-width="5" stroke-linecap="round"/>
+  <path d="M44,-62 q10,10 6,26" fill="none" stroke="#5E5A56" stroke-width="3"/>
+  <ellipse cx="2" cy="-58" rx="44" ry="20" fill="#8E8A86" class="obris"/>
+  <path d="M-34,-64 L-52,-92 L-40,-96 L-24,-70 Z" fill="#8E8A86" class="obris"/>
+  <ellipse cx="-56" cy="-96" rx="16" ry="11" fill="#8E8A86" class="obris" transform="rotate(-25 -56 -96)"/>
+  <ellipse cx="-66" cy="-91" rx="8" ry="6" fill="#DAD3C8" transform="rotate(-25 -66 -91)"/>
+  <path d="M-48,-104 L-50,-128 L-42,-106 Z M-44,-102 L-38,-126 L-38,-104 Z" fill="#8E8A86" class="obris"/>
+  <circle cx="-56" cy="-100" r="1.8" fill="#2A2520"/>
+  <path d="M-30,-60 h56 v26 h-56 Z" fill="#A8292A" class="obris"/>
+  <path d="M-30,-50 h56 M-30,-42 h56" stroke="#EFE3C8" stroke-width="3"/>
+</g>
+
+<!-- ===================== DJEČAK: dijelovi ===================== -->
+<g id="d-glava">
+  <circle cx="-27" cy="2" r="6" class="saka"/>
+  <circle cx="27" cy="2" r="6" class="saka"/>
+  <circle cx="0" cy="0" r="28" style="fill:var(--koza, #F1C7A0)" stroke="#3A2A20" stroke-width="2.5"/>
+  <path d="M-28,2 C-31,-24 -14,-32 0,-32 C14,-32 31,-24 28,2 C25,-8 19,-13 11,-13 C5,-10 -5,-10 -11,-13 C-19,-13 -25,-8 -28,2 Z" style="fill:var(--kosa, #3B2A20)"/>
+  <circle cx="-15" cy="9" r="6" fill="#E8877A" opacity=".55"/>
+  <circle cx="15" cy="9" r="6" fill="#E8877A" opacity=".55"/>
+  <path d="M1,1 q3,5 -1,7" fill="none" stroke="#3A2A20" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M-21,-27 L-20,-39 Q0,-44 20,-39 L21,-27 Q0,-31 -21,-27 Z" style="fill:var(--kapa, #C0312B)" stroke="#3A2A20" stroke-width="2.2" stroke-linejoin="round"/>
+  <ellipse cx="0" cy="-39.5" rx="20" ry="4" fill="#000" opacity=".18" stroke="#3A2A20" stroke-width="1.8"/>
+  <path d="M-21,-31 Q0,-35 21,-31" fill="none" stroke="#2A1E18" stroke-width="3"/>
+</g>
+<g id="d-pocupano">
+  <g style="fill:var(--koza, #F1C7A0)">
+    <ellipse cx="-17" cy="-19" rx="5" ry="3.5"/><ellipse cx="9" cy="-22" rx="4" ry="3"/><ellipse cx="22" cy="-10" rx="3.5" ry="3"/><ellipse cx="-24" cy="-6" rx="3" ry="3"/>
+  </g>
+  <path d="M-27,-14 l-6,-4 M-26,-20 l-5,-7 M26,-16 l6,-5 M27,-8 l6,-1" stroke="#3B2A20" stroke-width="2" stroke-linecap="round"/>
+</g>
+<g id="d-glava-straga">
+  <circle cx="-27" cy="2" r="6" class="saka"/>
+  <circle cx="27" cy="2" r="6" class="saka"/>
+  <circle cx="0" cy="0" r="28" style="fill:var(--kosa, #3B2A20)" stroke="#3A2A20" stroke-width="2.5"/>
+  <path d="M-12,22 Q0,28 12,22 L10,28 L-10,28 Z" style="fill:var(--koza, #F1C7A0)"/>
+  <path d="M-21,-27 L-20,-39 Q0,-44 20,-39 L21,-27 Q0,-31 -21,-27 Z" style="fill:var(--kapa, #C0312B)" stroke="#3A2A20" stroke-width="2.2" stroke-linejoin="round"/>
+  <ellipse cx="0" cy="-39.5" rx="20" ry="4" fill="#000" opacity=".18" stroke="#3A2A20" stroke-width="1.8"/>
+  <path d="M-21,-31 Q0,-35 21,-31" fill="none" stroke="#2A1E18" stroke-width="3"/>
+</g>
+<g id="d-pocupano-straga">
+  <g style="fill:var(--koza, #F1C7A0)">
+    <ellipse cx="-12" cy="-12" rx="6" ry="4"/><ellipse cx="10" cy="-2" rx="5" ry="4"/><ellipse cx="-6" cy="10" rx="4" ry="3"/><ellipse cx="16" cy="-16" rx="4" ry="3"/>
+  </g>
+  <path d="M-27,-14 l-6,-4 M27,-10 l6,-3 M-20,18 l-5,5" stroke="#3B2A20" stroke-width="2" stroke-linecap="round"/>
+</g>
+
+<g id="d-lice-mirno">
+  <ellipse cx="-10" cy="-3" rx="3" ry="4" fill="#2B1E16"/>
+  <ellipse cx="10" cy="-3" rx="3" ry="4" fill="#2B1E16"/>
+  <path d="M-15,-11 q5,-3 9,-1 M6,-12 q5,-2 9,1" fill="none" stroke="#3B2A20" stroke-width="2" stroke-linecap="round"/>
+  <path d="M-7,14 Q0,19 7,14" fill="none" stroke="#7A2E22" stroke-width="2.4" stroke-linecap="round"/>
+</g>
+<g id="d-lice-cudi">
+  <circle cx="-10" cy="-3" r="5" fill="#fff" stroke="#2B1E16" stroke-width="1.5"/>
+  <circle cx="10" cy="-3" r="5" fill="#fff" stroke="#2B1E16" stroke-width="1.5"/>
+  <circle cx="-10" cy="-2" r="2.6" fill="#2B1E16"/>
+  <circle cx="10" cy="-2" r="2.6" fill="#2B1E16"/>
+  <path d="M-16,-14 q6,-5 11,-2 M5,-16 q6,-3 11,2" fill="none" stroke="#3B2A20" stroke-width="2" stroke-linecap="round"/>
+  <ellipse cx="0" cy="15" rx="4.5" ry="6" fill="#7A2E22"/>
+</g>
+<g id="d-lice-boji">
+  <ellipse cx="-10" cy="-2" rx="3" ry="3.5" fill="#2B1E16"/>
+  <ellipse cx="10" cy="-2" rx="3" ry="3.5" fill="#2B1E16"/>
+  <path d="M-16,-8 L-6,-13 M6,-13 L16,-8" fill="none" stroke="#3B2A20" stroke-width="2" stroke-linecap="round"/>
+  <path d="M-8,15 q2,-3 4,0 q2,3 4,0 q2,-3 4,0 q2,3 4,0" fill="none" stroke="#7A2E22" stroke-width="2.2" stroke-linecap="round"/>
+</g>
+<g id="d-lice-sretno">
+  <path d="M-14,-2 q4,-6 8,0 M6,-2 q4,-6 8,0" fill="none" stroke="#2B1E16" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M-15,-12 q5,-3 9,-1 M6,-13 q5,-2 9,1" fill="none" stroke="#3B2A20" stroke-width="2" stroke-linecap="round"/>
+  <path d="M-10,11 Q0,24 10,11 Z" fill="#7A2E22" stroke="#7A2E22" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g id="d-lice-tuzno">
+  <ellipse cx="-10" cy="-1" rx="3" ry="3.5" fill="#2B1E16"/>
+  <ellipse cx="10" cy="-1" rx="3" ry="3.5" fill="#2B1E16"/>
+  <path d="M-16,-7 L-6,-11 M6,-11 L16,-7" fill="none" stroke="#3B2A20" stroke-width="2" stroke-linecap="round"/>
+  <path d="M-7,17 Q0,12 7,17" fill="none" stroke="#7A2E22" stroke-width="2.4" stroke-linecap="round"/>
+</g>
+<g id="d-lice-spava">
+  <path d="M-14,-2 q4,4 8,0 M6,-2 q4,4 8,0" fill="none" stroke="#2B1E16" stroke-width="2.2" stroke-linecap="round"/>
+  <ellipse cx="0" cy="14" rx="3" ry="2.5" fill="#7A2E22"/>
+</g>
+<g id="d-lice-zijeva">
+  <ellipse cx="0" cy="15" rx="5.5" ry="7.5" fill="#7A2E22"/>
+</g>
+
+<g id="d-vrat">
+  <rect x="-7" y="-86" width="14" height="16" style="fill:var(--koza, #F1C7A0)" stroke="#3A2A20" stroke-width="2"/>
+</g>
+<g id="d-trup">
+  <path d="M-30,-70 Q0,-79 30,-70 L34,0 L-34,0 Z" style="fill:var(--kosulja, #FBF7EE)" class="obris"/>
+  <path d="M-6,-76 L0,-64 L6,-76" fill="none" stroke="#3A2A20" stroke-width="2"/>
+  <path d="M-30,-70 L-11,-74 L-14,0 L-34,0 Z" style="fill:var(--prsluk, #5A3B26)" class="obris"/>
+  <path d="M30,-70 L11,-74 L14,0 L34,0 Z" style="fill:var(--prsluk, #5A3B26)" class="obris"/>
+  <path d="M-12,-72 L-15,-2 M12,-72 L15,-2" stroke="#B8322A" stroke-width="3.5" fill="none"/>
+  <g fill="#E3C46A" stroke="#3A2A20" stroke-width="1">
+    <circle cx="-19" cy="-56" r="3"/><circle cx="-19" cy="-44" r="3"/><circle cx="-19" cy="-32" r="3"/>
+    <circle cx="19" cy="-56" r="3"/><circle cx="19" cy="-44" r="3"/><circle cx="19" cy="-32" r="3"/>
+  </g>
+  <rect x="-35" y="-14" width="70" height="13" fill="#B8322A" stroke="#3A2A20" stroke-width="2"/>
+  <path d="M-35,-9 H35 M-35,-5 H35" stroke="#E9C77A" stroke-width="1.5"/>
+</g>
+<!-- otrcan trup: prsluk raspran do pola, pasa nema -->
+<g id="d-trup-otrcan">
+  <path d="M-30,-70 Q0,-79 30,-70 L34,0 L28,-5 L22,1 L14,-5 L6,1 L-2,-5 L-10,1 L-18,-5 L-26,1 L-34,0 Z" style="fill:var(--kosulja, #FBF7EE)" class="obris"/>
+  <path d="M-6,-76 L0,-64 L6,-76" fill="none" stroke="#3A2A20" stroke-width="2"/>
+  <path d="M-30,-70 L-11,-74 L-12,-34 L-16,-28 L-20,-34 L-25,-27 L-29,-34 L-32,-29 Z" style="fill:var(--prsluk, #5A3B26)" class="obris"/>
+  <path d="M30,-70 L11,-74 L12,-34 L16,-28 L20,-34 L25,-27 L29,-34 L32,-29 Z" style="fill:var(--prsluk, #5A3B26)" class="obris"/>
+  <path d="M-16,-28 q2,8 -2,14 M25,-27 q-3,9 1,16" fill="none" stroke="#5A3B26" stroke-width="2" stroke-linecap="round"/>
+  <g fill="#E3C46A" stroke="#3A2A20" stroke-width="1"><circle cx="-19" cy="-56" r="3"/><circle cx="19" cy="-56" r="3"/></g>
+</g>
+<g id="d-trup-straga">
+  <path d="M-30,-70 Q0,-79 30,-70 L34,0 L-34,0 Z" style="fill:var(--prsluk, #5A3B26)" class="obris"/>
+  <path d="M-34,-3 L34,-3" stroke="#B8322A" stroke-width="3.5"/>
+  <rect x="-35" y="-14" width="70" height="13" fill="#B8322A" stroke="#3A2A20" stroke-width="2"/>
+  <path d="M-35,-9 H35 M-35,-5 H35" stroke="#E9C77A" stroke-width="1.5"/>
+</g>
+<g id="d-trup-straga-otrcan">
+  <path d="M-30,-70 Q0,-79 30,-70 L34,0 L-34,0 Z" style="fill:var(--kosulja, #FBF7EE)" class="obris"/>
+  <path d="M-30,-70 Q0,-79 30,-70 L32,-30 L26,-24 L20,-31 L12,-24 L4,-31 L-4,-24 L-12,-31 L-20,-24 L-26,-31 L-32,-28 Z" style="fill:var(--prsluk, #5A3B26)" class="obris"/>
+  <path d="M-4,-24 q2,8 -2,14 M20,-31 q-3,9 1,16" fill="none" stroke="#5A3B26" stroke-width="2" stroke-linecap="round"/>
+</g>
+<g id="d-noge-sjedi">
+  <path d="M-38,20 L-14,22 L-22,46 L-46,44 Z" style="fill:var(--hlace, #3E4659)" class="obris"/>
+  <path d="M38,20 L14,22 L22,46 L46,44 Z" style="fill:var(--hlace, #3E4659)" class="obris"/>
+  <path d="M-36,-4 L36,-4 L40,24 Q0,31 -40,24 Z" style="fill:var(--hlace, #3E4659)" class="obris"/>
+  <ellipse cx="-35" cy="54" rx="13" ry="15" class="opanak"/>
+  <ellipse cx="35" cy="54" rx="13" ry="15" class="opanak"/>
+  <path d="M-44,48 L-26,48 M-45,57 L-25,57 M26,48 L44,48 M25,57 L45,57" stroke="#3A2A20" stroke-width="1.6"/>
+</g>
+<!-- trake na koljenima gdje su hlače rasparane -->
+<g id="d-resice">
+  <path d="M-7,0 l-2,7 M-2,1 l0,7 M3,0 l2,7 M7,-1 l3,6" stroke="#3E4659" stroke-width="2" stroke-linecap="round"/>
+</g>
+
+<!-- ===================== DJEČAK: poze (ishodište: tlo) ===================== -->
+<!-- tijelo bez torbe i tikvice: za braću i za poze koje ih nose drugačije -->
+<g id="djecak-tijelo-stoji"><use href="#djecak-tijelo-gol"/><g transform="translate(0,-200)"><use href="#d-lice-mirno"/></g></g>
+<g id="djecak-tijelo-sretan"><use href="#djecak-tijelo-gol"/><g transform="translate(0,-200)"><use href="#d-lice-sretno"/></g></g>
+<g id="djecak-tijelo-cudi"><use href="#djecak-tijelo-gol"/><g transform="translate(0,-200)"><use href="#d-lice-cudi"/></g></g>
+<g id="djecak-tijelo-gol">
+  <g transform="translate(0,-92)">
+    <path class="lo noo" d="M-15,-4 L-17,40 L-18,80 M15,-4 L17,40 L18,80"/>
+    <path class="no" d="M-15,-4 L-17,40 L-18,80 M15,-4 L17,40 L18,80"/>
+    <ellipse class="opanak" cx="-20" cy="86" rx="14" ry="7"/>
+    <ellipse class="opanak" cx="20" cy="86" rx="14" ry="7"/>
+    <use href="#d-vrat"/>
+    <use href="#d-trup"/>
+    <path class="lo ruo" d="M-27,-66 L-35,-36 L-38,-12 M27,-66 L35,-36 L38,-12"/>
+    <path class="ru" d="M-27,-66 L-35,-36 L-38,-12 M27,-66 L35,-36 L38,-12"/>
+    <circle class="saka" cx="-38" cy="-8" r="8.5"/>
+    <circle class="saka" cx="38" cy="-8" r="8.5"/>
+  </g>
+  <g transform="translate(0,-200)"><use href="#d-glava"/></g>
+</g>
+<g id="djecak-remen-torba">
+  <path d="M25,-160 L-30,-104" stroke="#7E2020" stroke-width="6" stroke-linecap="round"/>
+  <use href="#torba" transform="translate(-48,-114) scale(.62)"/>
+  <use href="#tikvica" transform="translate(-62,-66) scale(.55)"/>
+</g>
+<g id="djecak-stoji">
+  <use href="#djecak-tijelo-stoji"/>
+  <use href="#djecak-remen-torba"/>
+</g>
+<g id="djecak-pozdrav">
+  <g transform="translate(0,-92)">
+    <path class="lo noo" d="M-15,-4 L-17,40 L-18,80 M15,-4 L17,40 L18,80"/>
+    <path class="no" d="M-15,-4 L-17,40 L-18,80 M15,-4 L17,40 L18,80"/>
+    <ellipse class="opanak" cx="-20" cy="86" rx="14" ry="7"/>
+    <ellipse class="opanak" cx="20" cy="86" rx="14" ry="7"/>
+    <use href="#d-vrat"/>
+    <use href="#d-trup"/>
+    <path class="lo ruo" d="M-27,-66 L-46,-94 L-52,-124 M27,-66 L35,-36 L38,-12"/>
+    <path class="ru" d="M-27,-66 L-46,-94 L-52,-124 M27,-66 L35,-36 L38,-12"/>
+    <ellipse class="saka" cx="-53" cy="-136" rx="8.5" ry="10.5"/>
+    <circle class="saka" cx="38" cy="-8" r="8.5"/>
+  </g>
+  <use href="#djecak-remen-torba"/>
+  <g transform="translate(0,-200)"><use href="#d-glava"/><use href="#d-lice-sretno"/></g>
+</g>
+<g id="djecak-pozdrav-pola">
+  <g transform="translate(0,-92)">
+    <path class="lo noo" d="M-15,-4 L-17,40 L-18,80 M15,-4 L17,40 L18,80"/>
+    <path class="no" d="M-15,-4 L-17,40 L-18,80 M15,-4 L17,40 L18,80"/>
+    <ellipse class="opanak" cx="-20" cy="86" rx="14" ry="7"/>
+    <ellipse class="opanak" cx="20" cy="86" rx="14" ry="7"/>
+    <use href="#d-vrat"/>
+    <use href="#d-trup"/>
+    <path class="lo ruo" d="M-27,-66 L-50,-60 L-58,-88 M27,-66 L35,-36 L38,-12"/>
+    <path class="ru" d="M-27,-66 L-50,-60 L-58,-88 M27,-66 L35,-36 L38,-12"/>
+    <ellipse class="saka" cx="-59" cy="-99" rx="8.5" ry="10.5"/>
+    <circle class="saka" cx="38" cy="-8" r="8.5"/>
+  </g>
+  <use href="#djecak-remen-torba"/>
+  <g transform="translate(0,-200)"><use href="#d-glava"/><use href="#d-lice-cudi"/></g>
+</g>
+<g id="djecak-hoda">
+  <g transform="translate(0,-92)">
+    <path class="lo noo" d="M-15,-4 L-24,38 L-34,76 M15,-4 L19,40 L26,80"/>
+    <path class="no" d="M-15,-4 L-24,38 L-34,76 M15,-4 L19,40 L26,80"/>
+    <ellipse class="opanak" cx="-38" cy="82" rx="14" ry="7" transform="rotate(-8 -38 82)"/>
+    <ellipse class="opanak" cx="29" cy="86" rx="14" ry="7"/>
+    <use href="#d-vrat"/>
+    <use href="#d-trup"/>
+    <path class="lo ruo" d="M-27,-66 L-36,-38 L-30,-12 M27,-66 L38,-40 L48,-18"/>
+    <path class="ru" d="M-27,-66 L-36,-38 L-30,-12 M27,-66 L38,-40 L48,-18"/>
+    <circle class="saka" cx="-29" cy="-8" r="8.5"/>
+    <circle class="saka" cx="49" cy="-14" r="8.5"/>
+  </g>
+  <use href="#djecak-remen-torba"/>
+  <g transform="translate(0,-200)"><use href="#d-glava"/><use href="#d-lice-mirno"/></g>
+</g>
+<g id="djecak-slusa">
+  <g transform="translate(0,-92)">
+    <path class="lo noo" d="M-15,-4 L-17,40 L-18,80 M15,-4 L17,40 L18,80"/>
+    <path class="no" d="M-15,-4 L-17,40 L-18,80 M15,-4 L17,40 L18,80"/>
+    <ellipse class="opanak" cx="-20" cy="86" rx="14" ry="7"/>
+    <ellipse class="opanak" cx="20" cy="86" rx="14" ry="7"/>
+    <use href="#d-vrat"/>
+    <use href="#d-trup"/>
+    <path class="lo ruo" d="M-27,-66 L-34,-38 L-10,-28 M27,-66 L34,-38 L10,-28"/>
+    <path class="ru" d="M-27,-66 L-34,-38 L-10,-28 M27,-66 L34,-38 L10,-28"/>
+    <circle class="saka" cx="-6" cy="-27" r="8.5"/>
+    <circle class="saka" cx="6" cy="-27" r="8.5"/>
+  </g>
+  <g transform="translate(0,-200)"><use href="#d-glava"/><use href="#d-lice-cudi"/></g>
+</g>
+<g id="djecak-sjedi-trlja">
+  <g transform="translate(0,-62)">
+    <use href="#d-noge-sjedi"/>
+    <use href="#d-vrat"/>
+    <use href="#d-trup"/>
+  </g>
+  <g transform="translate(0,-170)"><use href="#d-glava"/><use href="#d-lice-zijeva"/></g>
+  <g transform="translate(0,-62)">
+    <path class="lo ruo" d="M-27,-66 L-50,-44 L-15,-104 M27,-66 L50,-44 L15,-104"/>
+    <path class="ru" d="M-27,-66 L-50,-44 L-15,-104 M27,-66 L50,-44 L15,-104"/>
+    <circle class="saka" cx="-11" cy="-111" r="9.5"/>
+    <circle class="saka" cx="11" cy="-111" r="9.5"/>
+  </g>
+</g>
+<!-- spava na leđima, glava nalijevo na torbi; ispružena ruka dolje ispred tijela (ishodište: tlo pod bokovima) -->
+<g id="djecak-spava">
+  <use href="#torba" transform="translate(-152,-14) rotate(-90) scale(.72)"/>
+  <g transform="translate(0,-40) rotate(-90)">
+    <path class="lo noo" d="M-15,-4 L-17,40 L-18,80 M15,-4 L17,40 L18,80"/>
+    <path class="no" d="M-15,-4 L-17,40 L-18,80 M15,-4 L17,40 L18,80"/>
+    <ellipse class="opanak" cx="-20" cy="86" rx="7" ry="14"/>
+    <ellipse class="opanak" cx="20" cy="86" rx="7" ry="14"/>
+    <use href="#d-vrat"/>
+    <use href="#d-trup"/>
+    <path class="lo ruo" d="M27,-66 L22,-40 L6,-26 M-27,-66 L-40,-40 L-44,-12"/>
+    <path class="ru" d="M27,-66 L22,-40 L6,-26 M-27,-66 L-40,-40 L-44,-12"/>
+    <circle class="saka" cx="4" cy="-24" r="8.5"/>
+    <ellipse class="saka" cx="-46" cy="-4" rx="8" ry="10"/>
+    <g transform="translate(0,-108) rotate(90)"><use href="#d-glava"/><use href="#d-lice-spava"/></g>
+  </g>
+</g>
+<g id="djecak-nosi-drva">
+  <g transform="translate(0,-92)">
+    <path class="lo noo" d="M-15,-4 L-24,38 L-34,76 M15,-4 L19,40 L26,80"/>
+    <path class="no" d="M-15,-4 L-24,38 L-34,76 M15,-4 L19,40 L26,80"/>
+    <ellipse class="opanak" cx="-38" cy="82" rx="14" ry="7" transform="rotate(-8 -38 82)"/>
+    <ellipse class="opanak" cx="29" cy="86" rx="14" ry="7"/>
+    <use href="#d-vrat"/>
+    <use href="#d-trup"/>
+    <path class="lo ruo" d="M-27,-66 L-38,-42 L-22,-50 M27,-66 L38,-42 L22,-50"/>
+    <path class="ru" d="M-27,-66 L-38,-42 L-22,-50 M27,-66 L38,-42 L22,-50"/>
+    <use href="#drva" transform="translate(0,-28) scale(.85)"/>
+    <circle class="saka" cx="-20" cy="-52" r="8.5"/>
+    <circle class="saka" cx="20" cy="-52" r="8.5"/>
+  </g>
+  <use href="#djecak-remen-torba"/>
+  <g transform="translate(0,-200)"><use href="#d-glava"/><use href="#d-lice-sretno"/></g>
+</g>
+<!-- penje se, gledamo ga s leđa; torba na leđima -->
+<g id="djecak-penje">
+  <g transform="translate(0,-92)">
+    <path class="lo noo" d="M-15,-4 L-36,24 L-30,60 M15,-4 L18,40 L18,80"/>
+    <path class="no" d="M-15,-4 L-36,24 L-30,60 M15,-4 L18,40 L18,80"/>
+    <ellipse class="opanak" cx="-30" cy="66" rx="13" ry="8"/>
+    <ellipse class="opanak" cx="18" cy="86" rx="13" ry="8"/>
+    <use href="#d-trup-straga"/>
+    <use href="#torba" transform="translate(0,-62) scale(.7)"/>
+    <use href="#tikvica" transform="translate(30,-16) scale(.5)"/>
+  </g>
+  <g transform="translate(0,-200)"><use href="#d-glava-straga"/></g>
+  <g transform="translate(0,-92)">
+    <path class="lo ruo" d="M-27,-66 L-48,-98 L-44,-134 M27,-66 L46,-84 L42,-114"/>
+    <path class="ru" d="M-27,-66 L-48,-98 L-44,-134 M27,-66 L46,-84 L42,-114"/>
+    <circle class="saka" cx="-44" cy="-140" r="9"/>
+    <circle class="saka" cx="42" cy="-120" r="9"/>
+  </g>
+</g>
+<g id="djecak-drzi-glavu">
+  <g transform="translate(0,-92)">
+    <path class="lo noo" d="M-15,-4 L-17,40 L-18,80 M15,-4 L17,40 L18,80"/>
+    <path class="no" d="M-15,-4 L-17,40 L-18,80 M15,-4 L17,40 L18,80"/>
+    <ellipse class="opanak" cx="-20" cy="86" rx="14" ry="7"/>
+    <ellipse class="opanak" cx="20" cy="86" rx="14" ry="7"/>
+    <use href="#d-vrat"/>
+    <use href="#d-trup"/>
+  </g>
+  <use href="#djecak-remen-torba"/>
+  <g transform="translate(0,-200)"><use href="#d-glava"/><use href="#d-lice-boji"/></g>
+  <g transform="translate(0,-92)">
+    <path class="lo ruo" d="M-27,-66 L-56,-86 L-36,-122 M27,-66 L56,-86 L36,-122"/>
+    <path class="ru" d="M-27,-66 L-56,-86 L-36,-122 M27,-66 L56,-86 L36,-122"/>
+    <circle class="saka" cx="-31" cy="-126" r="9"/>
+    <circle class="saka" cx="31" cy="-126" r="9"/>
+  </g>
+</g>
+
+<!-- ===== otrcane poze (od dvostranice 11): kratki rukavi i nogavice, počupana kosa ===== -->
+<g id="djecak-visi-otrcan">
+  <g transform="translate(0,-92)">
+    <path class="lo noo" d="M-15,-4 L-20,36 M15,-4 L24,34"/>
+    <path class="lo nko" d="M-20,36 L-14,76 M24,34 L28,74"/>
+    <path class="nk" d="M-20,36 L-14,76 M24,34 L28,74"/>
+    <path class="no" d="M-15,-4 L-20,36 M15,-4 L24,34"/>
+    <use href="#d-resice" transform="translate(-20,40)"/>
+    <use href="#d-resice" transform="translate(24,38)"/>
+    <ellipse class="opanak" cx="-14" cy="82" rx="13" ry="7"/>
+    <ellipse class="opanak" cx="28" cy="80" rx="13" ry="7"/>
+    <use href="#d-vrat"/>
+    <use href="#d-trup-otrcan"/>
+    <path class="lo ruo" d="M-27,-66 L-26,-112 M27,-66 L26,-112"/>
+    <path class="lo rko" d="M-26,-112 L-9,-168 M26,-112 L9,-168"/>
+    <path class="rk" d="M-26,-112 L-9,-168 M26,-112 L9,-168"/>
+    <path class="ru" d="M-27,-66 L-26,-112 M27,-66 L26,-112"/>
+  </g>
+  <g transform="translate(0,-200)"><use href="#d-glava"/><use href="#d-pocupano"/><use href="#d-lice-boji"/></g>
+  <use href="#tikvica-oko-vrata" transform="translate(0,-176)"/>
+  <circle class="saka" cx="-7" cy="-266" r="9"/>
+  <circle class="saka" cx="7" cy="-266" r="9"/>
+</g>
+<g id="djecak-pada-otrcan">
+  <g transform="translate(0,-92)">
+    <path class="lo noo" d="M-15,-4 L-38,28 M15,-4 L38,28"/>
+    <path class="lo nko" d="M-38,28 L-58,54 M38,28 L58,54"/>
+    <path class="nk" d="M-38,28 L-58,54 M38,28 L58,54"/>
+    <path class="no" d="M-15,-4 L-38,28 M15,-4 L38,28"/>
+    <ellipse class="opanak" cx="-62" cy="60" rx="13" ry="7" transform="rotate(30 -62 60)"/>
+    <ellipse class="opanak" cx="62" cy="60" rx="13" ry="7" transform="rotate(-30 62 60)"/>
+    <use href="#d-vrat"/>
+    <use href="#d-trup-otrcan"/>
+    <path class="lo ruo" d="M-27,-66 L-56,-86 M27,-66 L56,-86"/>
+    <path class="lo rko" d="M-56,-86 L-84,-112 M56,-86 L84,-112"/>
+    <path class="rk" d="M-56,-86 L-84,-112 M56,-86 L84,-112"/>
+    <path class="ru" d="M-27,-66 L-56,-86 M27,-66 L56,-86"/>
+    <circle class="saka" cx="-88" cy="-116" r="9"/>
+    <circle class="saka" cx="88" cy="-116" r="9"/>
+  </g>
+  <g transform="translate(0,-200)"><use href="#d-glava"/><use href="#d-pocupano"/><use href="#d-lice-cudi"/></g>
+  <use href="#tikvica-oko-vrata" transform="translate(0,-176)"/>
+</g>
+<!-- sjedi, lijeva noga u rupi (stopalo skriva kamenje u slici); ishodište: tlo -->
+<g id="djecak-zaglavljen-otrcan">
+  <g transform="translate(0,-26)">
+    <path class="lo noo" d="M-15,-4 L-34,18 M15,-4 L44,-26"/>
+    <path class="lo nko" d="M-34,18 L-40,46 M44,-26 L50,18"/>
+    <path class="nk" d="M-34,18 L-40,46 M44,-26 L50,18"/>
+    <path class="no" d="M-15,-4 L-34,18 M15,-4 L44,-26"/>
+    <ellipse class="opanak" cx="52" cy="24" rx="14" ry="7"/>
+    <use href="#d-vrat"/>
+    <use href="#d-trup-otrcan"/>
+  </g>
+  <g transform="translate(0,-134)"><use href="#d-glava"/><use href="#d-pocupano"/><use href="#d-lice-boji"/></g>
+  <use href="#tikvica-oko-vrata" transform="translate(0,-110)"/>
+  <g transform="translate(0,-26)">
+    <path class="lo ruo" d="M-27,-66 L-44,-44 M27,-66 L12,-42"/>
+    <path class="lo rko" d="M-44,-44 L-32,-4 M12,-42 L-14,-8"/>
+    <path class="rk" d="M-44,-44 L-32,-4 M12,-42 L-14,-8"/>
+    <path class="ru" d="M-27,-66 L-44,-44 M27,-66 L12,-42"/>
+    <circle class="saka" cx="-31" cy="0" r="9"/>
+    <circle class="saka" cx="-17" cy="-4" r="9"/>
+  </g>
+</g>
+<g id="djecak-motika-otrcan">
+  <g transform="translate(0,-92)">
+    <path class="lo noo" d="M-15,-4 L-24,38 M15,-4 L19,40"/>
+    <path class="lo nko" d="M-24,38 L-34,76 M19,40 L26,80"/>
+    <path class="nk" d="M-24,38 L-34,76 M19,40 L26,80"/>
+    <path class="no" d="M-15,-4 L-24,38 M15,-4 L19,40"/>
+    <ellipse class="opanak" cx="-38" cy="82" rx="14" ry="7" transform="rotate(-8 -38 82)"/>
+    <ellipse class="opanak" cx="29" cy="86" rx="14" ry="7"/>
+    <use href="#d-vrat"/>
+    <use href="#d-trup-otrcan"/>
+    <use href="#motika" transform="translate(-62,-140) rotate(36)"/>
+    <path class="lo ruo" d="M-27,-66 L-36,-40 M27,-66 L44,-80"/>
+    <path class="lo rko" d="M-36,-40 L-30,-14 M44,-80 L34,-98"/>
+    <path class="rk" d="M-36,-40 L-30,-14 M44,-80 L34,-98"/>
+    <path class="ru" d="M-27,-66 L-36,-40 M27,-66 L44,-80"/>
+    <circle class="saka" cx="-29" cy="-9" r="8.5"/>
+    <circle class="saka" cx="32" cy="-102" r="8.5"/>
+  </g>
+  <g transform="translate(0,-200)"><use href="#d-glava"/><use href="#d-pocupano"/><use href="#d-lice-mirno"/></g>
+  <use href="#tikvica-oko-vrata" transform="translate(0,-176)"/>
+</g>
+<g id="djecak-predaje-otrcan">
+  <g transform="translate(0,-92)">
+    <path class="lo noo" d="M-15,-4 L-17,40 M15,-4 L17,40"/>
+    <path class="lo nko" d="M-17,40 L-18,80 M17,40 L18,80"/>
+    <path class="nk" d="M-17,40 L-18,80 M17,40 L18,80"/>
+    <path class="no" d="M-15,-4 L-17,40 M15,-4 L17,40"/>
+    <use href="#d-resice" transform="translate(-17,44)"/>
+    <use href="#d-resice" transform="translate(17,44)"/>
+    <ellipse class="opanak" cx="-20" cy="86" rx="14" ry="7"/>
+    <ellipse class="opanak" cx="20" cy="86" rx="14" ry="7"/>
+    <use href="#d-vrat"/>
+    <use href="#d-trup-otrcan"/>
+    <path class="lo ruo" d="M-27,-66 L-8,-48 M27,-66 L50,-56"/>
+    <path class="lo rko" d="M-8,-48 L36,-50 M50,-56 L70,-60"/>
+    <path class="rk" d="M-8,-48 L36,-50 M50,-56 L70,-60"/>
+    <path class="ru" d="M-27,-66 L-8,-48 M27,-66 L50,-56"/>
+    <use href="#tikvica" transform="translate(58,-34) scale(.62)"/>
+    <circle class="saka" cx="42" cy="-48" r="8.5"/>
+    <circle class="saka" cx="74" cy="-56" r="8.5"/>
+  </g>
+  <path d="M25,-160 L-30,-104" stroke="#7E2020" stroke-width="6" stroke-linecap="round"/>
+  <use href="#torba-rasparana" transform="translate(-48,-114) scale(.62)"/>
+  <g transform="translate(0,-200)"><use href="#d-glava"/><use href="#d-pocupano"/><use href="#d-lice-sretno"/></g>
+</g>
+<g id="djecak-prozor-otrcan">
+  <g transform="translate(0,-92)">
+    <path class="lo noo" d="M-15,-4 L-17,40 M15,-4 L17,40"/>
+    <path class="lo nko" d="M-17,40 L-18,80 M17,40 L18,80"/>
+    <path class="nk" d="M-17,40 L-18,80 M17,40 L18,80"/>
+    <path class="no" d="M-15,-4 L-17,40 M15,-4 L17,40"/>
+    <use href="#d-resice" transform="translate(-17,44)"/>
+    <use href="#d-resice" transform="translate(17,44)"/>
+    <ellipse class="opanak" cx="-20" cy="86" rx="13" ry="8"/>
+    <ellipse class="opanak" cx="20" cy="86" rx="13" ry="8"/>
+    <use href="#d-trup-straga-otrcan"/>
+    <path class="lo ruo" d="M-27,-66 L-42,-48 M27,-66 L42,-48"/>
+    <path class="lo rko" d="M-42,-48 L-30,-34 M42,-48 L30,-34"/>
+    <path class="rk" d="M-42,-48 L-30,-34 M42,-48 L30,-34"/>
+    <path class="ru" d="M-27,-66 L-42,-48 M27,-66 L42,-48"/>
+  </g>
+  <g transform="translate(0,-200)"><use href="#d-glava-straga"/><use href="#d-pocupano-straga"/></g>
+</g>
+<g id="djecak-pozdrav-otrcan">
+  <g transform="translate(0,-92)">
+    <path class="lo noo" d="M-15,-4 L-17,40 M15,-4 L17,40"/>
+    <path class="lo nko" d="M-17,40 L-18,80 M17,40 L18,80"/>
+    <path class="nk" d="M-17,40 L-18,80 M17,40 L18,80"/>
+    <path class="no" d="M-15,-4 L-17,40 M15,-4 L17,40"/>
+    <use href="#d-resice" transform="translate(-17,44)"/>
+    <use href="#d-resice" transform="translate(17,44)"/>
+    <ellipse class="opanak" cx="-20" cy="86" rx="14" ry="7"/>
+    <ellipse class="opanak" cx="20" cy="86" rx="14" ry="7"/>
+    <use href="#d-vrat"/>
+    <use href="#d-trup-otrcan"/>
+    <path class="lo ruo" d="M-27,-66 L-46,-94 M27,-66 L35,-36"/>
+    <path class="lo rko" d="M-46,-94 L-52,-124 M35,-36 L38,-12"/>
+    <path class="rk" d="M-46,-94 L-52,-124 M35,-36 L38,-12"/>
+    <path class="ru" d="M-27,-66 L-46,-94 M27,-66 L35,-36"/>
+    <ellipse class="saka" cx="-53" cy="-136" rx="8.5" ry="10.5"/>
+    <circle class="saka" cx="38" cy="-8" r="8.5"/>
+  </g>
+  <path d="M25,-160 L-30,-104" stroke="#7E2020" stroke-width="6" stroke-linecap="round"/>
+  <use href="#torba-rasparana" transform="translate(-48,-114) scale(.62)"/>
+  <g transform="translate(0,-200)"><use href="#d-glava"/><use href="#d-pocupano"/><use href="#d-lice-sretno"/></g>
+</g>
+
+<!-- ===================== ODRASLI MUŠKARAC: dijelovi (ishodište: bokovi) ===================== -->
+<g id="m-glava">
+  <circle cx="-25" cy="3" r="6" class="saka" style="fill:var(--koza, #EBBE98)"/>
+  <circle cx="25" cy="3" r="6" class="saka" style="fill:var(--koza, #EBBE98)"/>
+  <circle cx="0" cy="0" r="25" style="fill:var(--koza, #EBBE98)" stroke="#3A2A20" stroke-width="2.4"/>
+  <path d="M-25,4 C-27,-10 -22,-18 -16,-20 L-16,-6 Q-21,-2 -25,4 Z M25,4 C27,-10 22,-18 16,-20 L16,-6 Q21,-2 25,4 Z" style="fill:var(--kosa, #3B2A20)"/>
+  <path d="M-20,-18 L-19,-32 Q0,-37 19,-32 L20,-18 Q0,-22 -20,-18 Z" style="fill:var(--kapa, #C0312B)" stroke="#3A2A20" stroke-width="2.2" stroke-linejoin="round"/>
+  <ellipse cx="0" cy="-32.5" rx="19" ry="3.6" fill="#000" opacity=".18" stroke="#3A2A20" stroke-width="1.6"/>
+  <path d="M-20,-22 Q0,-26 20,-22" fill="none" stroke="#2A1E18" stroke-width="2.6"/>
+  <circle cx="-14" cy="8" r="5" fill="#E8877A" opacity=".45"/>
+  <circle cx="14" cy="8" r="5" fill="#E8877A" opacity=".45"/>
+  <path d="M1,-2 q4,7 -2,9" fill="none" stroke="#3A2A20" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M-15,12 Q-8,5 0,9 Q8,5 15,12 Q8,16 0,12 Q-8,16 -15,12 Z" style="fill:var(--brci, #3B2A20)" stroke="#3A2A20" stroke-width="1"/>
+</g>
+<g id="m-lice-mirno">
+  <ellipse cx="-9" cy="-5" rx="2.6" ry="3.4" fill="#2B1E16"/>
+  <ellipse cx="9" cy="-5" rx="2.6" ry="3.4" fill="#2B1E16"/>
+  <path d="M-14,-12 q5,-3 9,-1 M5,-13 q5,-2 9,1" fill="none" style="stroke:var(--obrve, #3B2A20)" stroke-width="2.2" stroke-linecap="round"/>
+</g>
+<g id="m-lice-sretno">
+  <path d="M-13,-4 q4,-5 8,0 M5,-4 q4,-5 8,0" fill="none" stroke="#2B1E16" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M-14,-12 q5,-3 9,-1 M5,-13 q5,-2 9,1" fill="none" style="stroke:var(--obrve, #3B2A20)" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M-6,16 Q0,21 6,16" fill="none" stroke="#7A2E22" stroke-width="2.2" stroke-linecap="round"/>
+</g>
+<g id="m-bore">
+  <path d="M-18,-6 l-4,-2 M18,-6 l4,-2 M-18,-2 l-4,0 M18,-2 l4,0 M-8,-17 q8,-3 16,0" fill="none" stroke="#9A6E58" stroke-width="1.5" stroke-linecap="round"/>
+</g>
+<g id="m-vrat"><rect x="-8" y="-104" width="16" height="18" style="fill:var(--koza, #EBBE98)" stroke="#3A2A20" stroke-width="2"/></g>
+<g id="m-trup">
+  <path d="M-34,-88 Q0,-97 34,-88 L38,0 L-38,0 Z" style="fill:var(--kosulja, #FBF7EE)" class="obris"/>
+  <path d="M-7,-94 L0,-80 L7,-94" fill="none" stroke="#3A2A20" stroke-width="2"/>
+  <path d="M-34,-88 L-13,-92 L-16,0 L-38,0 Z" style="fill:var(--prsluk, #5A3B26)" class="obris"/>
+  <path d="M34,-88 L13,-92 L16,0 L38,0 Z" style="fill:var(--prsluk, #5A3B26)" class="obris"/>
+  <path d="M-14,-90 L-17,-2 M14,-90 L17,-2" style="stroke:var(--obrub, #B8322A)" stroke-width="3.5" fill="none"/>
+  <g fill="#E3C46A" stroke="#3A2A20" stroke-width="1">
+    <circle cx="-22" cy="-70" r="3"/><circle cx="-22" cy="-56" r="3"/><circle cx="-22" cy="-42" r="3"/>
+    <circle cx="22" cy="-70" r="3"/><circle cx="22" cy="-56" r="3"/><circle cx="22" cy="-42" r="3"/>
+  </g>
+  <rect x="-39" y="-17" width="78" height="16" style="fill:var(--pas, #B8322A)" stroke="#3A2A20" stroke-width="2"/>
+  <path d="M-39,-11 H39 M-39,-6 H39" stroke="#E9C77A" stroke-width="1.5"/>
+</g>
+
+<!-- ===================== ODRASLI MUŠKARAC: poze (ishodište: tlo) ===================== -->
+<g id="muskarac-stoji">
+  <g transform="translate(0,-112)">
+    <path class="lo mnoo" d="M-17,-4 L-19,48 L-20,98 M17,-4 L19,48 L20,98"/>
+    <path class="mno" d="M-17,-4 L-19,48 L-20,98 M17,-4 L19,48 L20,98"/>
+    <ellipse class="opanak" cx="-22" cy="104" rx="16" ry="8"/>
+    <ellipse class="opanak" cx="22" cy="104" rx="16" ry="8"/>
+    <use href="#m-vrat"/>
+    <use href="#m-trup"/>
+    <path class="lo mruo" d="M-31,-82 L-40,-44 L-42,-14 M31,-82 L40,-44 L42,-14"/>
+    <path class="mru" d="M-31,-82 L-40,-44 L-42,-14 M31,-82 L40,-44 L42,-14"/>
+    <circle class="saka" style="fill:var(--koza, #EBBE98)" cx="-42" cy="-9" r="9.5"/>
+    <circle class="saka" style="fill:var(--koza, #EBBE98)" cx="42" cy="-9" r="9.5"/>
+  </g>
+  <g transform="translate(0,-240)"><use href="#m-glava"/><use href="#m-lice-mirno"/><use href="#m-bore" style="display:var(--bore, none)"/></g>
+</g>
+<g id="muskarac-pokazuje">
+  <g transform="translate(0,-112)">
+    <path class="lo mnoo" d="M-17,-4 L-19,48 L-20,98 M17,-4 L19,48 L20,98"/>
+    <path class="mno" d="M-17,-4 L-19,48 L-20,98 M17,-4 L19,48 L20,98"/>
+    <ellipse class="opanak" cx="-22" cy="104" rx="16" ry="8"/>
+    <ellipse class="opanak" cx="22" cy="104" rx="16" ry="8"/>
+    <use href="#m-vrat"/>
+    <use href="#m-trup"/>
+    <path class="lo mruo" d="M-31,-82 L-40,-44 L-42,-14 M31,-82 L64,-100 L100,-118"/>
+    <path class="mru" d="M-31,-82 L-40,-44 L-42,-14 M31,-82 L64,-100 L100,-118"/>
+    <circle class="saka" style="fill:var(--koza, #EBBE98)" cx="-42" cy="-9" r="9.5"/>
+    <circle class="saka" style="fill:var(--koza, #EBBE98)" cx="106" cy="-121" r="9"/>
+    <path d="M112,-126 L126,-134" stroke="#3A2A20" stroke-width="7" stroke-linecap="round"/>
+    <path d="M112,-126 L126,-134" style="stroke:var(--koza, #EBBE98)" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(0,-240)"><use href="#m-glava"/><use href="#m-lice-sretno"/><use href="#m-bore" style="display:var(--bore, none)"/></g>
+</g>
+<g id="muskarac-pokazuje-gore">
+  <g transform="translate(0,-112)">
+    <path class="lo mnoo" d="M-17,-4 L-19,48 L-20,98 M17,-4 L19,48 L20,98"/>
+    <path class="mno" d="M-17,-4 L-19,48 L-20,98 M17,-4 L19,48 L20,98"/>
+    <ellipse class="opanak" cx="-22" cy="104" rx="16" ry="8"/>
+    <ellipse class="opanak" cx="22" cy="104" rx="16" ry="8"/>
+    <use href="#m-vrat"/>
+    <use href="#m-trup"/>
+    <path class="lo mruo" d="M-31,-82 L-40,-44 L-42,-14 M31,-82 L60,-118 L86,-158"/>
+    <path class="mru" d="M-31,-82 L-40,-44 L-42,-14 M31,-82 L60,-118 L86,-158"/>
+    <circle class="saka" style="fill:var(--koza, #EBBE98)" cx="-42" cy="-9" r="9.5"/>
+    <circle class="saka" style="fill:var(--koza, #EBBE98)" cx="90" cy="-164" r="9"/>
+    <path d="M94,-171 L102,-186" stroke="#3A2A20" stroke-width="7" stroke-linecap="round"/>
+    <path d="M94,-171 L102,-186" style="stroke:var(--koza, #EBBE98)" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(0,-240)"><use href="#m-glava"/><use href="#m-lice-sretno"/><use href="#m-bore" style="display:var(--bore, none)"/></g>
+</g>
+<!-- sjedi nisko (na tronošcu), koljena razmaknuta; ishodište: tlo -->
+<g id="muskarac-sjedi">
+  <g transform="translate(0,-80)">
+    <path class="lo mnoo" d="M-17,-4 L-40,22 L-38,66 M17,-4 L40,22 L38,66"/>
+    <path class="mno" d="M-17,-4 L-40,22 L-38,66 M17,-4 L40,22 L38,66"/>
+    <ellipse class="opanak" cx="-40" cy="72" rx="16" ry="8"/>
+    <ellipse class="opanak" cx="40" cy="72" rx="16" ry="8"/>
+    <use href="#m-vrat"/>
+    <use href="#m-trup"/>
+    <path class="lo mruo" d="M-31,-82 L-48,-42 L-36,-6 M31,-82 L48,-42 L36,-6"/>
+    <path class="mru" d="M-31,-82 L-48,-42 L-36,-6 M31,-82 L48,-42 L36,-6"/>
+    <circle class="saka" style="fill:var(--koza, #EBBE98)" cx="-34" cy="-2" r="9.5"/>
+    <circle class="saka" style="fill:var(--koza, #EBBE98)" cx="34" cy="-2" r="9.5"/>
+  </g>
+  <g transform="translate(0,-208)"><use href="#m-glava"/><use href="#m-lice-sretno"/><use href="#m-bore" style="display:var(--bore, none)"/></g>
+</g>
+<!-- starac sa štapom (susjed): bijela kosa i brci -->
+<g id="starac-stap">
+  <path d="M-62,-150 Q-70,-158 -62,-166" fill="none" stroke="#3A2A20" stroke-width="9" stroke-linecap="round"/>
+  <path d="M-62,-150 L-66,0" stroke="#3A2A20" stroke-width="9" stroke-linecap="round"/>
+  <path d="M-62,-150 L-66,0 M-62,-150 Q-70,-158 -62,-166" fill="none" stroke="#8A5E3A" stroke-width="5" stroke-linecap="round"/>
+  <g transform="translate(0,-112)">
+    <path class="lo mnoo" d="M-17,-4 L-19,48 L-20,98 M17,-4 L19,48 L20,98"/>
+    <path class="mno" d="M-17,-4 L-19,48 L-20,98 M17,-4 L19,48 L20,98"/>
+    <ellipse class="opanak" cx="-22" cy="104" rx="16" ry="8"/>
+    <ellipse class="opanak" cx="22" cy="104" rx="16" ry="8"/>
+    <use href="#m-vrat"/>
+    <use href="#m-trup"/>
+    <path class="lo mruo" d="M-31,-82 L-48,-56 L-58,-38 M31,-82 L40,-44 L42,-14"/>
+    <path class="mru" d="M-31,-82 L-48,-56 L-58,-38 M31,-82 L40,-44 L42,-14"/>
+    <circle class="saka" style="fill:var(--koza, #EBBE98)" cx="-62" cy="-36" r="9.5"/>
+    <circle class="saka" style="fill:var(--koza, #EBBE98)" cx="42" cy="-9" r="9.5"/>
+  </g>
+  <g transform="translate(0,-240)"><use href="#m-glava"/><use href="#m-lice-sretno"/><use href="#m-bore"/></g>
+</g>
+
+<!-- ===================== ODRASLA ŽENA: dijelovi (ishodište: struk) ===================== -->
+<g id="z-glava">
+  <path d="M-21,-4 Q-30,24 -20,34 L20,34 Q30,24 21,-4 Z" style="fill:var(--marama, #F4EFE3)" class="obris"/>
+  <circle cx="0" cy="0" r="22" style="fill:var(--koza, #EBBE98)" stroke="#3A2A20" stroke-width="2.4"/>
+  <circle cx="-12" cy="7" r="4.5" fill="#E8877A" opacity=".45"/>
+  <circle cx="12" cy="7" r="4.5" fill="#E8877A" opacity=".45"/>
+  <path d="M1,0 q3,5 -1,7" fill="none" stroke="#3A2A20" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M-25,4 C-28,-36 28,-36 25,4 C23,14 21,18 17,20 C16,4 10,-12 0,-12 C-10,-12 -16,4 -17,20 C-21,18 -23,14 -25,4 Z" style="fill:var(--marama, #F4EFE3)" class="obris"/>
+  <path d="M-17,20 Q0,30 17,20" fill="none" stroke="#3A2A20" stroke-width="2"/>
+</g>
+<g id="z-lice-mirno">
+  <ellipse cx="-8" cy="-1" rx="2.4" ry="3.2" fill="#2B1E16"/>
+  <ellipse cx="8" cy="-1" rx="2.4" ry="3.2" fill="#2B1E16"/>
+  <path d="M-5,12 Q0,15 5,12" fill="none" stroke="#7A2E22" stroke-width="2" stroke-linecap="round"/>
+</g>
+<g id="z-lice-sretno">
+  <path d="M-11,0 q3,-4 6,0 M5,0 q3,-4 6,0" fill="none" stroke="#2B1E16" stroke-width="2" stroke-linecap="round"/>
+  <path d="M-6,10 Q0,17 6,10 Z" fill="#7A2E22"/>
+</g>
+<g id="z-bore">
+  <path d="M-15,-2 l-3,-2 M15,-2 l3,-2 M-15,2 l-3,0 M15,2 l3,0 M-6,-8 q6,-2 12,0" fill="none" stroke="#9A6E58" stroke-width="1.4" stroke-linecap="round"/>
+</g>
+<g id="z-tijelo">
+  <ellipse class="opanak" cx="-16" cy="114" rx="14" ry="7"/>
+  <ellipse class="opanak" cx="16" cy="114" rx="14" ry="7"/>
+  <path d="M-28,-2 L28,-2 L50,108 Q0,116 -50,108 Z" style="fill:var(--haljina, #2F3550)" class="obris"/>
+  <path d="M-22,4 L22,4 L30,94 L-30,94 Z" style="fill:var(--pregaca, #A8292A)"/>
+  <path d="M-23,20 H23 M-26,46 H26 M-28,72 H28" stroke="#EFE3C8" stroke-width="5"/>
+  <path d="M-24,30 H24 M-27,58 H27" stroke="#2E3E6E" stroke-width="4"/>
+  <path d="M-29,84 H29" stroke="#4F7A3A" stroke-width="4"/>
+  <path d="M-22,4 L22,4 L30,94 L-30,94 Z" fill="none" class="obris"/>
+  <path d="M-28,95 V103 M-24,95 V104 M-20,95 V103 M-16,95 V104 M-12,95 V103 M-8,95 V104 M-4,95 V103 M0,95 V104 M4,95 V103 M8,95 V104 M12,95 V103 M16,95 V104 M20,95 V103 M24,95 V104 M28,95 V103" stroke="#C9402F" stroke-width="2" stroke-linecap="round"/>
+  <path d="M-28,-80 Q0,-88 28,-80 L30,0 L-30,0 Z" style="fill:var(--haljina, #2F3550)" class="obris"/>
+  <path d="M-12,-84 L0,-64 L12,-84 Z" style="fill:var(--kosulja, #FBF7EE)" class="obris"/>
+  <rect x="-31" y="-8" width="62" height="10" fill="#B8322A" stroke="#3A2A20" stroke-width="1.8"/>
+</g>
+<g id="z-vrat"><rect x="-7" y="-98" width="14" height="16" style="fill:var(--koza, #EBBE98)" stroke="#3A2A20" stroke-width="2"/></g>
+<g id="z-tijelo-sjedi">
+  <ellipse class="opanak" cx="-18" cy="74" rx="14" ry="7"/>
+  <ellipse class="opanak" cx="18" cy="74" rx="14" ry="7"/>
+  <path d="M-30,-2 L30,-2 L60,64 Q0,74 -60,64 Z" style="fill:var(--haljina, #2F3550)" class="obris"/>
+  <path d="M-24,4 L24,4 L40,60 L-40,60 Z" style="fill:var(--pregaca, #A8292A)"/>
+  <path d="M-26,18 H26 M-32,38 H32" stroke="#EFE3C8" stroke-width="5"/>
+  <path d="M-29,28 H29 M-36,50 H36" stroke="#2E3E6E" stroke-width="4"/>
+  <path d="M-24,4 L24,4 L40,60 L-40,60 Z" fill="none" class="obris"/>
+  <path d="M-28,-80 Q0,-88 28,-80 L30,0 L-30,0 Z" style="fill:var(--haljina, #2F3550)" class="obris"/>
+  <path d="M-12,-84 L0,-64 L12,-84 Z" style="fill:var(--kosulja, #FBF7EE)" class="obris"/>
+  <rect x="-31" y="-8" width="62" height="10" fill="#B8322A" stroke="#3A2A20" stroke-width="1.8"/>
+</g>
+
+<!-- ===================== ODRASLA ŽENA: poze (ishodište: tlo) ===================== -->
+<g id="zena-stoji">
+  <g transform="translate(0,-122)">
+    <use href="#z-tijelo"/>
+    <use href="#z-vrat"/>
+    <path class="lo mruo" d="M-26,-76 L-36,-40 L-36,-12 M26,-76 L36,-40 L36,-12"/>
+    <path class="mru" d="M-26,-76 L-36,-40 L-36,-12 M26,-76 L36,-40 L36,-12"/>
+    <circle class="saka" style="fill:var(--koza, #EBBE98)" cx="-36" cy="-6" r="8.5"/>
+    <circle class="saka" style="fill:var(--koza, #EBBE98)" cx="36" cy="-6" r="8.5"/>
+  </g>
+  <g transform="translate(0,-242)"><use href="#z-glava"/><use href="#z-lice-mirno"/><use href="#z-bore" style="display:var(--bore, none)"/></g>
+</g>
+<g id="zena-pruza">
+  <g transform="translate(0,-122)">
+    <use href="#z-tijelo"/>
+    <use href="#z-vrat"/>
+    <path class="lo mruo" d="M-26,-76 L-36,-40 L-36,-12 M26,-76 L52,-58 L84,-62"/>
+    <path class="mru" d="M-26,-76 L-36,-40 L-36,-12 M26,-76 L52,-58 L84,-62"/>
+    <circle class="saka" style="fill:var(--koza, #EBBE98)" cx="-36" cy="-6" r="8.5"/>
+    <circle class="saka" style="fill:var(--koza, #EBBE98)" cx="90" cy="-62" r="8.5"/>
+  </g>
+  <g transform="translate(0,-242)"><use href="#z-glava"/><use href="#z-lice-sretno"/><use href="#z-bore" style="display:var(--bore, none)"/></g>
+</g>
+<g id="zena-sjedi">
+  <g transform="translate(0,-80)">
+    <use href="#z-tijelo-sjedi"/>
+    <use href="#z-vrat"/>
+    <path class="lo mruo" d="M-26,-76 L-40,-40 L-24,-8 M26,-76 L40,-40 L24,-8"/>
+    <path class="mru" d="M-26,-76 L-40,-40 L-24,-8 M26,-76 L40,-40 L24,-8"/>
+    <circle class="saka" style="fill:var(--koza, #EBBE98)" cx="-20" cy="-4" r="8.5"/>
+    <circle class="saka" style="fill:var(--koza, #EBBE98)" cx="20" cy="-4" r="8.5"/>
+  </g>
+  <g transform="translate(0,-200)"><use href="#z-glava"/><use href="#z-lice-sretno"/><use href="#z-bore" style="display:var(--bore, none)"/></g>
+</g>
+<!-- beba u povoju -->
+<g id="beba">
+  <path d="M-34,6 Q-40,-14 -20,-18 L30,-14 Q44,-8 40,8 Q30,20 -20,18 Q-32,16 -34,6 Z" fill="#FBF7EE" class="obris"/>
+  <path d="M-4,-17 L2,18 M14,-15 L18,16" stroke="#B8322A" stroke-width="4"/>
+  <circle cx="-26" cy="-8" r="14" fill="#F4CDAE" stroke="#3A2A20" stroke-width="2"/>
+  <path d="M-38,-12 Q-30,-28 -14,-16" fill="#FBF7EE" stroke="#3A2A20" stroke-width="2"/>
+  <path d="M-31,-7 q2,2 4,0 M-23,-8 q2,2 4,0" fill="none" stroke="#2B1E16" stroke-width="1.6" stroke-linecap="round"/>
+  <circle cx="-33" cy="-2" r="2.6" fill="#E8877A" opacity=".5"/>
+  <circle cx="-19" cy="-3" r="2.6" fill="#E8877A" opacity=".5"/>
+</g>
+<g id="zena-dijete">
+  <g transform="translate(0,-122)">
+    <use href="#z-tijelo"/>
+    <use href="#z-vrat"/>
+    <path class="lo mruo" d="M-26,-76 L-38,-46 M26,-76 L38,-50"/>
+    <path class="mru" d="M-26,-76 L-38,-46 M26,-76 L38,-50"/>
+    <path class="lo mruo" d="M-38,-46 L-4,-36 M38,-50 L26,-44"/>
+    <path class="mru" d="M-38,-46 L-4,-36 M38,-50 L26,-44"/>
+    <use href="#beba" transform="translate(4,-56) rotate(-10) scale(1.1)"/>
+    <circle class="saka" style="fill:var(--koza, #EBBE98)" cx="0" cy="-36" r="8.5"/>
+    <circle class="saka" style="fill:var(--koza, #EBBE98)" cx="30" cy="-44" r="8.5"/>
+  </g>
+  <g transform="translate(0,-242)"><use href="#z-glava"/><use href="#z-lice-sretno"/></g>
+</g>
+<g id="pastirica">
+  <path d="M-60,-4 L-55,-214 Q-55,-236 -73,-234 Q-87,-232 -85,-218" fill="none" stroke="#3A2A20" stroke-width="9" stroke-linecap="round"/>
+  <path d="M-60,-4 L-55,-214 Q-55,-236 -73,-234 Q-87,-232 -85,-218" fill="none" stroke="#8A5E3A" stroke-width="5" stroke-linecap="round"/>
+  <g transform="translate(6,6) scale(.92)">
+    <g transform="translate(0,-122)">
+      <use href="#z-tijelo"/>
+      <use href="#z-vrat"/>
+      <path class="lo mruo" d="M-26,-76 L-46,-50 L-64,-56 M26,-76 L36,-40 L36,-12"/>
+      <path class="mru" d="M-26,-76 L-46,-50 L-64,-56 M26,-76 L36,-40 L36,-12"/>
+      <circle class="saka" style="fill:var(--koza, #EBBE98)" cx="-70" cy="-56" r="8.5"/>
+      <circle class="saka" style="fill:var(--koza, #EBBE98)" cx="36" cy="-6" r="8.5"/>
+    </g>
+    <g transform="translate(0,-242)"><use href="#z-glava"/><use href="#z-lice-mirno"/><use href="#z-bore"/></g>
+  </g>
+</g>
+
+<!-- ===================== DJECA (braća i sestre) ===================== -->
+<g id="dijete-djecak"><use href="#djecak-tijelo-stoji" transform="scale(.74)" style="--prsluk:#2E3E6E"/></g>
+<g id="dijete-djevojcica"><use href="#zena-stoji" transform="scale(.62)" style="--haljina:#7E2A2A;--pregaca:#2E3E6E;--koza:#F1C7A0"/></g>
+
+</defs>
+</svg>

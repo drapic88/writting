@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1000" viewBox="0 0 2000 1000" role="img" aria-label="Visoko u nebu dječak stoji na pragu otvorenih vrata u zlatnom oblaku i drži se za glavu: ispred njega je samo prazan plavi zrak. Daleko dolje u udolini koze žvaču panj boba, a crno-bijela koza gleda gore s listom u ustima.">
+<!-- likovi -->
+<rect x="0" y="0" width="2000" height="1000" fill="url(#g-nebo-dan)"/>
+<use href="#oblak" transform="translate(1000,420) scale(.9)"/>
+<use href="#oblak" transform="translate(1600,560) scale(.7)"/>
+<use href="#oblak" transform="translate(760,640) scale(.6)"/>
+<use href="#ptica-leti" transform="translate(900,300) scale(1.1)"/>
+<use href="#ptica-leti" transform="translate(1250,540) scale(.8)"/>
+
+<!-- daleko dolje: udolina -->
+<path d="M0,860 Q500,830 1000,850 T2000,840 L2000,1000 L0,1000 Z" fill="#97A58E"/>
+<path d="M0,900 Q500,880 1000,894 T2000,888 L2000,1000 L0,1000 Z" fill="#BCC385"/>
+<g>
+  <use href="#hrast" transform="translate(120,900) scale(.4)"/><use href="#hrast" transform="translate(200,890) scale(.35)"/>
+  <use href="#hrast" transform="translate(1900,900) scale(.4)"/><use href="#hrast" transform="translate(1820,892) scale(.35)"/>
+  <use href="#hrast" transform="translate(1100,880) scale(.3)"/>
+</g>
+<!-- pregrizen panj boba -->
+<path d="M1380,946 L1384,918 L1390,926 L1396,914 L1402,924 L1408,916 L1412,946 Z" fill="#3F7F37" class="obris"/>
+<use href="#bob-list" transform="translate(1420,950) scale(.35) rotate(20)"/>
+<use href="#koza-ide" fill="#8B5A35" transform="translate(1350,955) scale(.4)"/>
+<use href="#koza-pase" fill="#2A2520" transform="translate(1460,958) scale(.4)"/>
+<use href="#koza-cb-zvace" transform="translate(1530,965) scale(-.55,.55)"/>
+<use href="#ovca" transform="translate(1260,962) scale(.4)"/>
+<use href="#ovca" transform="translate(1640,960) scale(.4)"/>
+<use href="#pastirica" transform="translate(1720,965) scale(.38)"/>
+
+<!-- zlatni oblak s vratima -->
+<g>
+  <circle cx="330" cy="300" r="330" fill="url(#g-sjaj)"/>
+  <use href="#oblak-zlatni" transform="translate(320,330) scale(3.2)"/>
+  <path d="M220,560 V330 A110,110 0 0,1 440,330 V560 Z" fill="#FFF6DA" class="obris"/>
+  <path d="M440,560 V330 L520,300 V540 Z" fill="url(#daske)" class="obris"/>
+  <path d="M190,560 H470 L450,584 H210 Z" fill="#E8C878" class="obris"/>
+</g>
+<ellipse cx="330" cy="560" rx="70" ry="8" fill="#C9A24E" opacity=".5"/>
+<use href="#djecak-drzi-glavu" transform="translate(330,558) scale(1.1)"/>
+
+<rect id="okvir-teksta" data-dvostranica="10" x="1170" y="40" width="760" height="360"/>
+<rect x="0" y="0" width="2000" height="1000" filter="url(#tekstura)" opacity=".5"/>
+</svg>

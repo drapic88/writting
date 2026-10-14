@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1000" viewBox="0 0 2000 1000" role="img" aria-label="Vedro jutro pred kućom staraca na rubu šume: dječak nosi naručje drva, starica mu pruža malu kesicu boba vezanu crvenom vunom, a starac rukom pokazuje put koji vijuga u brda.">
+<!-- likovi -->
+
+<rect x="0" y="0" width="2000" height="720" fill="url(#g-nebo-dan)"/>
+<use href="#oblak" transform="translate(880,160) scale(.6)"/>
+<use href="#oblak" transform="translate(420,110) scale(.45)"/>
+<use href="#ptica-leti" transform="translate(700,230)"/><use href="#ptica-leti" transform="translate(740,210) scale(.8)"/>
+
+<!-- brda s putem (desno) -->
+<path d="M0,520 L160,470 L340,505 L520,455 L700,500 L880,462 L1060,500 L1240,450 L1420,494 L1600,456 L1780,498 L2000,462 L2000,680 L0,680 Z" fill="#A9B4C6" stroke="#8F9BB0" stroke-width="2" stroke-linejoin="round"/>
+<path d="M0,600 Q260,548 540,586 T1100,566 T1600,560 T2000,548 L2000,760 L0,760 Z" fill="#97A58E" stroke="#7E8C76" stroke-width="2"/>
+<path d="M900,700 Q1200,610 1500,640 T2000,600 L2000,800 L900,800 Z" fill="#A3AE72" stroke="#7F8B57" stroke-width="2"/>
+<g stroke="#8C877C" stroke-width="5" stroke-dasharray="5 3" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M1420,650 L1560,630 L1590,664 L1450,684 Z" fill="#C7BC86"/>
+  <path d="M1590,664 L1560,630 L1720,620 L1760,652 Z" fill="#93A764"/>
+  <path d="M1760,652 L1720,620 L1880,612 L1920,644 Z" fill="#B9AE78"/>
+</g>
+<use href="#ovca" transform="translate(1640,618) scale(.3)"/><use href="#ovca" transform="translate(1670,622) scale(.3)"/><use href="#ovca" transform="translate(1700,616) scale(.3)"/>
+<use href="#muskarac-stoji" transform="translate(1730,624) scale(.2)"/>
+<use href="#hrast" transform="translate(1300,668) scale(.4)"/><use href="#hrast" transform="translate(1860,610) scale(.35)"/>
+
+<!-- šuma iza kuće (lijevo) -->
+<use href="#hrast" transform="translate(40,700) scale(1.4)"/>
+<use href="#hrast" transform="translate(190,660) scale(1.2)"/>
+<use href="#hrast" transform="translate(540,680) scale(1.3)"/>
+<use href="#hrast" transform="translate(680,700) scale(1.1)"/>
+
+<!-- livada -->
+<path d="M0,760 Q500,730 1000,756 T2000,748 L2000,1000 L0,1000 Z" fill="#BCC385"/>
+<path d="M0,760 Q500,730 1000,756 T2000,748 L2000,1000 L0,1000 Z" fill="url(#trava)" opacity=".8"/>
+
+<!-- put u brda -->
+<path d="M1100,1000 C1140,930 1260,900 1380,870 S1600,800 1700,760 S1860,700 1960,680 L1990,690 C1880,720 1760,780 1640,830 S1360,930 1290,1000 Z" fill="#D9C9A0" stroke="#BFAE84" stroke-width="2"/>
+
+<!-- kuća staraca -->
+<use href="#dim" transform="translate(470,530) scale(.8)"/>
+<use href="#kuca" transform="translate(370,830) scale(1.25)"/>
+<g class="obris" fill="#8A5E3A">
+  <rect x="590" y="770" width="110" height="18" rx="9"/><rect x="584" y="788" width="120" height="18" rx="9"/><rect x="596" y="752" width="100" height="18" rx="9"/>
+</g>
+<g fill="#D9B98A" stroke="#3A2A20" stroke-width="1.5"><ellipse cx="590" cy="779" rx="5" ry="8"/><ellipse cx="584" cy="797" rx="5" ry="8"/><ellipse cx="596" cy="761" rx="5" ry="8"/></g>
+<use href="#kokos" transform="translate(130,880) scale(.9)"/>
+<use href="#kokos" transform="translate(180,892) scale(-.9,.9)"/>
+
+<!-- starica pruža kesicu, dječak s drvima, starac pokazuje put -->
+<g fill="#000" opacity=".12"><ellipse cx="680" cy="922" rx="70" ry="12"/><ellipse cx="880" cy="922" rx="60" ry="12"/><ellipse cx="1210" cy="922" rx="70" ry="12"/></g>
+<use href="#zena-pruza" transform="translate(680,918) scale(1.2)" style="--bore:inline;--haljina:#3A2E2A;--pregaca:#2E3E6E"/>
+<use href="#kesica" transform="translate(792,738) scale(1.3)"/>
+<use href="#djecak-nosi-drva" transform="translate(890,920) scale(1.08)"/>
+<use href="#muskarac-pokazuje" transform="translate(1210,918) scale(1.22)" style="--kosa:#E9E4DA;--brci:#E9E4DA;--obrve:#B9B2A6;--bore:inline;--koza:#E8B994;--prsluk:#3E4659"/>
+
+<!-- cvijeće -->
+<g>
+  <use href="#cvijet-crveni" transform="translate(60,960) scale(1.6)"/><use href="#cvijet-bijeli" transform="translate(320,975) scale(1.6)"/>
+  <use href="#cvijet-zuti" transform="translate(520,965) scale(1.6)"/><use href="#cvijet-crveni" transform="translate(1000,975) scale(1.6)"/>
+  <use href="#cvijet-bijeli" transform="translate(1520,960) scale(1.6)"/><use href="#cvijet-zuti" transform="translate(1880,975) scale(1.6)"/>
+  <use href="#cvijet-crveni" transform="translate(1700,945) scale(1.6)"/>
+</g>
+<use href="#kamen" transform="translate(1860,930) scale(1.2)"/>
+
+<rect id="okvir-teksta" data-dvostranica="5" x="1170" y="40" width="760" height="330"/>
+<rect x="0" y="0" width="2000" height="1000" filter="url(#tekstura)" opacity=".5"/>
+</svg>

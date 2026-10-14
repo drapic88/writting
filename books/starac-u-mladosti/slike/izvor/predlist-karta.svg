@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1000" viewBox="0 0 2000 1000" role="img" aria-label="Karta dječakova puta nacrtana kao naivna slika odozgo: od sela s crkvom točkasta staza vodi kroz šumu s povjetarcem do kuće staraca na rubu šume, pa preko uzbrdica i udolina do udoline iz koje bob raste do vrata u zlatnom oblaku.">
+<!-- likovi -->
+<rect x="0" y="0" width="2000" height="1000" fill="#F3EAD3"/>
+<rect x="30" y="30" width="1940" height="940" rx="20" fill="#E9DFC0" stroke="#B8A57A" stroke-width="3"/>
+<!-- brda -->
+<g stroke="#8F9BB0" stroke-width="2">
+  <path d="M1180,560 l60,-70 60,70 Z M1300,540 l70,-90 70,90 Z M1430,570 l60,-70 60,70 Z" fill="#A9B4C6"/>
+  <path d="M1000,700 l50,-60 50,60 Z M1080,720 l60,-70 60,70 Z" fill="#A9B4C6"/>
+</g>
+<g stroke="#7F8B57" stroke-width="2" fill="#A3AE72">
+  <ellipse cx="1180" cy="760" rx="120" ry="40"/><ellipse cx="1380" cy="680" rx="110" ry="36"/><ellipse cx="1560" cy="760" rx="120" ry="40"/>
+</g>
+<!-- selo -->
+<use href="#crkva" transform="translate(150,800) scale(.45)"/>
+<use href="#kuca" transform="translate(260,830) scale(.4)"/>
+<use href="#kuca" transform="translate(380,820) scale(.38)"/>
+<use href="#dim" transform="translate(392,740) scale(.35)"/>
+<!-- šuma -->
+<g>
+  <use href="#hrast" transform="translate(520,640) scale(.6)"/><use href="#hrast" transform="translate(600,600) scale(.6)"/>
+  <use href="#hrast" transform="translate(680,650) scale(.6)"/><use href="#hrast" transform="translate(560,720) scale(.6)"/>
+  <use href="#hrast" transform="translate(650,740) scale(.6)"/><use href="#hrast" transform="translate(740,700) scale(.6)"/>
+  <use href="#hrast" transform="translate(820,640) scale(.6)"/><use href="#hrast" transform="translate(780,580) scale(.55)"/>
+</g>
+<use href="#povjetarac" transform="translate(700,470) scale(.55)"/>
+<!-- kuća staraca na rubu šume -->
+<use href="#kuca" transform="translate(940,610) scale(.4)"/>
+<use href="#dim" transform="translate(966,530) scale(.3)"/>
+<!-- udolina s bobom -->
+<ellipse cx="1760" cy="820" rx="150" ry="50" fill="#BCC385" stroke="#7F8B57" stroke-width="2"/>
+<use href="#hrast" transform="translate(1630,820) scale(.4)"/><use href="#hrast" transform="translate(1890,820) scale(.4)"/>
+<path d="M1760,830 C1740,700 1790,600 1760,480 C1740,380 1790,300 1770,200" fill="none" stroke="#2F5F2A" stroke-width="20" stroke-linecap="round"/>
+<path d="M1760,830 C1740,700 1790,600 1760,480 C1740,380 1790,300 1770,200" fill="none" stroke="#3F7F37" stroke-width="15" stroke-linecap="round"/>
+<use href="#bob-list" transform="translate(1764,700) scale(.5)"/><use href="#bob-list" transform="translate(1764,600) scale(-.5,.5)"/>
+<use href="#bob-list" transform="translate(1760,480) scale(.5)"/><use href="#bob-list" transform="translate(1774,360) scale(-.5,.5)"/>
+<use href="#oblak-zlatni" transform="translate(1770,160) scale(1.3)"/>
+<path d="M1745,210 V160 A25,25 0 0,1 1795,160 V210 Z" fill="url(#daske)" class="obris"/>
+<use href="#ovca" transform="translate(1680,860) scale(.3)"/><use href="#ovca" transform="translate(1710,866) scale(.3)"/>
+<!-- staza -->
+<path d="M420,820 C500,780 560,700 640,690 S820,640 900,610 S1060,640 1120,700 S1260,780 1330,700 S1460,650 1520,740 S1660,830 1740,830" fill="none" stroke="#A8292A" stroke-width="6" stroke-dasharray="2 14" stroke-linecap="round"/>
+<!-- ruža vjetrova u kutu -->
+<g transform="translate(200,200)">
+  <path d="M0,-70 L12,-12 L70,0 L12,12 L0,70 L-12,12 L-70,0 L-12,-12 Z" fill="#E8C878" class="obris"/>
+  <path d="M0,-70 L12,-12 L0,0 Z M70,0 L12,12 L0,0 Z M0,70 L-12,12 L0,0 Z M-70,0 L-12,-12 L0,0 Z" fill="#A8292A"/>
+  <circle r="8" fill="#F3EAD3" class="obris"/>
+</g>
+<rect x="0" y="0" width="2000" height="1000" filter="url(#tekstura)" opacity=".5"/>
+</svg>

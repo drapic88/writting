@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-label="Karta lika: dječak u tri poze, s tri izraza lica, torbom s kitama i resama i malom okićenom tikvicom.">
+<!-- likovi -->
+<rect x="0" y="0" width="1600" height="1000" fill="#FAF6EC"/>
+<g font-family="Georgia, 'Times New Roman', serif" fill="#3A2A20">
+  <text x="60" y="84" font-size="40">Dječak — karta lika</text>
+  <text x="60" y="122" font-size="20" fill="#7A6A5A">Nošnja, torba i tikvica su pretpostavke dok ne stignu fotografije iz kraja.</text>
+</g>
+
+<g fill="#E6DECB">
+  <ellipse cx="230" cy="786" rx="90" ry="12"/>
+  <ellipse cx="560" cy="786" rx="90" ry="12"/>
+  <ellipse cx="900" cy="786" rx="100" ry="12"/>
+</g>
+<use href="#djecak-stoji" transform="translate(230,780) scale(1.55)"/>
+<use href="#djecak-pozdrav" transform="translate(560,780) scale(1.55)"/>
+<use href="#djecak-sjedi-trlja" transform="translate(900,780) scale(1.55)"/>
+
+<g transform="translate(1190,300) scale(2.1)"><use href="#d-glava"/><use href="#d-lice-cudi"/></g>
+<g transform="translate(1340,300) scale(2.1)"><use href="#d-glava"/><use href="#d-lice-boji"/></g>
+<g transform="translate(1490,300) scale(2.1)"><use href="#d-glava"/><use href="#d-lice-sretno"/></g>
+
+<use href="#torba" transform="translate(1250,560) scale(2)"/>
+<use href="#tikvica" transform="translate(1480,700) scale(2.2)"/>
+
+<g font-family="Georgia, 'Times New Roman', serif" font-size="22" fill="#5A4A3A" text-anchor="middle">
+  <text x="230" y="840">stoji</text>
+  <text x="560" y="840">pozdravlja</text>
+  <text x="900" y="840">sjedi i trlja oči</text>
+  <text x="1190" y="410">čudi se</text>
+  <text x="1340" y="410">boji se</text>
+  <text x="1490" y="410">sretan</text>
+  <text x="1250" y="740" font-size="20">torba s kitama i resama</text>
+  <text x="1480" y="740" font-size="20">mala okićena tikvica</text>
+</g>
+</svg>

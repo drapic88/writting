@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1000" viewBox="0 0 2000 1000" role="img" aria-label="U zoru dječak sjedi u udolini i trlja oči dok pastirica sa stadom prolazi tik pokraj njega; iza njega iz zemlje raste golemi bob i nestaje u oblaku, a crno-bijela koza jedina ga gleda.">
+<!-- likovi -->
+
+<!-- nebo i sunce -->
+<rect x="0" y="0" width="2000" height="700" fill="url(#g-nebo-zora)"/>
+<circle cx="790" cy="478" r="170" fill="url(#g-sjaj)"/>
+<circle cx="790" cy="478" r="46" fill="#FFD27A" stroke="#F2B45A" stroke-width="3"/>
+<use href="#oblak" transform="translate(170,250) scale(.55)"/>
+<use href="#oblak" transform="translate(900,170) scale(.6)"/>
+<use href="#ptica-leti" transform="translate(1000,320) scale(1.1)"/>
+<use href="#ptica-leti" transform="translate(1046,300) scale(.8)"/>
+
+<!-- planine -->
+<path d="M0,520 L120,470 L260,500 L400,455 L560,495 L720,460 L880,500 L1040,450 L1200,490 L1380,455 L1540,495 L1700,470 L1860,500 L2000,470 L2000,640 L0,640 Z" fill="#A9B4C6" stroke="#8F9BB0" stroke-width="2" stroke-linejoin="round"/>
+<path d="M0,565 Q150,520 300,552 T600,545 T900,556 T1200,538 T1500,560 T1800,542 T2000,552 L2000,680 L0,680 Z" fill="#97A58E" stroke="#7E8C76" stroke-width="2"/>
+
+<!-- brežuljci s poljima, suhozidima i selom -->
+<path d="M0,612 Q200,578 420,602 T860,600 T1300,602 T1720,594 T2000,602 L2000,720 L0,720 Z" fill="#A3AE72" stroke="#7F8B57" stroke-width="2"/>
+<g stroke="#8C877C" stroke-width="5" stroke-dasharray="5 3" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M1120,646 L1260,626 L1300,664 L1150,688 Z" fill="#C7BC86"/>
+  <path d="M1300,664 L1260,626 L1420,616 L1460,654 Z" fill="#93A764"/>
+  <path d="M1460,654 L1420,616 L1580,610 L1630,648 Z" fill="#B9AE78"/>
+  <path d="M1630,648 L1580,610 L1760,608 L1800,644 Z" fill="#8FA05F"/>
+  <path d="M150,654 L320,632 L360,672 L180,694 Z" fill="#B9AE78"/>
+  <path d="M700,654 L860,632 L900,668 L730,688 Z" fill="#C7BC86"/>
+</g>
+<use href="#dim" transform="translate(1356,540) scale(.35)"/>
+<use href="#dim" transform="translate(1426,546) scale(.3)"/>
+<use href="#kuca" transform="translate(1330,602) scale(.16)"/>
+<use href="#kuca" transform="translate(1400,606) scale(.15)"/>
+<use href="#crkva" transform="translate(1470,600) scale(.16)"/>
+<use href="#magarac" transform="translate(1690,630) scale(.25)"/>
+<use href="#muskarac-stoji" transform="translate(1730,634) scale(.16)"/>
+
+<!-- šuma na rubu udoline (stražnji red) -->
+<g>
+  <use href="#hrast" transform="translate(30,672) scale(.34)"/>
+  <use href="#hrast" transform="translate(110,664) scale(.3)"/>
+  <use href="#hrast" transform="translate(600,668) scale(.32)"/>
+  <use href="#hrast" transform="translate(1080,672) scale(.32)"/>
+  <use href="#hrast" transform="translate(1170,680) scale(.3)"/>
+  <use href="#hrast" transform="translate(1860,670) scale(.34)"/>
+  <use href="#hrast" transform="translate(1940,664) scale(.3)"/>
+</g>
+
+<!-- dno udoline -->
+<path d="M0,690 Q500,662 1000,682 T2000,674 L2000,1000 L0,1000 Z" fill="#BCC385"/>
+<path d="M0,690 Q500,662 1000,682 T2000,674 L2000,1000 L0,1000 Z" fill="url(#trava)" opacity=".8"/>
+<path d="M0,940 Q600,914 1200,932 T2000,922 L2000,1000 L0,1000 Z" fill="#A9B36F"/>
+
+<!-- magla iza likova -->
+<g fill="#FFFFFF" filter="url(#magla)">
+  <ellipse cx="1000" cy="700" rx="1100" ry="34" opacity=".6"/>
+  <ellipse cx="420" cy="740" rx="520" ry="26" opacity=".5"/>
+  <ellipse cx="1520" cy="735" rx="620" ry="30" opacity=".5"/>
+</g>
+
+<!-- šuma uz rubove -->
+<use href="#hrast" transform="translate(-10,720) scale(1.2)"/>
+<use href="#hrast" transform="translate(150,740) scale(1.0)"/>
+<use href="#hrast" transform="translate(2010,720) scale(1.2)"/>
+<use href="#hrast" transform="translate(1850,740) scale(1.0)"/>
+
+<!-- BOB -->
+<g>
+  <path d="M520,870 C505,760 555,690 528,600 C500,510 470,430 505,340 C540,250 560,170 520,90 C495,40 500,0 505,-40" fill="none" stroke="#2F5F2A" stroke-width="48" stroke-linecap="round"/>
+  <path d="M520,870 C505,760 555,690 528,600 C500,510 470,430 505,340 C540,250 560,170 520,90 C495,40 500,0 505,-40" fill="none" stroke="#3F7F37" stroke-width="40" stroke-linecap="round"/>
+  <path d="M520,870 C505,760 555,690 528,600 C500,510 470,430 505,340 C540,250 560,170 520,90 C495,40 500,0 505,-40" fill="none" stroke="#74AE55" stroke-width="7" stroke-linecap="round" transform="translate(-9,0)" opacity=".85"/>
+  <use href="#bob-list" transform="translate(526,792) scale(1.3)"/>
+  <use href="#bob-list" transform="translate(522,740) scale(-1.25,1.25)"/>
+  <use href="#bob-list" transform="translate(546,688) scale(1.2)"/>
+  <use href="#bob-list" transform="translate(522,628) scale(-1.15,1.15)"/>
+  <use href="#bob-list" transform="translate(518,568) scale(1.1)"/>
+  <use href="#bob-list" transform="translate(488,505) scale(-1.1,1.1)"/>
+  <use href="#bob-list" transform="translate(492,440) scale(1.05)"/>
+  <use href="#bob-list" transform="translate(492,375) scale(-1,1)"/>
+  <use href="#bob-list" transform="translate(522,310) scale(1)"/>
+  <use href="#bob-list" transform="translate(530,245) scale(-.95,.95)"/>
+  <use href="#bob-list" transform="translate(550,180) scale(.95)"/>
+  <use href="#bob-mahuna" transform="translate(556,700)"/>
+  <use href="#bob-mahuna" transform="translate(494,535) scale(-1,1)"/>
+  <use href="#bob-mahuna" transform="translate(530,330) scale(.9)"/>
+  <use href="#bob-cvijet" transform="translate(552,760) scale(1.2)"/>
+  <use href="#bob-cvijet" transform="translate(486,650) scale(-1.2,1.2)"/>
+  <use href="#bob-cvijet" transform="translate(530,590) scale(1.2)"/>
+  <use href="#bob-cvijet" transform="translate(472,470) scale(-1.2,1.2)"/>
+  <use href="#bob-cvijet" transform="translate(520,400) scale(1.2)"/>
+  <use href="#bob-cvijet" transform="translate(505,270) scale(-1.2,1.2)"/>
+  <use href="#bob-cvijet" transform="translate(556,210) scale(1.2)"/>
+</g>
+<use href="#oblak" transform="translate(520,70) scale(1.55)"/>
+<use href="#oblak" transform="translate(330,120) scale(.8)"/>
+
+<!-- stražnji dio stada -->
+<use href="#ovca" transform="translate(1080,842) scale(.7)"/>
+<use href="#ovca" transform="translate(1250,836) scale(.72)"/>
+<use href="#koza-ide" fill="#8B5A35" transform="translate(1450,826) scale(.7)"/>
+<use href="#ovca" transform="translate(1620,822) scale(.68)"/>
+
+<!-- tlo oko boba i rasprsnuto zrno -->
+<ellipse cx="522" cy="874" rx="52" ry="11" fill="#6E5236" stroke="#4E3A26" stroke-width="2"/>
+<path d="M474,874 q-14,4 -22,14 M566,874 q16,4 22,14 M500,880 q-6,8 -4,16" fill="none" stroke="#6B4A2E" stroke-width="3" stroke-linecap="round"/>
+<use href="#zrno" transform="translate(578,876) rotate(-20)"/>
+<use href="#zrno" transform="translate(598,880) rotate(15) scale(.9)"/>
+
+<!-- prednji plan: stado, dječak, pastirica -->
+<use href="#ovca" transform="translate(320,895) scale(1.05)"/>
+<use href="#koza-ide" fill="#8B5A35" transform="translate(1190,900) scale(1.05)"/>
+<use href="#ovca" transform="translate(1630,900) scale(1.05)"/>
+<use href="#ovca-zvonce" transform="translate(1410,908) scale(1.1)"/>
+<use href="#koza-cb-gleda-gore" transform="translate(420,936) scale(-1.2,1.2)"/>
+<use href="#torba" transform="translate(612,888) scale(.8)"/>
+<use href="#tikvica" transform="translate(654,938) scale(.7)"/>
+<use href="#pastirica" transform="translate(890,936) scale(1.08)"/>
+<use href="#ovca" transform="translate(1090,930) scale(1.1)"/>
+<use href="#djecak-sjedi-trlja" transform="translate(745,940) scale(.98)"/>
+<use href="#koza-ide" fill="#2A2520" transform="translate(1520,935) scale(1.1)"/>
+<use href="#ovca" transform="translate(205,950) scale(1.15)"/>
+<use href="#ovca" transform="translate(1300,948) scale(1.15)"/>
+<use href="#ovca" transform="translate(1745,952) scale(1.15)"/>
+
+<!-- cvijeće -->
+<g>
+  <use href="#cvijet-crveni" transform="translate(60,985) scale(1.6)"/><use href="#cvijet-bijeli" transform="translate(470,980) scale(1.6)"/>
+  <use href="#cvijet-zuti" transform="translate(1010,985) scale(1.6)"/><use href="#cvijet-crveni" transform="translate(1880,985) scale(1.6)"/>
+  <use href="#cvijet-bijeli" transform="translate(1560,990) scale(1.6)"/>
+</g>
+
+<!-- prednja magla -->
+<ellipse cx="1000" cy="995" rx="1150" ry="24" fill="#FFFFFF" opacity=".4" filter="url(#magla)"/>
+
+<rect id="okvir-teksta" data-dvostranica="7" x="1140" y="40" width="780" height="420"/>
+<rect x="0" y="0" width="2000" height="1000" filter="url(#tekstura)" opacity=".5"/>
+</svg>

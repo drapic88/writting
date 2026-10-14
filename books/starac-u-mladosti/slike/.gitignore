@@ -1,0 +1,5 @@
+# Sve ovdje osim izvor/ i sastavi.py generira sastavi.py; slike se izvoze ponovno, ne commitaju.
+*.png
+/*.svg
+knjiga.pdf
+flux/

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1000" viewBox="0 0 2000 1000" role="img" aria-label="U predvečerje, u maloj udolini okruženoj šumom, umorni dječak spava s glavom na torbi pod prvim zvijezdama; iz otvorene ruke pada mu jedno zrno boba.">
+<!-- likovi -->
+
+<rect x="0" y="0" width="2000" height="760" fill="url(#g-nebo-vecer)"/>
+<g fill="#FFF3C4">
+  <use href="#zvijezda" transform="translate(980,90) scale(.7)"/><use href="#zvijezda" transform="translate(1140,150) scale(.5)"/>
+  <use href="#zvijezda" transform="translate(1320,80) scale(.8)"/><use href="#zvijezda" transform="translate(1500,170) scale(.5)"/>
+  <use href="#zvijezda" transform="translate(1660,100) scale(.6)"/><use href="#zvijezda" transform="translate(1860,60) scale(.7)"/>
+  <use href="#zvijezda" transform="translate(900,250) scale(.4)"/>
+</g>
+
+<!-- brda u sumraku -->
+<path d="M0,520 L160,470 L340,505 L520,455 L700,500 L880,462 L1060,500 L1240,450 L1420,494 L1600,456 L1780,498 L2000,462 L2000,680 L0,680 Z" fill="#8A7FA6" stroke="#776C94" stroke-width="2" stroke-linejoin="round"/>
+<path d="M0,600 Q260,548 540,586 T1100,566 T1600,560 T2000,548 L2000,760 L0,760 Z" fill="#6E7A72"/>
+
+<!-- šuma oko udoline: stražnji red -->
+<g>
+  <use href="#hrast" transform="translate(860,700) scale(.75)"/><use href="#hrast" transform="translate(960,690) scale(.7)"/>
+  <use href="#hrast" transform="translate(1060,700) scale(.75)"/><use href="#hrast" transform="translate(1160,690) scale(.7)"/>
+  <use href="#hrast" transform="translate(1260,700) scale(.75)"/><use href="#hrast" transform="translate(1360,690) scale(.7)"/>
+  <use href="#hrast" transform="translate(1460,700) scale(.75)"/><use href="#hrast" transform="translate(1560,690) scale(.7)"/>
+  <use href="#hrast" transform="translate(1660,700) scale(.75)"/>
+</g>
+
+<!-- dno udoline -->
+<path d="M0,720 Q600,690 1200,712 T2000,708 L2000,1000 L0,1000 Z" fill="#7E8A58"/>
+<path d="M0,720 Q600,690 1200,712 T2000,708 L2000,1000 L0,1000 Z" fill="url(#trava)" opacity=".6"/>
+
+<!-- šuma: bočni redovi -->
+<use href="#hrast" transform="translate(40,760) scale(1.6)"/>
+<use href="#hrast" transform="translate(200,720) scale(1.3)"/>
+<use href="#hrast" transform="translate(360,750) scale(1.5)"/>
+<use href="#hrast" transform="translate(520,720) scale(1.2)"/>
+<use href="#hrast" transform="translate(680,740) scale(1.35)"/>
+<use href="#hrast" transform="translate(1800,740) scale(1.4)"/>
+<use href="#hrast" transform="translate(1960,760) scale(1.6)"/>
+<use href="#sova" transform="translate(1790,560) scale(1.1)"/>
+<use href="#vjetar-kovrca" transform="translate(1900,500) scale(1.1)"/>
+
+<!-- dječak spava -->
+<ellipse cx="1240" cy="922" rx="270" ry="20" fill="#000" opacity=".15"/>
+<use href="#djecak-spava" transform="translate(1300,915) scale(1.55)"/>
+<use href="#tikvica" transform="translate(1075,948) rotate(-70) scale(.9)"/>
+<use href="#kruh" transform="translate(1560,930) scale(.7)"/>
+<!-- zrno pada iz ruke -->
+<use href="#zrno" transform="translate(1304,952) scale(1.2)"/>
+<path d="M1294,926 v10 M1314,926 v10" stroke="#F4EAD0" stroke-width="2.5" stroke-linecap="round" opacity=".85"/>
+<use href="#grm" transform="translate(760,960) scale(1.4)"/>
+<use href="#grm" transform="translate(1820,980) scale(1.6)"/>
+<use href="#grm" transform="translate(120,990) scale(1.5)"/>
+<!-- cvijeće i kamenje -->
+<g opacity=".9">
+  <use href="#cvijet-bijeli" transform="translate(960,960) scale(1.6)"/><use href="#cvijet-bijeli" transform="translate(1620,975) scale(1.6)"/>
+  <use href="#cvijet-zuti" transform="translate(880,980) scale(1.6)"/><use href="#cvijet-crveni" transform="translate(1720,955) scale(1.6)"/>
+</g>
+<use href="#kamen" transform="translate(1000,930) scale(1.3)"/>
+<use href="#kamen" transform="translate(1700,990) scale(1.1)"/>
+
+<rect x="0" y="0" width="2000" height="1000" fill="#4A3A6A" opacity=".18" style="mix-blend-mode:multiply"/>
+<rect id="okvir-teksta" data-dvostranica="6" x="50" y="40" width="760" height="300"/>
+<rect x="0" y="0" width="2000" height="1000" filter="url(#tekstura)" opacity=".5"/>
+</svg>

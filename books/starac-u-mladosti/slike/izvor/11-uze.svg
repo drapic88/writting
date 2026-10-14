@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="2000" viewBox="0 0 1000 2000" role="img" aria-label="Uspravna dvostranica u zalazak sunca: s praga vrata u zlatnom oblaku visi dugo uže, gore spleteno od crvene vune iz torbe, dolje od sivih dlaka; na kraju užeta visi otrcan, počupan dječak s tikvicom oko vrata, a ispod njega je golema praznina do kamenite zemlje.">
+<!-- likovi -->
+<rect x="0" y="0" width="1000" height="2000" fill="url(#g-nebo-zalazak)"/>
+<circle cx="230" cy="1900" r="240" fill="url(#g-sjaj)"/>
+<circle cx="230" cy="1910" r="70" fill="#FFB648" stroke="#F08A2E" stroke-width="3"/>
+<use href="#oblak" transform="translate(820,520) scale(.6)" opacity=".85"/>
+<use href="#oblak" transform="translate(160,1300) scale(.7)" opacity=".85"/>
+<use href="#oblak" transform="translate(860,1560) scale(.5)" opacity=".85"/>
+<use href="#ptica-leti" transform="translate(780,1240) scale(1.2)"/>
+<use href="#ptica-leti" transform="translate(820,1270) scale(.9)"/>
+<g fill="#FFF3C4"><use href="#zvijezda" transform="translate(120,330) scale(.6)"/><use href="#zvijezda" transform="translate(880,240) scale(.5)"/></g>
+
+<!-- daleko dolje: kamenita zemlja -->
+<path d="M0,1930 Q300,1900 520,1916 T1000,1904 L1000,2000 L0,2000 Z" fill="#6E6A5A"/>
+<g>
+  <use href="#hrast" transform="translate(600,1932) scale(.28)"/><use href="#hrast" transform="translate(660,1926) scale(.24)"/>
+  <use href="#hrast" transform="translate(880,1928) scale(.28)"/><use href="#kamen" transform="translate(450,1950) scale(.5)"/>
+  <use href="#kamen" transform="translate(760,1956) scale(.45)"/>
+</g>
+
+<!-- zlatni oblak s pragom gore -->
+<circle cx="500" cy="120" r="300" fill="url(#g-sjaj)"/>
+<use href="#oblak-zlatni" transform="translate(500,90) scale(3.4)"/>
+<path d="M360,240 H640 L620,264 H380 Z" fill="#E8C878" class="obris"/>
+<use href="#torba-rasparana" transform="translate(580,200) scale(.6)"/>
+
+<!-- uže: gore vuna iz torbe, dolje sive dlake -->
+<path d="M500,250 C520,450 480,650 505,860 S490,1000 500,1060" fill="none" stroke="#3A2A20" stroke-width="17" stroke-linecap="round"/>
+<path d="M500,250 C520,450 480,650 505,860 S490,1000 500,1060" fill="none" stroke="#A8292A" stroke-width="12" stroke-linecap="round"/>
+<path d="M500,250 C520,450 480,650 505,860 S490,1000 500,1060" fill="none" stroke="#EFE3C8" stroke-width="12" stroke-dasharray="5 22"/>
+<path d="M500,250 C520,450 480,650 505,860 S490,1000 500,1060" fill="none" stroke="#2E3E6E" stroke-width="12" stroke-dasharray="5 22" stroke-dashoffset="13"/>
+<path d="M500,1060 C510,1160 492,1240 500,1300" fill="none" stroke="#3A2A20" stroke-width="13" stroke-linecap="round"/>
+<path d="M500,1060 C510,1160 492,1240 500,1300" fill="none" stroke="#8E8A86" stroke-width="9" stroke-linecap="round"/>
+<path d="M500,1060 C510,1160 492,1240 500,1300" fill="none" stroke="#5A5652" stroke-width="9" stroke-dasharray="3 7"/>
+<ellipse cx="500" cy="1060" rx="14" ry="10" fill="#A8292A" class="obris"/>
+<path d="M500,1060 q-14,10 -18,24 M500,1060 q14,10 18,24" stroke="#8E8A86" stroke-width="2.5" fill="none"/>
+
+<!-- dječak visi na kraju užeta -->
+<use href="#djecak-visi-otrcan" transform="translate(500,1565) scale(1.05)"/>
+
+<rect id="okvir-teksta" data-dvostranica="11" x="70" y="520" width="860" height="560"/>
+<rect x="0" y="0" width="1000" height="2000" filter="url(#tekstura)" opacity=".5"/>
+</svg>

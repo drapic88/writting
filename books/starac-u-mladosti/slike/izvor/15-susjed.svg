@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1000" viewBox="0 0 2000 1000" role="img" aria-label="Toplo jutro na dvorišnim vratima u suhozidu: otrcani dječak prvi podiže ruku i pozdravlja susjeda, sijedog starca sa štapom, koji ga sluša i smješka se. Na zidu sjedi mala ptica i sluša.">
+<!-- likovi -->
+<rect x="0" y="0" width="2000" height="740" fill="url(#g-nebo-dan)"/>
+<circle cx="1700" cy="150" r="200" fill="url(#g-sjaj)"/>
+<circle cx="1700" cy="150" r="50" fill="#FFD27A" stroke="#F2B45A" stroke-width="3"/>
+<use href="#oblak" transform="translate(1100,140) scale(.6)"/>
+<use href="#ptica-leti" transform="translate(1350,240) scale(1.1)"/>
+
+<path d="M0,560 Q260,520 540,550 T1100,540 T1600,548 T2000,530 L2000,740 L0,740 Z" fill="#97A58E" stroke="#7E8C76" stroke-width="2"/>
+<g stroke="#8C877C" stroke-width="5" stroke-dasharray="5 3" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M1200,610 L1360,592 L1390,626 L1230,642 Z" fill="#C7BC86"/>
+  <path d="M1390,626 L1360,592 L1520,586 L1560,618 Z" fill="#93A764"/>
+</g>
+<use href="#crkva" transform="translate(1680,610) scale(.35)"/>
+<use href="#dim" transform="translate(1110,520) scale(.4)"/>
+<use href="#kuca" transform="translate(1080,612) scale(.28)"/>
+<use href="#hrast" transform="translate(1800,620) scale(.5)"/>
+
+<path d="M0,700 Q500,670 1000,690 T2000,684 L2000,1000 L0,1000 Z" fill="#BCC385"/>
+<path d="M0,700 Q500,670 1000,690 T2000,684 L2000,1000 L0,1000 Z" fill="url(#trava)" opacity=".8"/>
+
+<!-- dječakova kuća (lijevo), dvorište -->
+<use href="#kuca" transform="translate(280,840) scale(1.3)" style="--prozor:#34405A"/>
+<use href="#supa" transform="translate(680,830) scale(1.0)"/>
+<use href="#motika" transform="translate(724,826) rotate(-80) scale(.7)"/>
+<use href="#kokos" transform="translate(560,900) scale(.9)"/>
+<use href="#macka-spava" transform="translate(130,880) scale(.9)"/>
+
+<!-- suhozid s dvorišnim vratima -->
+<use href="#suhozid" transform="translate(840,850) scale(1.3,1.6)"/>
+<use href="#suhozid" transform="translate(1440,850) scale(1.9,1.6)"/>
+<g>
+  <rect x="1222" y="700" width="26" height="160" fill="#8A877C" class="obris"/>
+  <rect x="1428" y="700" width="26" height="160" fill="#8A877C" class="obris"/>
+  <path d="M1248,720 L1300,700 L1300,860 L1248,850 Z" fill="url(#daske)" class="obris"/>
+</g>
+<use href="#ptica" transform="translate(1700,800) scale(1.6)"/>
+
+<!-- dječak pozdravlja susjeda -->
+<g fill="#000" opacity=".13"><ellipse cx="1120" cy="940" rx="65" ry="12"/><ellipse cx="1420" cy="944" rx="80" ry="12"/></g>
+<use href="#djecak-pozdrav-otrcan" transform="translate(1120,936) scale(-1.15,1.15)"/>
+<use href="#starac-stap" transform="translate(1440,940) scale(-1.25,1.25)" style="--kosa:#ECE8E0;--brci:#ECE8E0;--obrve:#C9C2B6;--prsluk:#3E4659;--koza:#E8B994"/>
+
+<g>
+  <use href="#cvijet-crveni" transform="translate(940,960) scale(1.6)"/><use href="#cvijet-bijeli" transform="translate(1600,975) scale(1.6)"/>
+  <use href="#cvijet-zuti" transform="translate(1860,960) scale(1.6)"/><use href="#cvijet-crveni" transform="translate(380,975) scale(1.6)"/>
+</g>
+
+<rect id="okvir-teksta" data-dvostranica="15" x="50" y="30" width="800" height="500"/>
+<rect x="0" y="0" width="2000" height="1000" filter="url(#tekstura)" opacity=".5"/>
+</svg>
