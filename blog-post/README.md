@@ -17,60 +17,53 @@ Derived from two internal talks — an introductory "Using AI" briefing and a 30
 advanced workshop on coding, QA, DevOps and daily automation — plus standalone pieces on
 whatever is worth writing about.
 
-The table is ordered by **publishing order** — the sequence to ship them in, not a reading
+The table is ordered by **publishing order**, the sequence to ship them in, not a reading
 order. Nothing in a post depends on an earlier one; a reader arriving at #9 from search gets
-a complete argument. The order exists because publishing is sequential and the first posts
-have to carry the ones behind them.
+a complete argument. Since October 2026 the order is set by **earnings**: the account is in
+the Medium Partner Program, posts are member-only, and pay follows paid-member reading time.
 
 | # | Folder | Working title | Words | Status |
 |---|--------|---------------|-------|--------|
 | 1 | `context-is-the-product` | Your AI Didn’t Get Worse. Your Context Did. | 2,100 | **published** |
 | 2 | `how-llms-actually-work` | Your LLM Has No Memory. It Has a Window. | 1,200–1,500 | **published** |
 | 3 | `chat-vs-agent` | Chat Answers. An Agent Acts. | 1,500–1,800 | **published** |
-| 4 | `php-8.6-small-release` | PHP 8.6 Is a Small Release With a Big Warning Label | 3,000 | **published** |
-| 5 | `plan-before-you-let-it-code` | The Readiness Gate Is the Cheapest Bug Fix You Own | 1,700–2,000 | **drafted** |
-| 6 | `subagents-and-parallelism` | Subagents Buy Context Isolation, Not Speed | 1,900–2,200 | **drafted** |
+| 4 | `php-8.6-small-release` | PHP 8.6 Is a Small Release With a Big Warning Label | 3,000 | **published** · refresh at GA |
+| 5 | `php-9` | The PHP 9 Upgrade Is Already in Your Error Log | 2,100 | **published** · re-check at GA |
+| 6 | `php-8.6-on-real-apps` | *(title waits for the run)* | 1,500–2,000 | plan · experiment not run |
 | 7 | `evidence-over-assertion` | "Done" Is Five Separate Claims | 2,100–2,400 | **drafted** |
-| 8 | `design-the-blast-radius` | The Container Is the Security Model, Not the Prompt | 1,900–2,200 | plan |
-| 9 | `skills-beat-long-prompts` | Stop Retyping Procedures. Commit Them. | 1,600–1,900 | plan |
-| 10 | `the-agent-as-a-unix-tool` | An Agent You Can Pipe Into `jq` | 1,600–1,900 | plan |
-| 11 | `automating-the-boring-half` | A Tip Nobody Installs Is Not a Tip | 1,700–2,000 | plan |
+| 8 | `plan-before-you-let-it-code` | The Readiness Gate Is the Cheapest Bug Fix You Own | 1,700–2,000 | **drafted** |
+| 9 | `subagents-and-parallelism` | Subagents Buy Context Isolation, Not Speed | 1,900–2,200 | **drafted** |
+| 10 | `design-the-blast-radius` | The Container Is the Security Model, Not the Prompt | 1,900–2,200 | plan |
+| 11 | `skills-beat-long-prompts` | Stop Retyping Procedures. Commit Them. | 1,600–1,900 | plan |
+| 12 | `the-agent-as-a-unix-tool` | An Agent You Can Pipe Into `jq` | 1,600–1,900 | plan |
+| 13 | `automating-the-boring-half` | A Tip Nobody Installs Is Not a Tip | 1,700–2,000 | plan |
 
 ### Why this order
 
-**1–4 are published and 5–7 are drafted.** The drafts ship as written; only 8–11 need
-drafting time, so the order also keeps a publishable post in hand while the next brief is
-still a brief.
+**The numbers decided it.** Medium stats seen on 15 October 2026: the PHP 8.6 post had 5.2K
+presentations, 1.7K views and 916 reads; the three AI posts published in September had
+about 550 / 33 / 1–7. Partner Program pay comes from member reading time on member-only
+stories, so the PHP posts are where the earnings are, and they move to the front.
 
-- **#1 `context-is-the-product` opens** because it is the most differentiated post in the
-  folder — Medium is saturated with prompt tips and near-empty on context design — and its
-  title is the highest click-through of the eleven. The first post is the one that has to
-  find readers with no audience behind it.
-- **#2 `how-llms-actually-work` follows** as the explainer with the widest search surface.
-  It is the shortest post here, it answers the question #1 raises for a reader who has never
-  thought about the window, and it is the one most likely to keep earning traffic a year on.
-- **#3 `chat-vs-agent`** draws the category line — answer you evaluate, process you
-  supervise — which is the frame every practice post after it assumes.
-- **#4 `php-8.6-small-release` is time-boxed and everything else is not.** PHP 8.6 GA is
-  **19 November 2026**; the post is worth the most in the weeks either side of that date and
-  loses value steadily after. It went out in the run-up; the beta-era specifics still need a
-  refresh at GA. It also breaks the AI cadence and pulls a different audience, which is a second
-  reason to place it here rather than at the end.
-- **#5 `plan-before-you-let-it-code` and #6 `subagents-and-parallelism`** are the first two
-  practice posts, in that order: the readiness gate is the cheaper, more universal
-  intervention, and the subagents post is mildly contrarian — worth more to readers who have
-  already tried the thing and seen the token bill.
-- **#7 `evidence-over-assertion`** is the strongest post in the folder and the strongest
-  title, so it closes the run of drafted posts before the briefs begin. It is deliberately not #1: "Done Is Five
-  Separate Claims" lands hardest on a reader who is already running agents, which is the
-  audience the first six build.
-- **#8 `design-the-blast-radius`** reaches outside the usual readership — security reviewers
-  and the people who have to answer them — so it is best published once there is something
-  behind it to link to from a profile.
-- **#9–#11 are the narrowing tail.** `skills-beat-long-prompts` needs the reader to already
-  keep procedures somewhere; `the-agent-as-a-unix-tool` is for CI and platform people;
-  `automating-the-boring-half` is about compounding and distribution, which is the idea that
-  reads best last, to an audience that has adopted something.
+- **#4 `php-8.6-small-release` gets a GA refresh, not a new slot.** PHP 8.6 GA is
+  **19 November 2026**. The post was written against beta 3 and its open items (which core
+  functions accept `Time\Duration`, the final deprecation list, the support dates) get
+  updated in GA week, when people search for it.
+- **#5 `php-9` went out on 19 October 2026**, a month ahead of the planned GA week. It's
+  written against 8.6 RC3: in GA week, re-run its probe script on the GA image and update
+  any message text or "RC3" label that moved, in the article and the hero.
+- **#6 `php-8.6-on-real-apps` ships just before GA**, while teams are deciding whether to
+  upgrade. It can't be drafted until its three-app experiment has run, so that's the next
+  piece of work.
+- **#7 `evidence-over-assertion` leads the AI posts** because it has the strongest title in
+  the folder, and the first AI post after a PHP run has to win readers on its own.
+- **#8 `plan-before-you-let-it-code` and #9 `subagents-and-parallelism`** follow as the
+  two remaining drafts, the cheaper and more universal one first.
+- **#10–#13 are briefs** and need drafting time. `design-the-blast-radius` reaches security
+  reviewers; the last three narrow toward people who already run agents in CI.
+
+Between AI posts, a new PHP post tied to a release date beats the next AI post in this
+queue. When one is ready, it goes in ahead of whatever AI post is next.
 
 Publishing order is an editorial decision and nothing in the drafts encodes it. Reorder it
 freely — move a post up when its subject is suddenly live, or when a brief is ready earlier

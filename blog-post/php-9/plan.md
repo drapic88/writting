@@ -183,9 +183,10 @@ announcement.
   dropped: it showed zero 9.0-bound hits (a maintained showcase app is the best case), so it
   could not evidence the warnings-not-deprecations point.
 
-- **Publish in 8.6 GA week (19 November 2026).** Drafted early, on 2026-10-18.
+- ~~Publish in 8.6 GA week (19 November 2026).~~ **Published on 2026-10-19**, a month early,
+  against RC3.
 
-## Before publishing (GA week)
+## GA-week follow-up (the post is already live)
 
 - Re-run `p9.php`, `p9b.php`, `p9c.php` from `exp-php9/` on the GA image and replace any
   message text in the article that moved; change the provenance line from RC3 to GA.
