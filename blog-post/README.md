@@ -29,7 +29,7 @@ the Medium Partner Program, posts are member-only, and pay follows paid-member r
 | 3 | `chat-vs-agent` | Chat Answers. An Agent Acts. | 1,500–1,800 | **published** |
 | 4 | `php-8.6-small-release` | PHP 8.6 Is a Small Release With a Big Warning Label | 3,000 | **published** · refresh at GA |
 | 5 | `php-9` | The PHP 9 Upgrade Is Already in Your Error Log | 2,100 | **published** · re-check at GA |
-| 6 | `php-8.6-on-real-apps` | PHP 8.6 Is Ready. Your Lock File Isn't. | 2,300 | **drafted** · re-check at GA |
+| 6 | `php-8.6-on-real-apps` | PHP 8.6 Is Ready. Your Lock File Isn't. | 2,300 | **published** · re-check at GA |
 | 7 | `evidence-over-assertion` | "Done" Is Five Separate Claims | 2,100–2,400 | **drafted** |
 | 8 | `plan-before-you-let-it-code` | The Readiness Gate Is the Cheapest Bug Fix You Own | 1,700–2,000 | **drafted** |
 | 9 | `subagents-and-parallelism` | Subagents Buy Context Isolation, Not Speed | 1,900–2,200 | **drafted** |
@@ -52,10 +52,9 @@ stories, so the PHP posts are where the earnings are, and they move to the front
 - **#5 `php-9` went out on 19 October 2026**, a month ahead of the planned GA week. It's
   written against 8.6 RC3: in GA week, re-run its probe script on the GA image and update
   any message text or "RC3" label that moved, in the article and the hero.
-- **#6 `php-8.6-on-real-apps` ships just before GA**, while teams are deciding whether to
-  upgrade. The three-app run on RC3 is done and the draft is written; its brief is still
-  marked as awaiting agreement, so agree it or revise it before publishing. The package
-  version caps it cites move quickly near a release, so re-check each one on GA day.
+- **#6 `php-8.6-on-real-apps` went out on 20 October 2026**, ahead of GA, written against
+  8.6 RC3. The package version caps it cites move quickly near a release, so re-check each
+  one on GA day and update the post where a cap has been lifted.
 - **#7 `evidence-over-assertion` leads the AI posts** because it has the strongest title in
   the folder, and the first AI post after a PHP run has to win readers on its own.
 - **#8 `plan-before-you-let-it-code` and #9 `subagents-and-parallelism`** follow as the

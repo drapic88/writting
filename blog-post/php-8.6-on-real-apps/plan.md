@@ -1,6 +1,6 @@
 # Plan — PHP 8.6 on real apps
 
-**Status:** brief, revised 2026-10-18 after the first experiment run. Awaiting agreement.
+**Status:** published on Medium on 2026-10-20 (brief revised 2026-10-18 after the first experiment run).
 Public sources carry the argument; the local test run supports one section.
 
 ---
