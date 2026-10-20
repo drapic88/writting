@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 650" width="1400" height="650" role="img" aria-label="PHP 8.6 is ready, but a version cap three levels down your dependency tree decides when you can upgrade">
+  <defs>
+    <style>
+      .ink   { fill: #12203A; }
+      .mute  { fill: #6B7789; }
+      .accent{ fill: #E0662E; }
+      .h     { font-family: Georgia, 'Times New Roman', serif; }
+      .m     { font-family: 'SF Mono', 'DejaVu Sans Mono', Menlo, monospace; }
+      .s     { font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="1400" height="650" fill="#FAF8F4"/>
+
+  <!-- kicker -->
+  <rect x="80" y="92" width="120" height="3" class="accent"/>
+  <text x="80" y="122" class="m" font-size="14" fill="#8A93A3" letter-spacing="1">PHP 8.6 · DEPENDENCY CAPS</text>
+
+  <!-- title -->
+  <text x="80" y="206" class="h ink" font-size="58" font-weight="700">PHP 8.6 is ready. Your lock file isn't.</text>
+  <text x="80" y="252" class="s mute" font-size="24">Your upgrade date is set by your dependency tree, not by php.net.</text>
+
+  <!-- the chain -->
+  <text x="80" y="330" class="m" font-size="14" fill="#B0B7C2" letter-spacing="1">WHO PULLED IT IN</text>
+
+  <!-- box 1: the app -->
+  <rect x="80" y="352" width="250" height="104" rx="8" fill="none" stroke="#12203A" stroke-width="3"/>
+  <text x="102" y="396" class="m ink" font-size="19" font-weight="700">symfony/demo</text>
+  <text x="102" y="428" class="s mute" font-size="15">your app</text>
+
+  <!-- arrow 1 -->
+  <path d="M 336 404 L 400 404" stroke="#6B7789" stroke-width="2" fill="none"/>
+  <path d="M 400 397 L 410 404 L 400 411 Z" fill="#6B7789"/>
+  <text x="373" y="390" text-anchor="middle" class="m mute" font-size="14">^2.1</text>
+
+  <!-- box 2 -->
+  <rect x="410" y="352" width="250" height="104" rx="8" fill="#12203A"/>
+  <text x="432" y="396" class="m" font-size="19" font-weight="700" fill="#FAF8F4">league/commonmark</text>
+  <text x="432" y="428" class="m" font-size="15" fill="#A9B3C4">2.10.0</text>
+
+  <!-- arrow 2 -->
+  <path d="M 666 404 L 730 404" stroke="#6B7789" stroke-width="2" fill="none"/>
+  <path d="M 730 397 L 740 404 L 730 411 Z" fill="#6B7789"/>
+  <text x="703" y="390" text-anchor="middle" class="m mute" font-size="14">^1.1.1</text>
+
+  <!-- box 3 -->
+  <rect x="740" y="352" width="250" height="104" rx="8" fill="#12203A" fill-opacity="0.55"/>
+  <text x="762" y="396" class="m" font-size="19" font-weight="700" fill="#FAF8F4">league/config</text>
+  <text x="762" y="428" class="m" font-size="15" fill="#E4E8EF">v1.2.0</text>
+
+  <!-- arrow 3 -->
+  <path d="M 996 404 L 1060 404" stroke="#6B7789" stroke-width="2" fill="none"/>
+  <path d="M 1060 397 L 1070 404 L 1060 411 Z" fill="#6B7789"/>
+  <text x="1033" y="390" text-anchor="middle" class="m mute" font-size="14">^1.2</text>
+
+  <!-- box 4: the wall -->
+  <rect x="1070" y="352" width="250" height="104" rx="8" fill="#E0662E"/>
+  <text x="1092" y="390" class="m" font-size="19" font-weight="700" fill="#FFFFFF">nette/schema</text>
+  <text x="1092" y="414" class="m" font-size="15" fill="#FFE3D4">v1.3.6</text>
+  <text x="1092" y="442" class="m" font-size="17" font-weight="700" fill="#FFFFFF">"php": "8.1 - 8.5"</text>
+  <rect x="1328" y="340" width="6" height="128" class="accent"/>
+
+  <!-- what composer says -->
+  <rect x="80" y="506" width="1240" height="1" fill="#E4DED3"/>
+  <g class="m" font-size="17">
+    <text x="80" y="550" fill="#12203A">$ composer install</text>
+    <text x="470" y="550" fill="#6B7789">exit 0</text>
+    <text x="600" y="550" fill="#8A93A3">platform pinned to 8.4.1, so the cap never shows</text>
+    <text x="80" y="590" fill="#12203A">$ composer check-platform-reqs</text>
+    <text x="470" y="590" fill="#E0662E" font-weight="700">failed</text>
+    <text x="600" y="590" fill="#8A93A3">PHP 8.6.0RC3: nette/schema requires php (8.1 - 8.5)</text>
+  </g>
+
+</svg>
