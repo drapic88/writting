@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 650" width="1400" height="650" role="img" aria-label="An MCP server in PHP: the session-based handshake fails on the second request, the stateless 2026-07-28 request succeeds with nothing stored">
+  <defs>
+    <style>
+      .ink   { fill: #12203A; }
+      .mute  { fill: #6B7789; }
+      .accent{ fill: #E0662E; }
+      .h     { font-family: Georgia, 'Times New Roman', serif; }
+      .m     { font-family: 'SF Mono', 'DejaVu Sans Mono', Menlo, monospace; }
+      .s     { font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="1400" height="650" fill="#FAF8F4"/>
+
+  <!-- kicker -->
+  <rect x="80" y="72" width="120" height="3" class="accent"/>
+  <text x="80" y="102" class="m" font-size="14" fill="#8A93A3" letter-spacing="1">MCP IN PHP · STREAMABLE HTTP</text>
+
+  <!-- title -->
+  <text x="80" y="176" class="h ink" font-size="54" font-weight="700">MCP went stateless. PHP was ready.</text>
+  <text x="80" y="220" class="s mute" font-size="24">The 2025 handshake needs a session PHP throws away. The 2026-07-28 revision needs none.</text>
+
+  <!-- lane 1: handshake era, default in-memory session store -->
+  <text x="80" y="292" class="m" font-size="15" fill="#12203A" letter-spacing="1.5">2025-11-25 · HANDSHAKE · DEFAULT IN-MEMORY SESSION STORE</text>
+
+  <rect x="80" y="308" width="360" height="72" rx="8" fill="#12203A" fill-opacity="0.55"/>
+  <text x="104" y="340" class="m" font-size="18" fill="#FAF8F4">POST initialize</text>
+  <text x="104" y="366" class="s" font-size="15" fill="#E4E8EF">200 · Mcp-Session-Id: c7a7273d-…</text>
+
+  <path d="M 452 344 L 500 344" stroke="#6B7789" stroke-width="2" fill="none"/>
+  <path d="M 500 344 L 490 338 L 490 350 Z" fill="#6B7789"/>
+
+  <rect x="512" y="308" width="420" height="72" rx="8" fill="#12203A" fill-opacity="0.55"/>
+  <text x="536" y="340" class="m" font-size="18" fill="#FAF8F4">next request, same session</text>
+  <text x="536" y="366" class="s" font-size="15" fill="#E4E8EF">initialized, then tools/call</text>
+
+  <rect x="972" y="308" width="4" height="72" class="accent"/>
+  <text x="996" y="344" class="m" font-size="40" font-weight="700" fill="#E0662E">404</text>
+  <text x="996" y="372" class="s" font-size="17" fill="#12203A">"Session not found or has expired."</text>
+
+  <rect x="80" y="420" width="1240" height="1" fill="#E4DED3"/>
+
+  <!-- lane 2: 2026-07-28, stateless -->
+  <text x="80" y="470" class="m" font-size="15" fill="#12203A" letter-spacing="1.5">2026-07-28 · STATELESS · NOTHING STORED</text>
+
+  <rect x="80" y="486" width="852" height="72" rx="8" fill="#12203A"/>
+  <text x="104" y="518" class="m" font-size="18" fill="#FAF8F4">POST tools/call  <tspan fill="#E0662E">_meta</tspan>: protocolVersion, clientCapabilities</text>
+  <text x="104" y="544" class="s" font-size="15" fill="#A9B3C4">no initialize, no Mcp-Session-Id: the request carries everything</text>
+
+  <rect x="972" y="486" width="4" height="72" fill="#12203A"/>
+  <text x="996" y="522" class="m" font-size="40" font-weight="700" fill="#12203A">200</text>
+  <text x="996" y="550" class="m" font-size="16" fill="#6B7789">Hello, Dragan, from PHP 8.4.26</text>
+
+  <text x="80" y="622" class="s" font-size="15" fill="#8A93A3">mcp/sdk v0.9.0 on PHP-FPM 8.4.26 behind nginx, default settings. PHP frees an in-memory store when each request ends.</text>
+
+</svg>
