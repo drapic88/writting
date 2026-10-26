@@ -18,7 +18,7 @@ advanced workshop on coding, QA, DevOps and daily automation — plus standalone
 whatever is worth writing about.
 
 The table is ordered by **publishing order**, the sequence to ship them in, not a reading
-order. Nothing in a post depends on an earlier one; a reader arriving at #9 from search gets
+order. Nothing in a post depends on an earlier one; a reader arriving at #15 from search gets
 a complete argument. Since October 2026 the order is set by **earnings**: the account is in
 the Medium Partner Program, posts are member-only, and pay follows paid-member reading time.
 
@@ -30,13 +30,19 @@ the Medium Partner Program, posts are member-only, and pay follows paid-member r
 | 4 | `php-8.6-small-release` | PHP 8.6 Is a Small Release With a Big Warning Label | 3,000 | **published** · refresh at GA |
 | 5 | `php-9` | The PHP 9 Upgrade Is Already in Your Error Log | 2,100 | **published** · re-check at GA |
 | 6 | `php-8.6-on-real-apps` | PHP 8.6 Is Ready. Your Lock File Isn't. | 2,300 | **published** · re-check at GA |
-| 7 | `evidence-over-assertion` | "Done" Is Five Separate Claims | 2,100–2,400 | **drafted** |
-| 8 | `plan-before-you-let-it-code` | The Readiness Gate Is the Cheapest Bug Fix You Own | 1,700–2,000 | **drafted** |
-| 9 | `subagents-and-parallelism` | Subagents Buy Context Isolation, Not Speed | 1,900–2,200 | **drafted** |
-| 10 | `design-the-blast-radius` | The Container Is the Security Model, Not the Prompt | 1,900–2,200 | plan |
-| 11 | `skills-beat-long-prompts` | Stop Retyping Procedures. Commit Them. | 1,600–1,900 | plan |
-| 12 | `the-agent-as-a-unix-tool` | An Agent You Can Pipe Into `jq` | 1,600–1,900 | plan |
-| 13 | `automating-the-boring-half` | A Tip Nobody Installs Is Not a Tip | 1,700–2,000 | plan |
+| 7 | `composer-audit-blind-spots` | Composer Says Your Dependencies Are Fine. Here's What It Didn't Check. | 2,080 | **drafted** · re-check before publishing |
+| 8 | `php-8.7-in-progress` | PHP 8.7 Has No Headline Feature Yet. Its Breaking Changes Already Landed. | 2,320 | **drafted** · re-check votes on publish day |
+| 9 | `php-8.2-end-of-life` | PHP 8.2 Stops Getting Security Fixes on 31 December | 2,340 | **drafted** · refresh Packagist figures |
+| 10 | `pipes-and-partial-application` | Pipes Were Half a Feature Until Partial Application Arrived | 2,190 | **drafted** · re-run on GA image |
+| 11 | `frankenphp-worker-mode` | Worker Mode Is Fast Until Request Two Sees Request One's Data | 2,190 | **drafted** |
+| 12 | `mcp-server-in-php` | MCP Went Stateless. PHP Was Ready. | 2,230 | **drafted** · check SDK version |
+| 13 | `evidence-over-assertion` | "Done" Is Five Separate Claims | 2,100–2,400 | **drafted** |
+| 14 | `plan-before-you-let-it-code` | The Readiness Gate Is the Cheapest Bug Fix You Own | 1,700–2,000 | **drafted** |
+| 15 | `subagents-and-parallelism` | Subagents Buy Context Isolation, Not Speed | 1,900–2,200 | **drafted** |
+| 16 | `design-the-blast-radius` | The Container Is the Security Model, Not the Prompt | 1,900–2,200 | plan |
+| 17 | `skills-beat-long-prompts` | Stop Retyping Procedures. Commit Them. | 1,600–1,900 | plan |
+| 18 | `the-agent-as-a-unix-tool` | An Agent You Can Pipe Into `jq` | 1,600–1,900 | plan |
+| 19 | `automating-the-boring-half` | A Tip Nobody Installs Is Not a Tip | 1,700–2,000 | plan |
 
 ### Why this order
 
@@ -55,11 +61,25 @@ stories, so the PHP posts are where the earnings are, and they move to the front
 - **#6 `php-8.6-on-real-apps` went out on 20 October 2026**, ahead of GA, written against
   8.6 RC3. The package version caps it cites move quickly near a release, so re-check each
   one on GA day and update the post where a cap has been lifted.
-- **#7 `evidence-over-assertion` leads the AI posts** because it has the strongest title in
+- **#7–#12 are six PHP posts drafted on 26 October 2026**, all ahead of the AI posts:
+  - **#7 `composer-audit-blind-spots` goes out before GA**, while its "capped below PHP 8.6"
+    count is still news. Advisories and caps move weekly, so re-run the audit on the seven
+    lock files before publishing.
+  - **#8 `php-8.7-in-progress` goes out in the 19–26 November window**, right after 8.6 GA,
+    when readers ask what's next. Re-check the open votes and master's `UPGRADING` on
+    publish day; the hero carries the 26 October figures and changes with them.
+  - **#9 `php-8.2-end-of-life` goes out in early December**, ahead of the 31 December
+    deadline. Refresh the Packagist figures first.
+  - **#10 `pipes-and-partial-application`** follows GA: re-run its snippets and opcode dumps
+    on the GA image and drop the "RC4" labels.
+  - **#11 `frankenphp-worker-mode` and #12 `mcp-server-in-php`** aren't tied to a release
+    and fill the gap before the AI posts. The MCP SDK is pre-1.0, so check its version and
+    changelog before publishing.
+- **#13 `evidence-over-assertion` leads the AI posts** because it has the strongest title in
   the folder, and the first AI post after a PHP run has to win readers on its own.
-- **#8 `plan-before-you-let-it-code` and #9 `subagents-and-parallelism`** follow as the
+- **#14 `plan-before-you-let-it-code` and #15 `subagents-and-parallelism`** follow as the
   two remaining drafts, the cheaper and more universal one first.
-- **#10–#13 are briefs** and need drafting time. `design-the-blast-radius` reaches security
+- **#16–#19 are briefs** and need drafting time. `design-the-blast-radius` reaches security
   reviewers; the last three narrow toward people who already run agents in CI.
 
 Between AI posts, a new PHP post tied to a release date beats the next AI post in this
