@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 650" width="1400" height="650" role="img" aria-label="PHP 8.7 so far: seven breaking changes landed on master as commits, while this summer's four syntax RFCs all lost their votes">
+  <defs>
+    <style>
+      .ink   { fill: #12203A; }
+      .mute  { fill: #6B7789; }
+      .accent{ fill: #E0662E; }
+      .h     { font-family: Georgia, 'Times New Roman', serif; }
+      .m     { font-family: 'SF Mono', 'DejaVu Sans Mono', Menlo, monospace; }
+      .s     { font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="1400" height="650" fill="#FAF8F4"/>
+
+  <!-- kicker -->
+  <rect x="80" y="72" width="120" height="3" class="accent"/>
+  <text x="80" y="102" class="m" font-size="14" fill="#8A93A3" letter-spacing="1">PHP 8.7 · COMMITS AND VOTES</text>
+
+  <!-- title -->
+  <text x="80" y="176" class="h ink" font-size="54" font-weight="700">PHP 8.7 has no headline feature yet</text>
+  <text x="80" y="220" class="s mute" font-size="24">Its breaking changes already landed, as commits. The syntax RFCs lost their votes.</text>
+
+  <!-- lane 1: commits -->
+  <text x="80" y="294" class="m" font-size="15" fill="#12203A" letter-spacing="1.5">COMMITS · BREAKING CHANGES ON MASTER</text>
+  <rect x="80" y="310" width="640" height="276" rx="10" fill="#12203A"/>
+
+  <g class="m" font-size="17">
+    <text x="108" y="352" fill="#FAF8F4">curl_multi_exec()</text>
+    <text x="108" y="386" fill="#FAF8F4">CURLOPT_POSTFIELDS, nested</text>
+    <text x="108" y="420" fill="#FAF8F4">PDOStatement::bindColumn()</text>
+    <text x="108" y="454" fill="#FAF8F4">ReflectionClass::$name</text>
+    <text x="108" y="488" fill="#FAF8F4">SoapClient cross-origin</text>
+    <text x="108" y="522" fill="#FAF8F4">session.cookie_path</text>
+    <text x="108" y="556" fill="#A9B3C4">php://filter, 17 filters</text>
+  </g>
+  <g class="m" font-size="17" text-anchor="end">
+    <text x="692" y="352" fill="#E0662E">TypeError</text>
+    <text x="692" y="386" fill="#E0662E">TypeError</text>
+    <text x="692" y="420" fill="#E0662E">ValueError</text>
+    <text x="692" y="454" fill="#E0662E">readonly</text>
+    <text x="692" y="488" fill="#E0662E">SoapFault</text>
+    <text x="692" y="522" fill="#E0662E">rejected</text>
+    <text x="692" y="556" fill="#A9B3C4">error · RFC</text>
+  </g>
+  <rect x="104" y="536" width="592" height="1" fill="#6B7789"/>
+
+  <!-- lane 2: votes -->
+  <text x="780" y="294" class="m" font-size="15" fill="#12203A" letter-spacing="1.5">VOTES · TWO THIRDS TO PASS</text>
+
+  <rect x="780" y="314" width="4" height="150" fill="#E4DED3"/>
+  <text x="804" y="336" class="s" font-size="18" font-weight="700" fill="#6B7789">Lost this summer</text>
+  <g class="m" font-size="17" fill="#8A93A3">
+    <text x="804" y="372">Bound-erased generics</text>
+    <text x="804" y="402">Pipe assignment operator</text>
+    <text x="804" y="432">Function autoloading</text>
+    <text x="804" y="462">__exists()</text>
+  </g>
+  <g class="m" font-size="17" fill="#8A93A3" text-anchor="end">
+    <text x="1320" y="372">7–19</text>
+    <text x="1320" y="402">14–12</text>
+    <text x="1320" y="432">2–11</text>
+    <text x="1320" y="462">2–13</text>
+  </g>
+  <g fill="#8A93A3">
+    <rect x="804" y="366" width="214" height="1.5"/>
+    <rect x="804" y="396" width="245" height="1.5"/>
+    <rect x="804" y="426" width="204" height="1.5"/>
+    <rect x="804" y="456" width="102" height="1.5"/>
+  </g>
+
+  <rect x="780" y="496" width="4" height="90" class="accent"/>
+  <text x="804" y="518" class="s" font-size="18" font-weight="700" fill="#E0662E">Passed for 8.7</text>
+  <g class="m" font-size="17" fill="#12203A">
+    <text x="804" y="552">End PEAR endorsement</text>
+    <text x="804" y="582">IntlRelativeDateTimeFormatter</text>
+  </g>
+  <g class="m" font-size="17" fill="#12203A" text-anchor="end">
+    <text x="1320" y="552">40–0</text>
+    <text x="1320" y="582">25–0</text>
+  </g>
+
+  <text x="80" y="622" class="s" font-size="15" fill="#8A93A3">Breaking changes from UPGRADING on php-src master, 26 October 2026. Six of the seven had no RFC. Votes are yes–no.</text>
+
+</svg>
