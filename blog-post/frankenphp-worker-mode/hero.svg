@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 650" width="1400" height="650" role="img" aria-label="In FrankenPHP worker mode the PHP process survives between requests, so state set for one user can be read by the next">
+  <defs>
+    <style>
+      .ink   { fill: #12203A; }
+      .mute  { fill: #6B7789; }
+      .accent{ fill: #E0662E; }
+      .h     { font-family: Georgia, 'Times New Roman', serif; }
+      .m     { font-family: 'SF Mono', 'DejaVu Sans Mono', Menlo, monospace; }
+      .s     { font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="1400" height="650" fill="#FAF8F4"/>
+
+  <!-- kicker -->
+  <rect x="80" y="72" width="120" height="3" class="accent"/>
+  <text x="80" y="102" class="m" font-size="14" fill="#8A93A3" letter-spacing="1">FRANKENPHP · WORKER MODE</text>
+
+  <!-- title, two lines -->
+  <text x="80" y="168" class="h ink" font-size="50" font-weight="700">Worker mode is fast until request two</text>
+  <text x="80" y="226" class="h ink" font-size="50" font-weight="700">sees request one's data</text>
+  <text x="80" y="272" class="s mute" font-size="23">The process stops forgetting. Frameworks reset their state, not yours.</text>
+
+  <!-- the worker thread -->
+  <text x="80" y="330" class="m" font-size="14" fill="#B0B7C2" letter-spacing="1">ONE WORKER THREAD · thread=a88f7f</text>
+
+  <!-- request 1: logged in -->
+  <rect x="80" y="346" width="360" height="112" rx="8" fill="none" stroke="#12203A" stroke-width="3"/>
+  <text x="102" y="378" class="m mute" font-size="15">request 1 · cookie: jane_admin</text>
+  <text x="102" y="410" class="m ink" font-size="19" font-weight="700">GET /en/leak/whoami</text>
+  <text x="102" y="440" class="m ink" font-size="17">user=jane_admin</text>
+
+  <!-- arrow 1 -->
+  <path d="M 446 402 L 504 402" stroke="#6B7789" stroke-width="2" fill="none"/>
+  <path d="M 504 395 L 514 402 L 504 409 Z" fill="#6B7789"/>
+
+  <!-- request 2: anonymous, leaked -->
+  <rect x="520" y="346" width="360" height="112" rx="8" fill="#E0662E"/>
+  <text x="542" y="378" class="m" font-size="15" fill="#FFE3D4">request 2 · no cookie</text>
+  <text x="542" y="410" class="m" font-size="19" font-weight="700" fill="#FFFFFF">GET /en/leak/whoami</text>
+  <text x="542" y="440" class="m" font-size="17" font-weight="700" fill="#FFFFFF">user=jane_admin</text>
+
+  <!-- arrow 2 -->
+  <path d="M 886 402 L 944 402" stroke="#6B7789" stroke-width="2" fill="none"/>
+  <path d="M 944 395 L 954 402 L 944 409 Z" fill="#6B7789"/>
+
+  <!-- request 3: anonymous, leaked -->
+  <rect x="960" y="346" width="360" height="112" rx="8" fill="#E0662E"/>
+  <text x="982" y="378" class="m" font-size="15" fill="#FFE3D4">request 3 · no cookie</text>
+  <text x="982" y="410" class="m" font-size="19" font-weight="700" fill="#FFFFFF">GET /en/leak/whoami</text>
+  <text x="982" y="440" class="m" font-size="17" font-weight="700" fill="#FFFFFF">user=jane_admin</text>
+
+  <!-- the static that survives underneath all three -->
+  <path d="M 260 458 L 260 486 M 700 458 L 700 486 M 1140 458 L 1140 486" stroke="#E0662E" stroke-width="2" stroke-opacity="0.55" fill="none"/>
+  <rect x="80" y="486" width="1240" height="44" rx="5" fill="#E0662E" fill-opacity="0.16" stroke="#E0662E" stroke-opacity="0.55" stroke-width="2"/>
+  <text x="102" y="514" class="m ink" font-size="17" font-weight="700">CurrentUser::$username = "jane_admin"</text>
+  <text x="560" y="514" class="s mute" font-size="16">a static property: nothing resets it between requests</text>
+
+  <!-- the control: classic mode -->
+  <rect x="80" y="556" width="1240" height="1" fill="#E4DED3"/>
+  <g class="m" font-size="17">
+    <text x="80" y="596" fill="#12203A">classic mode</text>
+    <text x="260" y="596" fill="#8A93A3">thread=24fd08 → 00a2dd → ba758f</text>
+    <text x="700" y="596" fill="#6B7789">user=jane_admin → (anonymous) → (anonymous)</text>
+  </g>
+
+</svg>
