@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 650" width="1400" height="650" role="img" aria-label="A green composer audit reads three published lists; a real lock file also carries quiet packages, old majors and PHP caps that are on none of them">
+  <defs>
+    <style>
+      .ink   { fill: #12203A; }
+      .mute  { fill: #6B7789; }
+      .accent{ fill: #E0662E; }
+      .h     { font-family: Georgia, 'Times New Roman', serif; }
+      .m     { font-family: 'SF Mono', 'DejaVu Sans Mono', Menlo, monospace; }
+      .s     { font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="1400" height="650" fill="#FAF8F4"/>
+
+  <!-- kicker -->
+  <rect x="80" y="92" width="120" height="3" class="accent"/>
+  <text x="80" y="122" class="m" font-size="14" fill="#8A93A3" letter-spacing="1">COMPOSER AUDIT · LOCK FILES</text>
+
+  <!-- title -->
+  <text x="80" y="200" class="h ink" font-size="52" font-weight="700">Composer says your dependencies are fine.</text>
+  <text x="80" y="246" class="s mute" font-size="24">A green audit is a statement about three lists, not about your dependencies.</text>
+
+  <!-- left: what audit reads -->
+  <text x="80" y="318" class="m" font-size="14" fill="#B0B7C2" letter-spacing="1">WHAT AUDIT READS</text>
+
+  <rect x="80" y="334" width="560" height="56" rx="6" fill="none" stroke="#12203A" stroke-width="2.5"/>
+  <text x="102" y="369" class="s ink" font-size="19" font-weight="700">Security advisories</text>
+  <text x="618" y="371" text-anchor="end" class="m ink" font-size="24" font-weight="700">22</text>
+
+  <rect x="80" y="400" width="560" height="56" rx="6" fill="none" stroke="#12203A" stroke-width="2.5"/>
+  <text x="102" y="435" class="s ink" font-size="19" font-weight="700">Flagged abandoned</text>
+  <text x="618" y="437" text-anchor="end" class="m ink" font-size="24" font-weight="700">37</text>
+
+  <rect x="80" y="466" width="560" height="56" rx="6" fill="none" stroke="#12203A" stroke-width="2.5"/>
+  <text x="102" y="501" class="s ink" font-size="19" font-weight="700">Malware lists</text>
+  <text x="618" y="501" text-anchor="end" class="s mute" font-size="15">new in 2.10</text>
+
+  <!-- right: what it never reads -->
+  <text x="760" y="318" class="m" font-size="14" fill="#E0662E" letter-spacing="1">ON NONE OF THOSE LISTS</text>
+
+  <rect x="760" y="334" width="560" height="56" rx="6" fill="#E0662E"/>
+  <text x="782" y="369" class="s" font-size="19" font-weight="700" fill="#FFFFFF">Quiet, unflagged<tspan font-size="15" font-weight="400" fill="#FFE3D4">   no release, no commit in 2 years</tspan></text>
+  <text x="1298" y="371" text-anchor="end" class="m" font-size="24" font-weight="700" fill="#FFFFFF">55</text>
+
+  <rect x="760" y="400" width="560" height="56" rx="6" fill="#E0662E" fill-opacity="0.75"/>
+  <text x="782" y="435" class="s" font-size="19" font-weight="700" fill="#FFFFFF">Capped below PHP 8.6</text>
+  <text x="1298" y="437" text-anchor="end" class="m" font-size="24" font-weight="700" fill="#FFFFFF">29</text>
+
+  <rect x="760" y="466" width="560" height="56" rx="6" fill="#E0662E" fill-opacity="0.08" stroke="#E0662E" stroke-width="2.5"/>
+  <text x="782" y="501" class="s" font-size="19" font-weight="700" fill="#E0662E">A major behind, per app</text>
+  <text x="1298" y="503" text-anchor="end" class="m" font-size="24" font-weight="700" fill="#E0662E">0–89</text>
+
+  <!-- divider arrow between the halves -->
+  <path d="M 660 428 L 728 428" stroke="#6B7789" stroke-width="2" fill="none" stroke-dasharray="5 5"/>
+  <path d="M 728 421 L 738 428 L 728 435 Z" fill="#6B7789"/>
+
+  <!-- what composer says -->
+  <rect x="80" y="552" width="1240" height="1" fill="#E4DED3"/>
+  <g class="m" font-size="16">
+    <text x="80" y="590" fill="#12203A">$ composer audit --locked</text>
+    <text x="440" y="590" fill="#12203A" font-weight="700">1 of 7 pass</text>
+    <text x="600" y="590" fill="#8A93A3">1,265 packages in seven committed lock files, 26 Oct 2026</text>
+    <text x="80" y="622" fill="#12203A">$ composer check-platform-reqs</text>
+    <text x="440" y="622" fill="#E0662E" font-weight="700">shows 1 cap</text>
+    <text x="600" y="622" fill="#8A93A3">composer why-not php 8.6.0 shows all of them</text>
+  </g>
+
+</svg>
