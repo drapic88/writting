@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 650" width="1400" height="650" role="img" aria-label="PHP 8.2 security support ends on 31 December 2026; for a codebase that already runs on 8.2, leaving it is a composer.json change and a lock-file upgrade">
+  <defs>
+    <style>
+      .ink   { fill: #12203A; }
+      .mute  { fill: #6B7789; }
+      .accent{ fill: #E0662E; }
+      .h     { font-family: Georgia, 'Times New Roman', serif; }
+      .m     { font-family: 'SF Mono', 'DejaVu Sans Mono', Menlo, monospace; }
+      .s     { font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="1400" height="650" fill="#FAF8F4"/>
+
+  <!-- kicker -->
+  <rect x="80" y="92" width="120" height="3" class="accent"/>
+  <text x="80" y="122" class="m" font-size="14" fill="#8A93A3" letter-spacing="1">PHP 8.2 · END OF LIFE</text>
+
+  <!-- title -->
+  <text x="80" y="200" class="h ink" font-size="44" font-weight="700">PHP 8.2 stops getting security fixes on 31 December</text>
+  <text x="80" y="246" class="s mute" font-size="24">Leaving it is a composer.json change. The lock file is the upgrade.</text>
+
+  <!-- left: support timeline -->
+  <text x="80" y="330" class="m" font-size="14" fill="#B0B7C2" letter-spacing="1">SUPPORT · PHP.NET</text>
+  <rect x="175.5" y="356" width="1" height="164" fill="#E4DED3"/>
+  <text x="175.5" y="542" text-anchor="middle" class="m mute" font-size="14">2023</text>
+  <rect x="246.0" y="356" width="1" height="164" fill="#E4DED3"/>
+  <text x="246.0" y="542" text-anchor="middle" class="m mute" font-size="14">2024</text>
+  <rect x="316.6" y="356" width="1" height="164" fill="#E4DED3"/>
+  <text x="316.6" y="542" text-anchor="middle" class="m mute" font-size="14">2025</text>
+  <rect x="387.1" y="356" width="1" height="164" fill="#E4DED3"/>
+  <text x="387.1" y="542" text-anchor="middle" class="m mute" font-size="14">2026</text>
+  <rect x="457.5" y="356" width="1" height="164" fill="#E4DED3"/>
+  <text x="457.5" y="542" text-anchor="middle" class="m mute" font-size="14">2027</text>
+  <rect x="528.0" y="356" width="1" height="164" fill="#E4DED3"/>
+  <text x="528.0" y="542" text-anchor="middle" class="m mute" font-size="14">2028</text>
+  <rect x="598.6" y="356" width="1" height="164" fill="#E4DED3"/>
+  <text x="598.6" y="542" text-anchor="middle" class="m mute" font-size="14">2029</text>
+  <text x="80" y="409" class="m ink" font-size="17" font-weight="700">8.2</text>
+  <rect x="170.9" y="388" width="145.5" height="30" rx="3" fill="#12203A"/>
+  <rect x="316.4" y="388" width="140.9" height="30" rx="3" fill="#E0662E" fill-opacity="1"/>
+  <text x="80" y="477" class="m ink" font-size="17" font-weight="700">8.4</text>
+  <rect x="308.7" y="456" width="148.6" height="30" rx="3" fill="#12203A"/>
+  <rect x="457.3" y="456" width="141.1" height="30" rx="3" fill="#12203A" fill-opacity="0.35"/>
+  <text x="186.9" y="409" class="s" font-size="15" fill="#FAF8F4">active</text>
+  <text x="322.6" y="409" class="s" font-size="15" fill="#FFFFFF" font-weight="700">security only</text>
+  <text x="319.3" y="477" class="s" font-size="15" fill="#FAF8F4">active</text>
+  <text x="463.5" y="477" class="s" font-size="15" fill="#12203A">security only</text>
+  <rect x="455.8" y="344" width="3" height="176" class="accent"/>
+  <text x="465.3" y="372" class="m accent" font-size="15" font-weight="700">31 Dec 2026</text>
+  <text x="80" y="590" class="s mute" font-size="15">The same day 8.4 drops to security fixes only, until the end of 2028.</text>
+
+  <!-- right: what leaving 8.2 changed in BookStack v26.09.1 -->
+  <text x="680" y="330" class="m" font-size="14" fill="#B0B7C2" letter-spacing="1">BOOKSTACK · 8.2 → 8.4</text>
+  <rect x="680" y="350" width="640" height="214" rx="8" fill="#12203A"/>
+  <g class="m" font-size="16">
+    <text x="704" y="382" fill="#A9B3C4">composer.json</text>
+    <text x="910" y="382" fill="#6B7789">2 lines</text>
+    <text x="704" y="410" fill="#FAF8F4">"php": "^8.2.0" → "^8.4.0"</text>
+    <text x="1020" y="410" fill="#FAF8F4">platform 8.2.0 → 8.4.0</text>
+    <rect x="700" y="426" width="600" height="1" fill="#3A4862"/>
+    <text x="704" y="454" fill="#A9B3C4">composer.lock</text>
+    <text x="910" y="454" fill="#6B7789">five new Symfony majors</text>
+    <text x="704" y="482" fill="#E0662E">symfony/clock · event-dispatcher · filesystem</text>
+    <text x="704" y="508" fill="#E0662E">symfony/string · translation</text>
+    <text x="1060" y="508" fill="#FAF8F4" font-weight="700">7.4 → 8.0</text>
+    <text x="704" y="544" fill="#A9B3C4">app/</text>
+    <text x="910" y="544" fill="#FAF8F4" font-weight="700">0 files needed</text>
+  </g>
+  <text x="680" y="590" class="s mute" font-size="15">1,625 tests green on 8.2 and 8.4. Rector's 110-file diff is style, not the upgrade.</text>
+</svg>
