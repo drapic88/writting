@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 650" width="1400" height="650" role="img" aria-label="The same PHP pipeline three ways: nested calls in 8.4, a pipe of wrapped arrow functions in 8.5 that builds 4 closures, and a pipe of partial applications in 8.6 that builds none. In Laravel's source, partial application replaces 71 of 2,289 closures">
+  <defs>
+    <style>
+      .ink   { fill: #12203A; }
+      .mute  { fill: #6B7789; }
+      .accent{ fill: #E0662E; }
+      .h     { font-family: Georgia, 'Times New Roman', serif; }
+      .m     { font-family: 'SF Mono', 'DejaVu Sans Mono', Menlo, monospace; }
+      .s     { font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="1400" height="650" fill="#FAF8F4"/>
+
+  <!-- kicker -->
+  <rect x="80" y="56" width="120" height="3" class="accent"/>
+  <text x="80" y="86" class="m" font-size="14" fill="#8A93A3" letter-spacing="1">PHP 8.5 PIPES · PHP 8.6 PARTIAL APPLICATION</text>
+
+  <!-- title -->
+  <text x="80" y="152" class="h ink" font-size="52" font-weight="700">Pipes were half a feature</text>
+  <text x="80" y="194" class="s mute" font-size="23">Partial application finishes the pipe operator. It doesn't replace your closures.</text>
+
+  <!-- 8.4: the nested one-liner -->
+  <text x="80" y="244" class="m" font-size="14" fill="#B0B7C2" letter-spacing="1">PHP 8.4</text>
+  <text x="160" y="244" class="m" font-size="15" fill="#6B7789">implode(', ', array_values(array_unique(array_filter(array_map(fn($t) =&gt; strtolower(trim($t)), explode(',', $input))))))</text>
+
+  <!-- 8.5 panel -->
+  <rect x="80" y="272" width="660" height="296" rx="10" fill="#12203A"/>
+  <text x="106" y="306" class="m" font-size="14" fill="#A9B3C4" letter-spacing="1">PHP 8.5 · PIPES ALONE</text>
+  <g class="m" font-size="15" fill="#FAF8F4">
+    <text x="106" y="344">$tags = $input</text>
+    <text x="106" y="368">    |&gt; <tspan fill="#E0662E">(fn($s) =&gt;</tspan> explode(',', $s)<tspan fill="#E0662E">)</tspan></text>
+    <text x="106" y="392">    |&gt; <tspan fill="#E0662E">(fn($a) =&gt;</tspan> array_map(fn($t) =&gt; strtolower(trim($t)), $a)<tspan fill="#E0662E">)</tspan></text>
+    <text x="106" y="416">    |&gt; array_filter(...)</text>
+    <text x="106" y="440">    |&gt; array_unique(...)</text>
+    <text x="106" y="464">    |&gt; array_values(...)</text>
+    <text x="106" y="488">    |&gt; <tspan fill="#E0662E">(fn($a) =&gt;</tspan> implode(', ', $a)<tspan fill="#E0662E">);</tspan></text>
+  </g>
+  <rect x="106" y="526" width="608" height="1" fill="#6B7789"/>
+  <text x="106" y="554" class="m" font-size="17" font-weight="700" fill="#E0662E">4 closures · 3 dynamic calls</text>
+
+  <!-- 8.6 panel -->
+  <rect x="770" y="272" width="550" height="296" rx="10" fill="#12203A"/>
+  <text x="796" y="306" class="m" font-size="14" fill="#A9B3C4" letter-spacing="1">PHP 8.6 · PIPES + PARTIAL APPLICATION</text>
+  <g class="m" font-size="15" fill="#FAF8F4">
+    <text x="796" y="344">$tags = $input</text>
+    <text x="796" y="368">    |&gt; explode(',', <tspan fill="#E0662E" font-weight="700">?</tspan>)</text>
+    <text x="796" y="392">    |&gt; array_map(trim(...), <tspan fill="#E0662E" font-weight="700">?</tspan>)</text>
+    <text x="796" y="416">    |&gt; array_map(strtolower(...), <tspan fill="#E0662E" font-weight="700">?</tspan>)</text>
+    <text x="796" y="440">    |&gt; array_filter(...)</text>
+    <text x="796" y="464">    |&gt; array_unique(...)</text>
+    <text x="796" y="488">    |&gt; array_values(...)</text>
+    <text x="796" y="512">    |&gt; implode(', ', <tspan fill="#E0662E" font-weight="700">?</tspan>);</text>
+  </g>
+  <rect x="796" y="526" width="498" height="1" fill="#6B7789"/>
+  <text x="796" y="554" class="m" font-size="17" font-weight="700" fill="#FAF8F4">0 closures · plain function calls</text>
+
+  <!-- the count -->
+  <rect x="80" y="596" width="4" height="30" class="accent"/>
+  <text x="100" y="618" class="s" font-size="18" fill="#12203A"><tspan font-weight="700">71 of 2,289</tspan> closures and arrow functions in Laravel's <tspan class="m" font-size="16">src/</tspan> need partial application to be replaced.</text>
+  <text x="1320" y="618" text-anchor="end" class="m" font-size="14" fill="#8A93A3">opcache dump, php:8.6.0RC4-cli</text>
+
+</svg>
