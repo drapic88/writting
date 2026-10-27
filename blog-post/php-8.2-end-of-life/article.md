@@ -41,11 +41,14 @@ One more line in that table matters this month. **8.4's active support also ends
 
 Packagist breaks every Composer install down by PHP minor version. I parsed the monthly series from packagist.org/php-statistics:
 
-| Month | 8.5 | 8.4 | 8.3 | 8.2 | 8.1 | 8.2 or older |
-|---|---|---|---|---|---|---|
-| Oct 2024 | – | 0.2% | 30.0% | 31.1% | 21.2% | 69.8% |
-| Oct 2025 | 0.5% | 23.4% | 32.6% | 20.9% | 10.6% | 43.6% |
-| **Sep 2026** | 21.8% | 34.0% | 23.0% | **11.1%** | 4.0% | **21.1%** |
+```text
+Share of Composer installs by PHP version, in %
+
+            8.5    8.4    8.3    8.2    8.1   ≤ 8.2
+Oct 2024      –    0.2   30.0   31.1   21.2   69.8
+Oct 2025    0.5   23.4   32.6   20.9   10.6   43.6
+Sep 2026   21.8   34.0   23.0   11.1    4.0   21.1
+```
 
 September is the last full month: 5.8 billion installs, **21.1%** of them on 8.2 or older. 10.0% are already on a branch with no security fixes at all, so 8.2 is about to double that group. October so far is a little lower, at 18.6%.
 
@@ -116,12 +119,17 @@ return RectorConfig::configure()
 
 I dry-ran Rector 2.8.1 over BookStack's `app/`, 522 files, with each target from `php82` to `php86`:
 
-| Target | Files changed | New compared with the row above |
-|---|---|---|
-| `php82` | **110** | 17 rules: closures to arrow functions (45), constructor promotion (22), unused catch variables (21), `??=` (20) … |
-| `php83` | 110 | nothing |
-| `php84` | 110 | `new` without parentheses (21), `array_any()` (2) |
-| `php85`, `php86` | 110 | nothing |
+```text
+Target   Files changed   New rules vs. the line above
+php82    110             17 rules (see below)
+php83    110             none
+php84    110             new without parentheses (21)
+                         array_any() (2)
+php85    110             none
+php86    110             none
+```
+
+The 17 `php82` rules are led by closures to arrow functions (45 hits), constructor promotion (22), unused catch variables (21) and `??=` (20).
 
 The `php82` row is the surprise. 110 files change before you target anything newer than you already run, all of it 7.4- and 8.0-era style the project never adopted. None of it is needed for 8.2 or for 8.4. Moving the target four versions up adds two rules.
 

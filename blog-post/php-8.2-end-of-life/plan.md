@@ -1,6 +1,6 @@
 # Plan — PHP 8.2 end of life
 
-**Status:** agreed 2026-10-26. Drafted to `article.md` the same day.
+**Status:** published on Medium on 2026-10-27 (agreed and drafted 2026-10-26). Refresh before 31 December.
 Public sources carry the argument; the BookStack probe supports two sections.
 
 ## Decisions (2026-10-26)
