@@ -2,18 +2,19 @@
 """Naslikaj ilustracije lokalnim FLUX.2 [klein] 4B modelom (mflux) iz SVG kompozicija.
 
 Za svaku sliku model dobiva gotovu SVG kompoziciju (verziju bez teksta, iz sastavi.py) i
-uputu složenu iz ../ai-upute.md: STIL, opis scene sa zamjenama iz tablice „Zamjene“ i
-ZABRANE, plus popravke iz proba (jedna neprekinuta slika bez crte uveza, prirodna trava,
-krovovi od kamenih ploča, izričit opis likova). Svaka slika dobiva nekoliko inačica s
-različitim seedom; na kraju se složi pregledni list flux/pregled.png.
+uputu iz ../flux-upute.md: Početak, bilješku za tu sliku i Kraj, sa zamjenama iz tablice
+„Zamjene“. Kad bilješka spominje „second image“, uz kompoziciju ide i karta dječaka. Svaka
+slika dobiva nekoliko inačica s različitim seedom; na kraju se složi pregledni list
+flux/pregled.png.
 
     python3 books/starac-u-mladosti/slike/flux.py --suho                   # samo ispiši upute
     python3 books/starac-u-mladosti/slike/flux.py                          # sve slike, 3 inačice
-    python3 books/starac-u-mladosti/slike/flux.py 07-bob-do-neba --inacica 1
-    python3 books/starac-u-mladosti/slike/flux.py --karta                  # uz kartu dječaka
-    python3 books/starac-u-mladosti/slike/flux.py --povecaj flux/07-bob-do-neba/seed102.png
+    python3 books/starac-u-mladosti/slike/flux.py 08-bob-do-neba --inacica 1
+    python3 books/starac-u-mladosti/slike/flux.py --povecaj flux/08-bob-do-neba/seed102.png
+    python3 books/starac-u-mladosti/slike/flux.py 06-bob-na-dar --lora flux/lora/trening/<adapter>.safetensors 0.8
 
-Gotove inačice se preskaču, pa se prekinuto pokretanje samo nastavi. Treba mflux
+Gotove inačice se preskaču, pa se prekinuto pokretanje samo nastavi. S LoRA-om (naučenom
+u lora.py) inačice se zovu seedNNN-<adapter>.png, pa stoje uz obične. Treba mflux
 (`uv tool install --python 3.12 mflux`) i najprije pokrenut sastavi.py.
 """
 import os
@@ -25,56 +26,40 @@ import time
 from pathlib import Path
 
 OVDJE = Path(__file__).resolve().parent
-UPUTE = OVDJE.parent / "ai-upute.md"
+UPUTE = OVDJE.parent / "flux-upute.md"
 FLUX = OVDJE / "flux"
 IZVOZ = OVDJE.parents[2] / "scripts" / "hero-export.sh"
 OKOLINA = {**os.environ, "PATH": f"{Path.home() / '.local' / 'bin'}:{os.environ['PATH']}"}
 MODEL = ["--model", "flux2-klein-4b", "--quantize", "4", "--low-ram", "--steps", "4"]
 
-# ime slike, naslov odlomka u ai-upute.md, širina × visina
+# ime slike i širina × visina; bilješka za sliku je u odlomku "### <ime>" u flux-upute.md
+# (37-tvoj-crtez i zalist-vez su samo vez, a vez radi prijelom, ne model)
 SLIKE = [
-    ("01-rodenje", "**1 —", (1536, 768)),
-    ("02-priprema", "**2 —", (1536, 768)),
-    ("03-suma", "**3 —", (1536, 768)),
-    ("04-kuca-na-rubu-sume", "**4 —", (1536, 768)),
-    ("05-bob-na-dar", "**5 —", (1536, 768)),
-    ("06-noc-u-udolini", "**6 —", (1536, 768)),
-    ("07-bob-do-neba", "**7 —", (1536, 768)),
-    ("08-penjanje", "**8 —", (768, 1536)),
-    ("09-kod-svetog-petra", "**9 —", (1536, 768)),
-    ("10-nema-boba", "**10 —", (1536, 768)),
-    ("11-uze", "**11 —", (768, 1536)),
-    ("12-skok-i-motika", "**12 —", (1536, 768)),
-    ("13-doma", "**13 —", (1536, 768)),
-    ("14-propusteno-krstenje", "**14 —", (1536, 768)),
-    ("15-susjed", "**15 —", (1536, 768)),
-    ("32-tvoja-istinita-laz", "**Stranica 32**", (1024, 1024)),
-    ("predlist-karta", "**Predlist", (1536, 768)),
-    ("zalist-rjecnik", "**Zalist", (1536, 768)),
-    ("naslovnica", "**Naslovnica**", (1024, 1024)),
+    ("01-rodenje", (1536, 768)),
+    ("02-priprema", (1536, 768)),
+    ("03-suma", (1536, 768)),
+    ("04-strah-u-sumi", (1536, 768)),
+    ("05-kuca-na-rubu-sume", (1536, 768)),
+    ("06-bob-na-dar", (1536, 768)),
+    ("07-noc-u-udolini", (1536, 768)),
+    ("08-bob-do-neba", (1536, 768)),
+    ("09-penjanje", (768, 1536)),
+    ("10-kod-svetog-petra", (1536, 768)),
+    ("11-nema-boba", (1536, 768)),
+    ("12-uze-i-dlake", (1536, 768)),
+    ("13-na-kraju-uzeta", (768, 1536)),
+    ("14-skok-i-motika", (1536, 768)),
+    ("15-doma", (1536, 768)),
+    ("16-propusteno-krstenje", (1536, 768)),
+    ("17-susjed", (1536, 768)),
+    ("36-tvoja-istinita-laz", (1024, 1024)),
+    ("predlist-karta", (1536, 768)),
+    ("38-rjecnik", (1536, 768)),
+    ("naslovnica", (1024, 1024)),
 ]
 
-UVOD = (
-    "Repaint the first image as one finished, continuous painting for a children's book. "
-    "Keep exactly the same composition, figures, poses, objects and landscape; keep the calm "
-    "empty areas calm and empty."
-)
-LIKOVI = (
-    "Characters: the boy (about 10) has a small red cap, white shirt, brown vest with red trim, "
-    "dark trousers and leather opanci. Women wear white headscarves covering their hair, long "
-    "dark dresses and red striped aprons; old women are wrinkled and wear no caps. Men wear red "
-    "caps, white shirts and dark vests; old men have white hair and white moustaches."
-)
-OTRCAN = "The boy's sleeves and trouser legs are short and frayed and his hair is patchy."
-POPRAVCI = (
-    "One continuous painting with no fold or seam down the middle. Natural painted grass. "
-    "Grey stone-slab roofs, no red tiles."
-)
-ZABRANE = "No text, no letters, no signature, no watermark. No modern objects. No photorealism, no 3D look."
-# otrcan je od dvostranice 11 do 15
-OTRCANE = {"11-uze", "12-skok-i-motika", "13-doma", "14-propusteno-krstenje", "15-susjed"}
-# rečenice o mjestu teksta iz ai-upute.md: raspored tu određuje kompozicija
-O_TEKSTU = re.compile(r"\s*(Keep a calm[^.]*\.|Large calm area for text\.)")
+# bilješka koja spominje drugu sliku dobiva kartu dječaka kao drugu sliku
+KARTA = "second image"
 TOKENA = 480  # mflux čita najviše 512 tokena upute
 
 
@@ -89,15 +74,14 @@ def zamjene(tekst: str) -> dict:
     return dict(re.findall(r"^\| `(\[[A-Z_]+\])` \| ([^|]+?) \|", tekst, re.M))
 
 
-def uputa(tekst: str, naslov: str, ime: str) -> str:
-    stil = blok(tekst, "## STIL")
-    scena = O_TEKSTU.sub("", blok(tekst, naslov))
+def uputa(tekst: str, ime: str) -> str:
+    sastavljena = " ".join([blok(tekst, "## Početak"), blok(tekst, f"### {ime}\n"),
+                            blok(tekst, "## Kraj")])
     for oznaka, opis in zamjene(tekst).items():
-        stil, scena = stil.replace(oznaka, opis), scena.replace(oznaka, opis)
-    if "[" in scena or "[" in stil:
-        sys.exit(f"u uputi za {naslov} je ostala nezamijenjena oznaka")
-    likovi = LIKOVI + (" " + OTRCAN if ime in OTRCANE else "")
-    return " ".join([UVOD, "Scene: " + scena, likovi, POPRAVCI, stil, ZABRANE])
+        sastavljena = sastavljena.replace(oznaka, opis)
+    if "[" in sastavljena:
+        sys.exit(f"u uputi za {ime} je ostala nezamijenjena oznaka")
+    return sastavljena
 
 
 def tokena(tekst: str):
@@ -136,21 +120,23 @@ def karta() -> Path:
     return cilj
 
 
-def naslikaj(ime: str, naslov: str, velicina: tuple, seedovi: list, s_kartom: bool, suho: bool) -> None:
-    tekst = uputa(UPUTE.read_text(encoding="utf-8"), naslov, ime)
+def naslikaj(ime: str, velicina: tuple, seedovi: list, suho: bool, lora: list) -> None:
+    """lora je prazan popis ili [put, mjera]; s LoRA-om se inačica zove seedNNN-<adapter>.png."""
+    tekst = uputa(UPUTE.read_text(encoding="utf-8"), ime)
     broj = tokena(tekst) if suho else None
     if broj and broj > TOKENA:
         sys.exit(f"{ime}: uputa ima {broj} tokena, a model čita najviše 512; skrati je")
-    slike = [kompozicija(ime, velicina)] + ([karta()] if s_kartom else [])
+    slike = [kompozicija(ime, velicina)] + ([karta()] if KARTA in tekst else [])
     (FLUX / ime / "uputa.txt").write_text(tekst + "\n", encoding="utf-8")
     for seed in seedovi:
-        izlaz = FLUX / ime / f"seed{seed}.png"
-        naredba = ["mflux-generate-flux2-edit", *MODEL, "--seed", str(seed),
+        izlaz = FLUX / ime / f"seed{seed}{'-' + Path(lora[0]).stem if lora else ''}.png"
+        naredba = ["mflux-generate-flux2-edit", *MODEL, *(["--lora", *lora] if lora else []),
+                   "--seed", str(seed),
                    "--width", str(velicina[0]), "--height", str(velicina[1]),
                    "--image-paths", *map(str, slike),
                    "--prompt-file", str(FLUX / ime / "uputa.txt"), "--output", str(izlaz)]
         if suho:
-            print(f"{ime} seed {seed}: {broj or '?'} tokena u uputi")
+            print(f"{ime} seed {seed}: {broj or '?'} tokena u uputi, {len(slike)} slike")
             continue
         if izlaz.exists():
             print(f"{ime} seed {seed}: već postoji, preskačem")
@@ -168,7 +154,7 @@ def naslikaj(ime: str, naslov: str, velicina: tuple, seedovi: list, s_kartom: bo
 def pregled() -> None:
     """Složi flux/pregled.png: po jedan red za svaku sliku, sve njene inačice."""
     redovi = []
-    for ime, _, _ in SLIKE:
+    for ime, _ in SLIKE:
         inacice = sorted((FLUX / ime).glob("seed*.png")) if (FLUX / ime).exists() else []
         if inacice:
             redovi.append((ime, inacice))
@@ -217,16 +203,24 @@ def main() -> None:
         i = argumenti.index("--inacica")
         inacica = int(argumenti[i + 1])
         del argumenti[i: i + 2]
+    lora = []
+    if "--lora" in argumenti:
+        i = argumenti.index("--lora")
+        lora = [str(Path(argumenti[i + 1]).resolve())]
+        if i + 2 < len(argumenti) and re.fullmatch(r"[\d.]+", argumenti[i + 2]):
+            lora.append(argumenti[i + 2])
+        del argumenti[i: i + 1 + len(lora)]
+        if not Path(lora[0]).exists():
+            sys.exit(f"nema LoRA-e {lora[0]}")
     suho = "--suho" in argumenti
-    s_kartom = "--karta" in argumenti
     imena = [a for a in argumenti if not a.startswith("--")]
-    nepoznate = set(imena) - {ime for ime, _, _ in SLIKE}
+    nepoznate = set(imena) - {ime for ime, _ in SLIKE}
     if nepoznate:
         sys.exit("nepoznate slike: " + ", ".join(sorted(nepoznate)))
     seedovi = [101 + n for n in range(inacica)]
-    for ime, naslov, velicina in SLIKE:
+    for ime, velicina in SLIKE:
         if not imena or ime in imena:
-            naslikaj(ime, naslov, velicina, seedovi, s_kartom, suho)
+            naslikaj(ime, velicina, seedovi, suho, lora)
     if not suho:
         pregled()
 
