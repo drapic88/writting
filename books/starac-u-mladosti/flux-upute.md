@@ -22,16 +22,46 @@ Pravila za bilješke, prema probama od 26. 10. 2026.:
 - **Dječaka uvijek veži uz kartu**, rečenicom „is the boy from the second image“. Bez karte
   mu se lice i nošnja mijenjaju od slike do slike.
 - **Mjesto za tekst navedi kao „calm and empty“**, inače ga model popuni.
+- **Reci što jest, ne što nije.** „There are no trees in heaven“ dalo je drveće na oba ruba
+  (10); „the golden sky reaches down to the wall“ je ono što model zna nacrtati.
+- **Svaki stari čovjek ima svoju oznaku.** Dok su djed, starac iz šume i susjed dijelili
+  `[STARAC]`, bili su isti čovjek na svim slikama (pregled 28. 10. 2026.).
+- **Drveće u sobi i u nebu donosi LoRA, ne uputa.** S LoRA-om hrast stoji u kutu slika 1, 2
+  i 10 na skalama 1,4, 1,0 i 0,7, i kad Početak kaže samo „where the picture has trees,
+  paint every leaf“ i kad bilješka kaže „the whole picture is inside a stone room“. Bez
+  LoRA-e (`--bez-lore`) s istim uputama drveća nema. Isto za drugog dječaka u 16: na 1,4 se
+  pojavi, na 1,0 i 0,7 i bez LoRA-e ga nema (probe 28. 10. 2026.).
 
 ## Početak
 
 ```text
 Repaint the first image as a finished children's picture book illustration in Croatian
 naive art style: bright clear saturated colours, smooth glossy surfaces like oil painted on
-glass, crisp outlines, trees with every leaf painted, decorative clouds, rich small details
-of village life. Keep exactly the same composition, the same figures in the same places and
+glass, crisp outlines, decorative clouds, rich small details of village life. Where the
+picture has trees, paint every leaf. Keep exactly the same composition, the same figures in the same places and
 poses.
 ```
+
+## Stil
+
+Ide odmah iza Početka kad se crta sa stilskom referencom (`flux.py --stil <gotova slika>`):
+model uz kompoziciju i kartu dobiva i jednu gotovu ilustraciju kao zadnju sliku, a
+`[STILSKA]` postaje njezin redni broj („second“ ili „third“).
+
+```text
+The [STILSKA] image is only a sample of the painting style: copy its brushwork, its colours
+and its outlines. Everything that is in the picture comes from the first image alone; the
+people, objects and setting of the [STILSKA] image stay out of this picture.
+```
+
+Probe 28. 10. 2026. (seed 101, slike 1, 5, 10, 16): referenca traje 130 s po slici umjesto
+60 s. Sa slikom 6 kao referencom hrastovi iz njezinih kutova dolaze u nebo (10) i pod gredu
+(1). Sa sobom iz slike 2 drveća nema, ali u sliku 1 uđe bradati starac s klupe iz slike 2
+umjesto žene kod vatre, i ostaje i kad rečenica izričito kaže da njezini ljudi ostaju vani.
+Prva inačica rečenice spominjala je „leaves“ i to je samo po sebi dalo grane na rubovima
+slike 10. Dobitak u potezu kista je malen; 5 je dobila jedan mjesec umjesto dva, što je
+slučaj seeda, ne stila. Zaključak: referenca nije zadana; isplati se samo za pojedinu sliku,
+s referencom bez ljudi i bez drveća.
 
 ## Kraj
 
@@ -49,7 +79,10 @@ No text, no letters, no signature.
 | `[TIKVICA]` | the small decorated bottle gourd |
 | `[ZENA]` | a white headscarf covering all her hair, a long dark dress and a red striped woven apron |
 | `[STARICA]` | an OLD WOMAN with a wrinkled kind face, a white headscarf covering all her hair, a long dark blue dress and a red striped woven apron; she has no cap |
-| `[STARAC]` | an old man with white hair and a white moustache, a red cap, a white shirt and a dark vest |
+| `[DJED]` | the grandfather: an old man with white hair, a thick white moustache and a clean-shaven chin, a red cap, a white shirt and a dark vest |
+| `[STARAC]` | an old man with white hair and a full white beard, a red cap, a white shirt and a dark vest |
+| `[SUSJED]` | the old neighbour: a very old man with white hair and a long drooping white moustache, leaning on a wooden walking stick, a red cap, a white shirt and a dark vest |
+| `[OTAC]` | the father: a younger man with dark hair and a dark moustache, a red cap, a white shirt and a dark vest |
 | `[KROVOVI]` | All house roofs are grey stone slabs, no red tiles. |
 
 ## Slike
@@ -57,22 +90,24 @@ No text, no letters, no signature.
 ### 01-rodenje
 
 ```text
-Keep the same stone room with dark wooden beams, the shelf with pots, the wooden cross, the
-small window, the open door with hens outside, the wooden cradle, the hearth fire with the
-pot hanging on a chain and the sleeping grey cat. The taller boy in the middle, looking at
-the baby in wonder, is [DJECAK]. The mother holding the newborn baby wears [ZENA]. The
-grandfather sitting on the three-legged stool is [STARAC]. [TORBA] hangs on a peg on the
+The whole picture is inside a stone room with dark wooden beams and bare stone walls. Keep
+the shelf with pots, the wooden cross, the small window, the open door with hens outside, the
+wooden cradle, the hearth fire with the pot hanging on a chain and the sleeping grey cat. The
+taller boy in the middle, turned towards the baby
+and looking at it in wonder, is [DJECAK]. The mother holding the newborn baby wears [ZENA].
+The grandfather sitting on the three-legged stool is [DJED]. [TORBA] hangs on a peg on the
 wall. Keep the upper right wall calm and empty.
 ```
 
 ### 02-priprema
 
 ```text
-Evening in the same stone room, lit warmly by the hearth fire on the right. Keep the big
-window showing a dusk landscape with a dotted path over the hills, the wooden chest, the
+The whole picture is inside the same stone room with bare stone walls, in the evening, lit
+warmly by the hearth fire on the right; the only view outside is through the window. Keep
+the big window showing a dusk landscape with a dotted path over the hills, the wooden chest, the
 table with bread, two bottle gourds, a small bundle and [TORBA], the hearth with the hanging
 pot and the cat. The boy in the middle, listening with his mouth open, is [DJECAK]. The
-grandfather pointing up towards the window is [STARAC]. The two women wear [ZENA]. Keep the
+grandfather pointing up towards the window is [DJED]. The two women wear [ZENA]. Keep the
 upper right wall calm and empty.
 ```
 
@@ -83,7 +118,8 @@ Keep the same small stone village with the church and the villagers on the left,
 the dusty path, the dry-stone walls and the oak grove on the right. The frightened boy
 standing on the path with stiff trembling arms and a worried face is [DJECAK], with [TORBA]
 and [TIKVICA]. The sun rises behind the oak grove, the grove is dark in its own shade, and
-long dark shadows shaped like fingers lie across the path at the boy's feet. Keep the white
+long dark shadows shaped like fingers lie across the path at the boy's feet, and two small
+pairs of eyes glint deep in the shade under the trees, close to the ground. Keep the white
 wind curls in the treetops. The oak grove is a row of medium oak trees of equal height, as
 small as in the first image, with open sky and the sun above them. [KROVOVI] Keep the upper
 left sky calm and empty.
@@ -129,8 +165,9 @@ sky calm and empty.
 ```text
 Dusk in a small hollow surrounded by oak forest, under the first stars in a violet sky. The
 tired boy lying asleep in the grass with his head on [TORBA] is [DJECAK]; one bean falls
-from his open hand. Keep [TIKVICA] by his head, the piece of bread, the owl in the tree on
-the right, the small wind curl, the bushes and stones. Keep the upper left sky calm and
+from his open hand. Keep [TIKVICA] by his head, the piece of bread, one single owl sitting
+in the treetop on the right (the only owl in the picture), the small wind curl, the bushes
+and stones. Keep the upper left sky calm and
 empty.
 ```
 
@@ -164,9 +201,10 @@ the same row of arched doors with blank plaques above them, the small saint symb
 them (a lily, a grate, a dragon, three golden balls) and the people in folk costume standing
 in the doorways. At the right end, in a glowing niche behind a counter, only two hands are
 seen offering a bowl of holy water, with a big bunch of keys hanging above. The boy in front
-of the counter, half raising his hand to greet, is [DJECAK], with [TORBA]. The plaques stay
-blank. Above the wall is only a golden sky with small cream clouds from edge to edge; there
-are no trees or plants anywhere in heaven. Keep the upper left sky calm and empty.
+of the counter, half raising his hand to greet, is [DJECAK], with [TORBA] and [TIKVICA]. The
+plaques stay blank. Above the wall is a plain golden sky with a few small cream clouds, and
+at both edges of the picture the golden sky reaches straight down to the wall. Keep the
+upper left sky calm and empty.
 ```
 
 ### 11-nema-boba
@@ -201,8 +239,9 @@ calm and empty.
 A tall view at sunset, violet at the top and orange near the ground. Keep the same golden
 cloud at the top with the doorway ledge, and the long rope hanging from it, woven from red
 wool in the upper part and from grey hairs in the lower part, with a red knot between them.
-Hanging from the end of the rope with both hands is [OTRCAN], with [TIKVICA] around his
-neck. Below him is a long empty drop of sky. The stony ground is only a thin strip at the
+Hanging from the end of the rope with both hands, looking down with a worried, frightened
+face and an open mouth as if shouting, is [OTRCAN], with [TIKVICA] hanging on a red cord
+around his neck. Below him is a long empty drop of sky. The stony ground is only a thin strip at the
 very bottom, far below, with the low setting sun on the left and a few tiny trees. Keep the
 sky on both sides of the rope calm and simple.
 ```
@@ -211,11 +250,13 @@ sky on both sides of the rope calm and simple.
 
 ```text
 Dusk with a violet sky and the first stars. On the left, [OTRCAN] falls straight down from
-the sky with arms and legs spread and a frightened face; above him hang the end of the grey
-rope and white speed lines. On the right, the same boy sits on the ground with one foot
-stuck in a gap between two grey stones. A dotted path leads from the stones to a small stone
-house with smoke and back, and on it a tiny boy carries a hoe. Keep the bush with small
-glowing eyes, the oak trees and the hills. [KROVOVI] Keep the upper right sky calm and
+the sky with arms and legs spread, leather shoes on his feet, [TIKVICA] on a cord around his
+neck and a frightened face; above him hang the end of the grey rope and white speed lines.
+On the right, the same boy, with the same shoes and [TIKVICA] around his neck, sits on the
+ground with one foot stuck in a gap between two grey stones. A dotted path leads from the
+stones to a small stone house with smoke and back, and on it a tiny boy carries a hoe. Keep
+the one small bush next to the stones, which is the only place with two small glowing eyes;
+the oak trees and the hills are plain dark green. [KROVOVI] Keep the upper right sky calm and
 empty.
 ```
 
@@ -225,27 +266,28 @@ empty.
 Dusk in the yard of the boy's home under a violet sky with a crescent moon. Keep the same
 stone house with a lit window and smoke, the small shed with a hoe leaning by its door, the
 stone bench, the dry-stone wall, the hens and the sleeping cat. In the middle, [OTRCAN]
-happily hands [TIKVICA] to his mother, who holds the baby and wears [ZENA]. Keep the
-grandfather sitting on the bench, the girl, the man with a hoe on his shoulder and the small
-boy with the sheep. [KROVOVI] Keep the upper right sky calm and empty.
+happily hands [TIKVICA] to his mother, who holds the baby and wears [ZENA]. The grandfather
+sitting on the bench is [DJED]. The man with a hoe on his shoulder is [OTAC]. Keep the girl
+and the small boy with the sheep. [KROVOVI] Keep the upper right sky calm and empty.
 ```
 
 ### 16-propusteno-krstenje
 
 ```text
-A quiet morning in the empty stone room with dark wooden beams. [OTRCAN] stands alone at the
-big window, seen from behind. Through the window, far away on a green hill, the family walks
-along a path towards a small stone church with a bell; the mother carries the baby. Keep the
-wooden cradle, the small table with [TIKVICA] and bread, the cold hearth and the sleeping
-cat. [KROVOVI] Keep the left wall calm and empty.
+A quiet morning inside the same stone room with dark wooden beams. The only person in the
+room is [OTRCAN], standing at the big window with his back to us. Through the window, far
+away on a green hill, the family walks up a path away from the house towards a small stone
+church with a bell, their backs turned to us; the mother carries the baby. Keep the wooden cradle, the small table with [TIKVICA] and
+bread, the hearth on the floor as a ring of grey stones with cold grey ashes and no fire, and
+the sleeping cat. [KROVOVI] Keep the left wall calm and empty.
 ```
 
 ### 17-susjed
 
 ```text
 A warm sunny morning by a dry-stone wall with an open wooden yard gate. [OTRCAN] raises his
-hand first and greets the neighbour with a smile. The neighbour, listening and smiling,
-leaning on a walking stick, is [STARAC]. Keep the small brown bird on the wall, the stone
+hand first and greets the neighbour with a smile. The neighbour, listening and smiling, is
+[SUSJED]. Keep the small brown bird on the wall, the stone
 house and the shed with a hoe on the left, the hen and the cat, the far village with the
 church, and the sun. [KROVOVI] Keep the upper left sky calm and empty.
 ```
@@ -267,8 +309,8 @@ tree on the right and a few flowers. Keep the upper sky calm and empty.
 A map seen from above, painted as a naive picture on one single sheet of warm beige paper
 with a thin border, with no fold, crease or seam down the middle. Keep
 the same compass star in the upper left, the small village with the church on the left, the
-red dotted path through the oak grove with the swirl of leaves, past the small stone house on
-the hill, over the blue mountains and green hollows, to the hollow with sheep from which the
+red dotted path through the oak grove, where a white swirl of leaves spins above the
+treetops, past the small stone house on the hill, over the blue mountains and green hollows, to the hollow with sheep from which the
 giant bean stalk rises to the golden cloud with a wooden door in the upper right. Keep the
 cream paper plain between the pictures. [KROVOVI]
 ```
@@ -292,8 +334,8 @@ objects and add nothing.
 ```text
 A square book cover. Keep the same golden glowing cloud with a flat wooden ledge on top of
 the gigantic bean stalk with big leaves and white flowers. Standing on the ledge in front of
-the arched wooden door, happily waving at the reader, is [DJECAK], with [TORBA] and
-[TIKVICA]. The ground is only a low green strip at the very bottom, far below, with two
+the arched wooden door, happily waving at the reader, is [DJECAK], with [TORBA] over his
+shoulder and [TIKVICA] hanging on a red cord around his neck. The ground is only a low green strip at the very bottom, far below, with two
 tiny round trees at the edges, and there the black and white goat chews the stalk. Keep the
 small clouds and the bird. Keep the upper sky calm and empty for the title.
 ```

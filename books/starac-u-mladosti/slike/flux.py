@@ -11,13 +11,15 @@ flux/pregled.png.
     python3 books/starac-u-mladosti/slike/flux.py                          # sve slike, 3 inačice
     python3 books/starac-u-mladosti/slike/flux.py 08-bob-do-neba --inacica 1
     python3 books/starac-u-mladosti/slike/flux.py --povecaj flux/08-bob-do-neba/seed102.png
+    python3 books/starac-u-mladosti/slike/flux.py 01-rodenje --stil flux/06-bob-na-dar/seed102.png
     python3 books/starac-u-mladosti/slike/flux.py 06-bob-na-dar --lora flux/lora/trening/<adapter>.safetensors 0.8
-    python3 books/starac-u-mladosti/slike/flux.py 06-bob-na-dar --bez-lore    # kao prije učenja
 
-Gotove inačice se preskaču, pa se prekinuto pokretanje samo nastavi. S LoRA-om (naučenom
-u lora.py) inačice se zovu seedNNN-<adapter>.png, uz mjeru različitu od 1 još i -x<mjera>.
-Kad adapter LORA postoji, koristi se sam s mjerom LORA_MJERA; --bez-lore crta kao prije
-učenja. Treba mflux (`uv tool install --python 3.12 mflux`) i najprije pokrenut sastavi.py.
+Gotove inačice se preskaču, pa se prekinuto pokretanje samo nastavi. Sa stilskom
+referencom (--stil, gotova slika koju model dobiva kao zadnju sliku uz rečenicu iz odlomka
+„## Stil“) inačice se zovu seedNNN-stil-<mapa reference>.png. S LoRA-om (naučenom u lora.py) zovu se
+seedNNN-<adapter>.png, uz mjeru različitu od 1 još i -x<mjera>; LoRA se više ne koristi
+sama od sebe, jer je u sobu i nebo stavljala hrast (28. 10. 2026.). Treba mflux
+(`uv tool install --python 3.12 mflux`) i najprije pokrenut sastavi.py.
 """
 import os
 import re
@@ -33,8 +35,8 @@ FLUX = OVDJE / "flux"
 IZVOZ = OVDJE.parents[2] / "scripts" / "hero-export.sh"
 OKOLINA = {**os.environ, "PATH": f"{Path.home() / '.local' / 'bin'}:{os.environ['PATH']}"}
 MODEL = ["--model", "flux2-klein-4b", "--quantize", "4", "--low-ram", "--steps", "4"]
-# naučena LoRA (lora.py) i njezina mjera: 1,4 daje šrafuru bez promjene likova, 2,0 već mijenja sadržaj (28. 10. 2026.)
-LORA = OVDJE / "flux" / "lora" / "trening" / "starac-200.safetensors"
+# naučena LoRA (lora.py): mjera 1,4 daje šrafuru bez promjene likova, 2,0 već mijenja sadržaj, ali na
+# svakoj mjeri stavlja hrast u sobu (1, 2) i u nebo (10), pa se koristi samo na izričit --lora (28. 10. 2026.)
 LORA_MJERA = "1.4"
 
 # ime slike i širina × visina; bilješka za sliku je u odlomku "### <ime>" u flux-upute.md
@@ -65,6 +67,9 @@ SLIKE = [
 
 # bilješka koja spominje drugu sliku dobiva kartu dječaka kao drugu sliku
 KARTA = "second image"
+# oznaka u odlomku „## Stil“ koju zamjenjuje redni broj stilske referentne slike
+STILSKA = "[STILSKA]"
+REDNI = {2: "second", 3: "third"}
 TOKENA = 480  # mflux čita najviše 512 tokena upute
 
 
@@ -79,9 +84,12 @@ def zamjene(tekst: str) -> dict:
     return dict(re.findall(r"^\| `(\[[A-Z_]+\])` \| ([^|]+?) \|", tekst, re.M))
 
 
-def uputa(tekst: str, ime: str) -> str:
-    sastavljena = " ".join([blok(tekst, "## Početak"), blok(tekst, f"### {ime}\n"),
-                            blok(tekst, "## Kraj")])
+def uputa(tekst: str, ime: str, stil: int = 0) -> str:
+    """stil je redni broj stilske referentne slike (2 ili 3) ili 0 kad je nema."""
+    dijelovi = [blok(tekst, "## Početak"), blok(tekst, f"### {ime}\n"), blok(tekst, "## Kraj")]
+    if stil:
+        dijelovi.insert(1, blok(tekst, "## Stil").replace(STILSKA, REDNI[stil]))
+    sastavljena = " ".join(dijelovi)
     for oznaka, opis in zamjene(tekst).items():
         sastavljena = sastavljena.replace(oznaka, opis)
     if "[" in sastavljena:
@@ -125,19 +133,33 @@ def karta() -> Path:
     return cilj
 
 
-def naslikaj(ime: str, velicina: tuple, seedovi: list, suho: bool, lora: list) -> None:
-    """lora je prazan popis ili [put, mjera]; s LoRA-om se inačica zove seedNNN-<adapter>[-x<mjera>].png."""
-    tekst = uputa(UPUTE.read_text(encoding="utf-8"), ime)
+def stilska(put: Path) -> Path:
+    """Stilska referenca smanjena na 1024 px, kao i karta; jedna predmemorija po izvoru."""
+    cilj = FLUX / f"stil-{put.parent.name}-{put.stem}.png"
+    if not cilj.exists() or cilj.stat().st_mtime < put.stat().st_mtime:
+        subprocess.run(["sips", "-s", "format", "png", "-Z", "1024", str(put), "--out", str(cilj)],
+                       check=True, capture_output=True)
+    return cilj
+
+
+def naslikaj(ime: str, velicina: tuple, seedovi: list, suho: bool, lora: list, stil: Path | None) -> None:
+    """lora je prazan popis ili [put, mjera]; s LoRA-om se inačica zove seedNNN-<adapter>[-x<mjera>].png.
+    stil je gotova slika kao stilska referenca; s njom se inačica zove seedNNN-stil-<mapa reference>.png."""
+    izvor = UPUTE.read_text(encoding="utf-8")
+    slike = [kompozicija(ime, velicina)] + ([karta()] if KARTA in uputa(izvor, ime) else [])
+    if stil:
+        slike.append(stilska(stil))
+    tekst = uputa(izvor, ime, len(slike) if stil else 0)
     broj = tokena(tekst) if suho else None
     if broj and broj > TOKENA:
         sys.exit(f"{ime}: uputa ima {broj} tokena, a model čita najviše 512; skrati je")
-    slike = [kompozicija(ime, velicina)] + ([karta()] if KARTA in tekst else [])
     (FLUX / ime / "uputa.txt").write_text(tekst + "\n", encoding="utf-8")
     for seed in seedovi:
-        # s LoRA-om: seedNNN-<adapter>.png, a uz mjeru različitu od 1 još i -x<mjera> (seed101-starac-200-x1.4.png)
-        oznaka = ""
+        # sa stilom: seedNNN-stil-<mapa reference>.png; s LoRA-om: seedNNN-<adapter>.png, a uz mjeru različitu od 1 još
+        # i -x<mjera> (seed101-starac-200-x1.4.png)
+        oznaka = f"-stil-{stil.parent.name}" if stil else ""
         if lora:
-            oznaka = "-" + Path(lora[0]).stem
+            oznaka += "-" + Path(lora[0]).stem
             if len(lora) > 1 and float(lora[1]) != 1.0:
                 oznaka += f"-x{lora[1]}"
         izlaz = FLUX / ime / f"seed{seed}{oznaka}.png"
@@ -223,10 +245,15 @@ def main() -> None:
         del argumenti[i: i + 1 + len(lora)]
         if len(lora) == 1:
             lora.append(LORA_MJERA)
-    elif "--bez-lore" not in argumenti and LORA.exists():
-        lora = [str(LORA), LORA_MJERA]
         if not Path(lora[0]).exists():
             sys.exit(f"nema LoRA-e {lora[0]}")
+    stil = None
+    if "--stil" in argumenti:
+        i = argumenti.index("--stil")
+        stil = Path(argumenti[i + 1]).resolve()
+        if not stil.exists():
+            sys.exit(f"nema stilske slike {stil}")
+        del argumenti[i: i + 2]
     suho = "--suho" in argumenti
     imena = [a for a in argumenti if not a.startswith("--")]
     nepoznate = set(imena) - {ime for ime, _ in SLIKE}
@@ -235,7 +262,7 @@ def main() -> None:
     seedovi = [101 + n for n in range(inacica)]
     for ime, velicina in SLIKE:
         if not imena or ime in imena:
-            naslikaj(ime, velicina, seedovi, suho, lora)
+            naslikaj(ime, velicina, seedovi, suho, lora, stil)
     if not suho:
         pregled()
 
