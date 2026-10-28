@@ -12,10 +12,12 @@ flux/pregled.png.
     python3 books/starac-u-mladosti/slike/flux.py 08-bob-do-neba --inacica 1
     python3 books/starac-u-mladosti/slike/flux.py --povecaj flux/08-bob-do-neba/seed102.png
     python3 books/starac-u-mladosti/slike/flux.py 06-bob-na-dar --lora flux/lora/trening/<adapter>.safetensors 0.8
+    python3 books/starac-u-mladosti/slike/flux.py 06-bob-na-dar --bez-lore    # kao prije učenja
 
 Gotove inačice se preskaču, pa se prekinuto pokretanje samo nastavi. S LoRA-om (naučenom
-u lora.py) inačice se zovu seedNNN-<adapter>.png, pa stoje uz obične. Treba mflux
-(`uv tool install --python 3.12 mflux`) i najprije pokrenut sastavi.py.
+u lora.py) inačice se zovu seedNNN-<adapter>.png, uz mjeru različitu od 1 još i -x<mjera>.
+Kad adapter LORA postoji, koristi se sam s mjerom LORA_MJERA; --bez-lore crta kao prije
+učenja. Treba mflux (`uv tool install --python 3.12 mflux`) i najprije pokrenut sastavi.py.
 """
 import os
 import re
@@ -31,6 +33,9 @@ FLUX = OVDJE / "flux"
 IZVOZ = OVDJE.parents[2] / "scripts" / "hero-export.sh"
 OKOLINA = {**os.environ, "PATH": f"{Path.home() / '.local' / 'bin'}:{os.environ['PATH']}"}
 MODEL = ["--model", "flux2-klein-4b", "--quantize", "4", "--low-ram", "--steps", "4"]
+# naučena LoRA (lora.py) i njezina mjera: 1,4 daje šrafuru bez promjene likova, 2,0 već mijenja sadržaj (28. 10. 2026.)
+LORA = OVDJE / "flux" / "lora" / "trening" / "starac-200.safetensors"
+LORA_MJERA = "1.4"
 
 # ime slike i širina × visina; bilješka za sliku je u odlomku "### <ime>" u flux-upute.md
 # (37-tvoj-crtez i zalist-vez su samo vez, a vez radi prijelom, ne model)
@@ -121,7 +126,7 @@ def karta() -> Path:
 
 
 def naslikaj(ime: str, velicina: tuple, seedovi: list, suho: bool, lora: list) -> None:
-    """lora je prazan popis ili [put, mjera]; s LoRA-om se inačica zove seedNNN-<adapter>.png."""
+    """lora je prazan popis ili [put, mjera]; s LoRA-om se inačica zove seedNNN-<adapter>[-x<mjera>].png."""
     tekst = uputa(UPUTE.read_text(encoding="utf-8"), ime)
     broj = tokena(tekst) if suho else None
     if broj and broj > TOKENA:
@@ -129,7 +134,13 @@ def naslikaj(ime: str, velicina: tuple, seedovi: list, suho: bool, lora: list) -
     slike = [kompozicija(ime, velicina)] + ([karta()] if KARTA in tekst else [])
     (FLUX / ime / "uputa.txt").write_text(tekst + "\n", encoding="utf-8")
     for seed in seedovi:
-        izlaz = FLUX / ime / f"seed{seed}{'-' + Path(lora[0]).stem if lora else ''}.png"
+        # s LoRA-om: seedNNN-<adapter>.png, a uz mjeru različitu od 1 još i -x<mjera> (seed101-starac-200-x1.4.png)
+        oznaka = ""
+        if lora:
+            oznaka = "-" + Path(lora[0]).stem
+            if len(lora) > 1 and float(lora[1]) != 1.0:
+                oznaka += f"-x{lora[1]}"
+        izlaz = FLUX / ime / f"seed{seed}{oznaka}.png"
         naredba = ["mflux-generate-flux2-edit", *MODEL, *(["--lora", *lora] if lora else []),
                    "--seed", str(seed),
                    "--width", str(velicina[0]), "--height", str(velicina[1]),
@@ -210,6 +221,10 @@ def main() -> None:
         if i + 2 < len(argumenti) and re.fullmatch(r"[\d.]+", argumenti[i + 2]):
             lora.append(argumenti[i + 2])
         del argumenti[i: i + 1 + len(lora)]
+        if len(lora) == 1:
+            lora.append(LORA_MJERA)
+    elif "--bez-lore" not in argumenti and LORA.exists():
+        lora = [str(LORA), LORA_MJERA]
         if not Path(lora[0]).exists():
             sys.exit(f"nema LoRA-e {lora[0]}")
     suho = "--suho" in argumenti

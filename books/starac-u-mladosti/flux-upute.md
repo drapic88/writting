@@ -384,8 +384,17 @@ klein-4b). Prvi test, 06-bob-na-dar sa seedom 101 uz skalu 1,0
 (`flux/lora/usporedba-06.png`): kompozicija, likovi i boje su isti kao bez adaptera, jer je
 LoRA učila iz slika koje je taj isti model nacrtao; razlika je u teksturi (slikarskija trava
 i krošnje, čišći brk i prsluk, više kamena na kući). Hoće li pomoći na slikama gdje je
-dječak mijenjao lice i hrast ulazio u kutove, vidi se tek na svih 20, po potrebi uz jaču
-skalu (1,4).
+dječak mijenjao lice i hrast ulazio u kutove, vidi se tek na svih 20.
+
+Skala adaptera (`flux/lora/usporedba-06-skale.png`, isti seed 101): 1,4 zadržava
+kompoziciju i likove, a trava, brda i krošnje dobivaju šrafuru kao crtež tušem; 2,0 već
+mijenja sadržaj (djed se okreće u profil i dobiva bradu, korača) i šrafura prekriva sve.
+Mjera se zapisuje u ime datoteke (`seedNNN-<adapter>-x<mjera>.png`), pa inačice stoje jedna
+uz drugu.
+
+**Izabrano: skala 1,4.** flux.py je sam koristi kad adapter `flux/lora/trening/starac-200.safetensors`
+postoji (`LORA`, `LORA_MJERA`); `--bez-lore` crta kao prije učenja, a `--lora put [mjera]` uzima drugi
+adapter.
 
 Adapter i kontrolna točka nisu u gitu (`flux/` je u `.gitignore`, a GitHub bez LFS-a ne
 prima 96 MB): ostaju na disku, a recept za ponovno učenje je `lora.py` + `lora-uci.sh`.
