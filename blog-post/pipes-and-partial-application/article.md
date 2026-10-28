@@ -159,10 +159,18 @@ The candidates then split by what the other arguments are:
 - **PFA changes timing.** Some other argument is a property fetch or a call that runs on every invocation today. A partial would run it once (gotcha 2).
 - **Neither.** Everything else: multi-statement bodies, nested calls, parameters used twice, `use (&$x)`, constructors.
 
-| Non-test code | Closures + arrow fns | `foo(...)` already works | Needs PFA | PFA changes timing | Neither |
-|---|---|---|---|---|---|
-| laravel/framework v13.37.0 `src/` | 2,289 | 130 (5.7%) | **71 (3.1%)** | 26 (1.1%) | 2,062 (90.1%) |
-| symfony/symfony v8.1.9 `src/` | 1,361 | 19 (1.4%) | **71 (5.2%)** | 4 (0.3%) | 1,267 (93.1%) |
+```text
+Closures and arrow functions in non-test code
+
+                      Laravel src/    Symfony src/
+Total                  2,289           1,361
+foo(...) works           130  5.7%        19  1.4%
+Needs PFA                 71  3.1%        71  5.2%
+PFA changes timing        26  1.1%         4  0.3%
+Neither                2,062 90.1%     1,267 93.1%
+
+Laravel v13.37.0, Symfony v8.1.9
+```
 
 The candidates look exactly like what you'd expect. `array_map(fn ($group) => static::collapse($group, $min, $max), $groups)` in `CronExpressionTimezoneConverter.php:283` becomes `static::collapse(?, $min, $max)`. `->map(fn ($property) => sprintf('<fg=gray>%s</>', $property))` in `ShowModelCommand.php:114` becomes `sprintf('<fg=gray>%s</>', ?)`. I hand-checked 20 random Laravel candidates and all 20 were genuine.
 

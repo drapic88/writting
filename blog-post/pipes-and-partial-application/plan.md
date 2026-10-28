@@ -1,6 +1,6 @@
 # Plan: pipes and partial application (working title: "Pipes Were Half a Feature Until Partial Application Arrived")
 
-**Status:** agreed 2026-10-26. Drafted in `article.md`.
+**Status:** published on Medium on 2026-10-28 (agreed 2026-10-26). Re-run on the GA image after 19 November.
 
 **Decisions (2026-10-26):**
 - Title stays: *Pipes Were Half a Feature Until Partial Application Arrived*.

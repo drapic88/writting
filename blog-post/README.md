@@ -33,7 +33,7 @@ the Medium Partner Program, posts are member-only, and pay follows paid-member r
 | 7 | `composer-audit-blind-spots` | Composer Says Your Dependencies Are Fine. Here's What It Didn't Check. | 2,080 | **drafted** · re-check before publishing |
 | 8 | `php-8.7-in-progress` | PHP 8.7 Has No Headline Feature Yet. Its Breaking Changes Already Landed. | 2,320 | **drafted** · re-check votes on publish day |
 | 9 | `php-8.2-end-of-life` | PHP 8.2 Stops Getting Security Fixes on 31 December | 2,340 | **published** · refresh before 31 Dec |
-| 10 | `pipes-and-partial-application` | Pipes Were Half a Feature Until Partial Application Arrived | 2,190 | **drafted** · re-run on GA image |
+| 10 | `pipes-and-partial-application` | Pipes Were Half a Feature Until Partial Application Arrived | 2,190 | **published** · re-run on GA image |
 | 11 | `frankenphp-worker-mode` | Worker Mode Is Fast Until Request Two Sees Request One's Data | 2,190 | **drafted** |
 | 12 | `mcp-server-in-php` | MCP Went Stateless. PHP Was Ready. | 2,230 | **drafted** · check SDK version |
 | 13 | `evidence-over-assertion` | "Done" Is Five Separate Claims | 2,100–2,400 | **drafted** |
@@ -72,8 +72,9 @@ stories, so the PHP posts are where the earnings are, and they move to the front
     planned, written against the 26 October figures. Before 31 December, refresh the
     Packagist shares (November is the next full month), the latest 8.2.x release, the
     Rector version and the supported-versions table after 8.6 GA.
-  - **#10 `pipes-and-partial-application`** follows GA: re-run its snippets and opcode dumps
-    on the GA image and drop the "RC4" labels.
+  - **#10 `pipes-and-partial-application` went out on 28 October 2026**, ahead of GA,
+    written against 8.6 RC4. After 19 November, re-run its snippets and opcode dumps on the
+    GA image and drop the "RC4" labels in the article and the hero.
   - **#11 `frankenphp-worker-mode` and #12 `mcp-server-in-php`** aren't tied to a release
     and fill the gap before the AI posts. The MCP SDK is pre-1.0, so check its version and
     changelog before publishing.
