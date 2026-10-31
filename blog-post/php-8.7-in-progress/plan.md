@@ -1,6 +1,6 @@
 # Plan — PHP 8.7 in progress (working title: "PHP 8.7 Is Being Decided Right Now")
 
-**Status:** agreed 2026-10-26. `article.md` drafted the same day.
+**Status:** published on Medium on 2026-10-31 (agreed and drafted 2026-10-26).
 **Researched:** 2026-10-20, with php-src `master` at `a17dcadd4c` (20 Oct 2026) and PHP 8.6 at
 RC3 (RC4 due 22 October, GA 19 November 2026). **Re-checked 2026-10-26** at `219289d8e7`.
 

@@ -31,7 +31,7 @@ the Medium Partner Program, posts are member-only, and pay follows paid-member r
 | 5 | `php-9` | The PHP 9 Upgrade Is Already in Your Error Log | 2,100 | **published** · re-check at GA |
 | 6 | `php-8.6-on-real-apps` | PHP 8.6 Is Ready. Your Lock File Isn't. | 2,300 | **published** · re-check at GA |
 | 7 | `composer-audit-blind-spots` | Composer Says Your Dependencies Are Fine. Here's What It Didn't Check. | 2,080 | **drafted** · re-check before publishing |
-| 8 | `php-8.7-in-progress` | PHP 8.7 Has No Headline Feature Yet. Its Breaking Changes Already Landed. | 2,320 | **drafted** · re-check votes on publish day |
+| 8 | `php-8.7-in-progress` | PHP 8.7 Has No Headline Feature Yet. Its Breaking Changes Already Landed. | 2,320 | **published** · re-check at GA |
 | 9 | `php-8.2-end-of-life` | PHP 8.2 Stops Getting Security Fixes on 31 December | 2,340 | **published** · refresh before 31 Dec |
 | 10 | `pipes-and-partial-application` | Pipes Were Half a Feature Until Partial Application Arrived | 2,190 | **published** · re-run on GA image |
 | 11 | `frankenphp-worker-mode` | Worker Mode Is Fast Until Request Two Sees Request One's Data | 2,190 | **drafted** |
@@ -65,9 +65,10 @@ stories, so the PHP posts are where the earnings are, and they move to the front
   - **#7 `composer-audit-blind-spots` goes out before GA**, while its "capped below PHP 8.6"
     count is still news. Advisories and caps move weekly, so re-run the audit on the seven
     lock files before publishing.
-  - **#8 `php-8.7-in-progress` goes out in the 19–26 November window**, right after 8.6 GA,
-    when readers ask what's next. Re-check the open votes and master's `UPGRADING` on
-    publish day; the hero carries the 26 October figures and changes with them.
+  - **#8 `php-8.7-in-progress` went out on 31 October 2026**, ahead of the planned
+    19–26 November window, written against the 26 October figures. In GA week, put in the
+    final tallies of the number-base (closed 1 Nov) and Filter enums (4 Nov) votes, re-read
+    master's `UPGRADING`, and update the hero if a breaking change has been added.
   - **#9 `php-8.2-end-of-life` went out on 27 October 2026**, five weeks earlier than
     planned, written against the 26 October figures. Before 31 December, refresh the
     Packagist shares (November is the next full month), the latest 8.2.x release, the
