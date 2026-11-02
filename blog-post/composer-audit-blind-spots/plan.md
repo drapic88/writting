@@ -1,6 +1,6 @@
 # Plan — Composer audit blind spots (working title: "Composer Says Your Dependencies Are Fine. Here's What It Didn't Check.")
 
-**Status:** agreed 2026-10-26.
+**Status:** published on Medium on 2026-11-02 (agreed and drafted 2026-10-26).
 
 **Decisions (Dragan, 2026-10-26):**
 

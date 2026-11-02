@@ -30,7 +30,7 @@ the Medium Partner Program, posts are member-only, and pay follows paid-member r
 | 4 | `php-8.6-small-release` | PHP 8.6 Is a Small Release With a Big Warning Label | 3,000 | **published** · refresh at GA |
 | 5 | `php-9` | The PHP 9 Upgrade Is Already in Your Error Log | 2,100 | **published** · re-check at GA |
 | 6 | `php-8.6-on-real-apps` | PHP 8.6 Is Ready. Your Lock File Isn't. | 2,300 | **published** · re-check at GA |
-| 7 | `composer-audit-blind-spots` | Composer Says Your Dependencies Are Fine. Here's What It Didn't Check. | 2,080 | **drafted** · re-check before publishing |
+| 7 | `composer-audit-blind-spots` | Composer Says Your Dependencies Are Fine. Here's What It Didn't Check. | 2,080 | **published** · re-check at GA |
 | 8 | `php-8.7-in-progress` | PHP 8.7 Has No Headline Feature Yet. Its Breaking Changes Already Landed. | 2,320 | **published** · re-check at GA |
 | 9 | `php-8.2-end-of-life` | PHP 8.2 Stops Getting Security Fixes on 31 December | 2,340 | **published** · refresh before 31 Dec |
 | 10 | `pipes-and-partial-application` | Pipes Were Half a Feature Until Partial Application Arrived | 2,190 | **published** · re-run on GA image |
@@ -62,9 +62,10 @@ stories, so the PHP posts are where the earnings are, and they move to the front
   8.6 RC3. The package version caps it cites move quickly near a release, so re-check each
   one on GA day and update the post where a cap has been lifted.
 - **#7–#12 are six PHP posts drafted on 26 October 2026**, all ahead of the AI posts:
-  - **#7 `composer-audit-blind-spots` goes out before GA**, while its "capped below PHP 8.6"
-    count is still news. Advisories and caps move weekly, so re-run the audit on the seven
-    lock files before publishing.
+  - **#7 `composer-audit-blind-spots` went out on 2 November 2026**, before GA, written
+    against the 26 October figures. In GA week, re-run the audit and `why-not php 8.6.0` on
+    the seven lock files, check whether Composer 2.11.0 has shipped, and update the article
+    and the hero where a number has moved.
   - **#8 `php-8.7-in-progress` went out on 31 October 2026**, ahead of the planned
     19–26 November window, written against the 26 October figures. In GA week, put in the
     final tallies of the number-base (closed 1 Nov) and Filter enums (4 Nov) votes, re-read
