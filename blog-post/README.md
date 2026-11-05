@@ -36,9 +36,9 @@ the Medium Partner Program, posts are member-only, and pay follows paid-member r
 | 10 | `pipes-and-partial-application` | Pipes Were Half a Feature Until Partial Application Arrived | 2,190 | **published** · re-run on GA image |
 | 11 | `frankenphp-worker-mode` | Worker Mode Is Fast Until Request Two Sees Request One's Data | 2,190 | **published** |
 | 12 | `mcp-server-in-php` | MCP Went Stateless. PHP Was Ready. | 2,230 | **drafted** · check SDK version |
-| 13 | `evidence-over-assertion` | "Done" Is Five Separate Claims | 2,100–2,400 | **drafted** |
-| 14 | `plan-before-you-let-it-code` | The Readiness Gate Is the Cheapest Bug Fix You Own | 1,700–2,000 | **drafted** |
-| 15 | `subagents-and-parallelism` | Subagents Buy Context Isolation, Not Speed | 1,900–2,200 | **drafted** |
+| 13 | `evidence-over-assertion` | My AI Agent Said "Shipped." The Branch Was Never Merged. | 2,100–2,400 | **drafted** |
+| 14 | `plan-before-you-let-it-code` | An AI Agent Wrote 400 Lines in Ten Minutes. The Ticket Never Said What Was Broken. | 1,700–2,000 | **drafted** |
+| 15 | `subagents-and-parallelism` | Claude Code Subagents Won't Make You Faster. They Keep Your Context Clean. | 1,900–2,200 | **drafted** |
 | 16 | `design-the-blast-radius` | The Container Is the Security Model, Not the Prompt | 1,900–2,200 | plan |
 | 17 | `skills-beat-long-prompts` | Stop Retyping Procedures. Commit Them. | 1,600–1,900 | plan |
 | 18 | `the-agent-as-a-unix-tool` | An Agent You Can Pipe Into `jq` | 1,600–1,900 | plan |
@@ -81,8 +81,12 @@ stories, so the PHP posts are where the earnings are, and they move to the front
     FrankenPHP 1.13.3, Symfony 8.1 and Octane 2.22. It isn't tied to a release date.
   - **#12 `mcp-server-in-php`** isn't tied to a release either and fills the gap before the
     AI posts. The MCP SDK is pre-1.0, so check its version and changelog before publishing.
-- **#13 `evidence-over-assertion` leads the AI posts** because it has the strongest title in
+- **#13 `evidence-over-assertion` leads the AI posts** because it has the strongest story in
   the folder, and the first AI post after a PHP run has to win readers on its own.
+- **#13–#15 were retitled on 5 November 2026.** The September AI posts had abstract titles
+  and drew about 6% clicks against about 33% for the PHP 8.6 post. Each new title names
+  "AI Agent" or "Claude Code", a term readers search for, and leads with the concrete event
+  from the lede.
 - **#14 `plan-before-you-let-it-code` and #15 `subagents-and-parallelism`** follow as the
   two remaining drafts, the cheaper and more universal one first.
 - **#16–#19 are briefs** and need drafting time. `design-the-blast-radius` reaches security

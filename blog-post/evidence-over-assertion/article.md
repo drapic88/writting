@@ -1,6 +1,6 @@
-# "Done" Is Five Separate Claims
+# My AI Agent Said "Shipped." The Branch Was Never Merged.
 
-### The failure mode where an agent reads feature code and reports "shipped" — and the evidence standard that makes that impossible to say by accident.
+### It read the feature code and inferred delivery. Ticket, branch, pull request, tests and runtime are five separate claims, and each one needs its own proof.
 
 *Written against the coding agents I use daily, in September 2026. Command names, plan gates and availability move between releases, so check them against your own version rather than this post. Repository, script and ticket names are changed; the failure mode and the artefacts are as they happened.*
 

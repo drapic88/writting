@@ -1,6 +1,6 @@
-# Subagents Buy Context Isolation, Not Speed
+# Claude Code Subagents Won't Make You Faster. They Keep Your Context Clean.
 
-### And a reviewer with no ability to edit is strictly better than one that can fix things for you.
+### Four at once can cost more and take longer. What you buy is a separate window that reads thousands of lines of log and hands back three — and a reviewer with no Edit tool.
 
 *Written against Claude Code in September 2026, with every command and frontmatter field checked against the current documentation rather than my own notes. Flags move between releases; check them against your version. The repository names are placeholders for a real client stack, and the architectural constraints are the real ones.*
 

@@ -1,6 +1,6 @@
-# The Readiness Gate Is the Cheapest Bug Fix You Own
+# An AI Agent Wrote 400 Lines in Ten Minutes. The Ticket Never Said What Was Broken.
 
-### Three planning surfaces, a ten-section checklist, and why agents make underspecified tickets more expensive, not less
+### "Improve the checkout retry behaviour" got backoff and a circuit breaker. Users were complaining about double-charging. Ten sections that catch that before the first edit.
 
 *Written against Claude Code in September 2026. Mode names, flags and availability move between releases, and some of what follows is plan-gated — check your own version and your organisation's settings rather than trusting a blog post from months ago.*
 
