@@ -1,6 +1,6 @@
 # Plan — FrankenPHP worker mode (working title: "Worker Mode Is Fast Until Request Two Sees Request One's Data")
 
-**Status:** agreed 2026-10-26.
+**Status:** published on Medium on 2026-11-05 (agreed and drafted 2026-10-26).
 **Researched:** 2026-10-20, against FrankenPHP v1.13.1, Laravel Octane v2.22.0 and Symfony
 8.1.9. Re-checked 2026-10-26: FrankenPHP is now v1.13.3.
 
